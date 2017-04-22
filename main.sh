@@ -8,19 +8,15 @@ then
   APP_NAME=generic-rails-$DATE
 fi
 
-echo $APP_NAME
-
 DIR_PARENT="$(dirname "$PWD")"
 DIR_APP=$DIR_PARENT/$APP_NAME
 
-if [ ! -d "$DIR_APP" ]; then
-  # Creating the new Rails app
-  cd $DIR_PARENT && rails new $APP_NAME
-
-  # Duplicating the original new Rails app
-  mkdir $DIR_PARENT/rails_new_orig
-  rm -rf $DIR_PARENT/rails_new_orig
-  cp -R $DIR_APP $DIR_PARENT/rails_new_orig
+# Removing the old Rails app (if necessary)
+if [ -d "$DIR_APP" ]; then
+  rm -rf $DIR_APP
 fi
+
+# Creating the new Rails app
+cd $DIR_PARENT && rails new $APP_NAME
 
 # Modifying the Rails app
