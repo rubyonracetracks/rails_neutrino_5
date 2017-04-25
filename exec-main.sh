@@ -41,6 +41,7 @@ cp -R mod $APP_NAME
 # Modify the new app
 cd $DIR_APP && sh mod_app.sh '01-01'
 cd $DIR_APP && sh mod_app.sh '01-02'
+cd $DIR_APP && sh mod_app.sh '01-03'
 
 echo '###########'
 echo 'FINAL SETUP'
@@ -48,14 +49,18 @@ echo '###########'
 
 echo '--------------------------'
 echo 'bundle install > /dev/null'
-bundle install > /dev/null
+cd $DIR_APP && bundle install > /dev/null
 
 echo '----------------'
 echo 'rails db:migrate'
-rails db:migrate
+cd $DIR_APP && rails db:migrate
 
 # echo '----------'
 # echo 'rails test'
 # rails test
 
-rails db:seed
+cd $DIR_APP && rails db:seed
+
+echo '----------------------'
+echo 'bundle exec rubocop -D'
+cd $DIR_APP && bundle exec rubocop -D

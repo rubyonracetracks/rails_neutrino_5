@@ -1,0 +1,5 @@
+# BEGIN: gems used in test_code.sh script
+group :development, :testing do
+  gem 'rubocop' # Checks for violations of the Ruby Style Guide, not recommended for legacy apps
+end
+# END: gems used in test_code.sh script
