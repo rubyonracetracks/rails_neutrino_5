@@ -8,8 +8,9 @@ then
   APP_NAME=generic-rails-$DATE
 fi
 
-DIR_PARENT="$(dirname "$PWD")"
-DIR_APP=$DIR_PARENT/$APP_NAME
+DIR_MAIN=$PWD
+echo $DIR_MAIN
+DIR_APP=$DIR_MAIN/$APP_NAME
 
 sh credentials.sh
 
@@ -18,8 +19,22 @@ if [ -d "$DIR_APP" ]; then
   rm -rf $DIR_APP
 fi
 
-# Creating the new Rails app
-cd $DIR_PARENT && rails new $APP_NAME
+echo '-----------------------------------------------'
+echo 'BEGIN: installing gems needed by Rails Neutrino'
+echo '-----------------------------------------------'
+gem install insert_from_file
+gem install line_containing
+echo '-----------------------------------------------'
+echo 'FINISHED: installing gems needed by Rails Neutrino'
+echo '-----------------------------------------------'
 
-# Modifying the Rails app
-cp -R mod $DIR_APP
+# Creating the new Rails app
+rails new $APP_NAME
+wait
+
+# Copy mod_app.sh to the new app's root directory
+cp mod_app.sh $APP_NAME 
+
+# Copy the mod directory to the new app's root directory
+cp -R mod $APP_NAME
+cd $DIR_APP && sh mod_app.sh '01-01'
