@@ -1,3 +1,5 @@
 #!/bin/bash
+DATE=`date +%Y-%m%d-%H%M-%S`
 
-sh main.sh 'tmp1'
+mkdir -p log
+sh exec-main.sh 'tmp1' 2>&1 | tee log/log-$DATE.txt
