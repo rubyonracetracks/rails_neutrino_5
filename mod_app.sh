@@ -10,6 +10,7 @@ echo '**************'
 cp mod/mod-$CHAPTER/* $PWD
 SCRIPT="mod-$CHAPTER.sh"
 sh $SCRIPT
+# rm mod-$CHAPTER-*
 echo '*****************'
 echo "FINISHED $CHAPTER"
 echo '*****************'

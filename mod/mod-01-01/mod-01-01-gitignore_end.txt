@@ -83,5 +83,10 @@ Temporary Items
 # END: Linux files to ignore
 ############################
 
+# mod directory and files from Rails Neutrino
+mod/*
+mod-*
+mod_app.sh
+
 # NOTE: Comments MUST get their own dedicated lines and cannot be shared with that of the file name.
 
