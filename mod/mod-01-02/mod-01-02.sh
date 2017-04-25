@@ -15,6 +15,9 @@ mv mod-01-02-kill_spring.sh kill_spring.sh
 echo 'Adding pg-start.sh'
 mv mod-01-02-pg-start.sh pg-start.sh
 
+echo 'Adding sandbox.sh'
+mv mod-01-02-sandbox.sh sandbox.sh
+
 echo 'Adding server.sh'
 mv mod-01-02-server.sh server.sh
 
