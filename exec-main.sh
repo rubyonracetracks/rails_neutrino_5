@@ -9,8 +9,8 @@ then
 fi
 
 DIR_MAIN=$PWD
-echo $DIR_MAIN
-DIR_APP=$DIR_MAIN/$APP_NAME
+DIR_PARENT="$(dirname "$DIR_MAIN")"
+DIR_APP=$DIR_PARENT/$APP_NAME
 
 sh credentials.sh
 
@@ -29,19 +29,19 @@ echo 'FINISHED: installing gems needed by Rails Neutrino'
 echo '-----------------------------------------------'
 
 # Creating the new Rails app
-rails new $APP_NAME
+cd $DIR_PARENT && rails new $APP_NAME
 wait
 
 # Copy mod_app.sh to the new app's root directory
-cp mod_app.sh $APP_NAME 
+cp $DIR_MAIN/mod_app.sh $DIR_APP
 
 # Copy the mod directory to the new app's root directory
-cp -R mod $APP_NAME
+cp -R $DIR_MAIN/mod $DIR_APP
 
 # Modify the new app
 cd $DIR_APP && sh mod_app.sh '01-01'
 cd $DIR_APP && sh mod_app.sh '01-02'
-cd $DIR_APP && sh mod_app.sh '01-03'
+# cd $DIR_APP && sh mod_app.sh '01-03'
 
 echo '###########'
 echo 'FINAL SETUP'
@@ -63,4 +63,4 @@ cd $DIR_APP && rails db:seed
 
 echo '----------------------'
 echo 'bundle exec rubocop -D'
-cd $DIR_APP && bundle exec rubocop -D
+# cd $DIR_APP && bundle exec rubocop -D
