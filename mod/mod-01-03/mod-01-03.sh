@@ -16,7 +16,6 @@ echo '----------------'
 echo 'rails db:migrate'
 rails db:migrate
 
-
 git add .
 git commit -m "Added RuboCop"
 git checkout master

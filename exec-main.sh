@@ -24,6 +24,10 @@ echo 'BEGIN: installing gems needed by Rails Neutrino'
 echo '-----------------------------------------------'
 gem install insert_from_file
 gem install line_containing
+gem install gemfile_entry
+gem install string_in_file
+gem install replace_quotes
+gem install remove_double_blank
 echo '-----------------------------------------------'
 echo 'FINISHED: installing gems needed by Rails Neutrino'
 echo '-----------------------------------------------'
@@ -31,6 +35,9 @@ echo '-----------------------------------------------'
 # Creating the new Rails app
 cd $DIR_PARENT && rails new $APP_NAME
 wait
+
+# Copy credentials.sh to the new app's root directory
+cp $DIR_MAIN/credentials.sh $DIR_APP
 
 # Copy mod_app.sh to the new app's root directory
 cp $DIR_MAIN/mod_app.sh $DIR_APP
@@ -41,7 +48,7 @@ cp -R $DIR_MAIN/mod $DIR_APP
 # Modify the new app
 cd $DIR_APP && sh mod_app.sh '01-01'
 cd $DIR_APP && sh mod_app.sh '01-02'
-# cd $DIR_APP && sh mod_app.sh '01-03'
+cd $DIR_APP && sh mod_app.sh '01-03'
 
 echo '###########'
 echo 'FINAL SETUP'
@@ -55,12 +62,14 @@ echo '----------------'
 echo 'rails db:migrate'
 cd $DIR_APP && rails db:migrate
 
-# echo '----------'
-# echo 'rails test'
-# rails test
+echo '----------'
+echo 'rails test'
+rails test
 
+echo '-------------'
+echo 'rails db:seed'
 cd $DIR_APP && rails db:seed
 
 echo '----------------------'
 echo 'bundle exec rubocop -D'
-# cd $DIR_APP && bundle exec rubocop -D
+cd $DIR_APP && bundle exec rubocop -D
