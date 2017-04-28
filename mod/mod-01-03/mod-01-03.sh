@@ -6,6 +6,9 @@ echo '#########################'
 
 git checkout -b 01-03-rubocop
 
+echo 'Adding .rubocop.yml'
+mv mod-01-03-rubocop_yml.txt .rubocop.yml
+
 ruby mod-01-03.rb
 
 echo '--------------'

@@ -13,9 +13,6 @@ StringInFile.add_end("  #{GemfileEntry.latest('rubocop')}", 'Gemfile')
 StringInFile.add_end('end', 'Gemfile')
 StringInFile.add_end('# END: gems for test_code.sh', 'Gemfile')
 
-puts 'Adding .rubocop.yml'
-system('mv mod-01-03-rubocop_yml.txt .rubocop.yml')
-
 puts 'Making additional changes to comply with RuboCop'
 StringInFile.replace('[ :request_id ]', '[:request_id]', 'config/environments/production.rb')
 StringInFile.replace('"/"', "'/'", 'Gemfile')
