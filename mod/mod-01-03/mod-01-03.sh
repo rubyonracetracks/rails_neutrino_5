@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# AGENDA
+# * Add .rubocop.yml
+# * Add RuboCop
+# * Comply with RuboCop
+
 echo '#########################'
 echo 'Unit 1 Chapter 3: RuboCop'
 echo '#########################'

@@ -1,3 +1,4 @@
+# BEGIN: AllCops
 AllCops:
   Exclude:
     - bin/spring
@@ -7,11 +8,13 @@ AllCops:
     - mod*
     - mod/*
     - mod/*/*
+# END: AllCops
 
 Bundler/OrderedGems:
   Exclude:
     - Gemfile
 
+# BEGIN: Metrics/LineLength
 Metrics/LineLength:
   Exclude:
     - config/application.rb
@@ -31,11 +34,16 @@ Metrics/LineLength:
     - Rakefile
     - test/integration/*
     - test/test_helper.rb
+# END: Metrics/LineLength
 
+# BEGIN: Style/ClassAndModuleChildren
 Style/ClassAndModuleChildren:
   Exclude:
     - test/test_helper.rb
+# END: Style/ClassAndModuleChildren
 
+# BEGIN: Style/SymbolArray
 Style/SymbolArray:
   Exclude:
     - Gemfile
+# END: Style/SymbolArray

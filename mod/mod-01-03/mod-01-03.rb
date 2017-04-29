@@ -9,7 +9,7 @@ puts 'Adding RuboCop to the Gemfile'
 StringInFile.add_end("\n", 'Gemfile')
 StringInFile.add_end('# BEGIN: gems for test_code.sh', 'Gemfile')
 StringInFile.add_end('group :development, :testing do', 'Gemfile')
-StringInFile.add_end("  #{GemfileEntry.latest('rubocop')}", 'Gemfile')
+StringInFile.add_end("  #{GemfileEntry.latest('rubocop')} # Checks for violations of the Ruby Style Guide, not recommended for legacy apps", 'Gemfile')
 StringInFile.add_end('end', 'Gemfile')
 StringInFile.add_end('# END: gems for test_code.sh', 'Gemfile')
 

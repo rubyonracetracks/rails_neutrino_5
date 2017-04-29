@@ -49,27 +49,13 @@ cp -R $DIR_MAIN/mod $DIR_APP
 cd $DIR_APP && sh mod_app.sh '01-01'
 cd $DIR_APP && sh mod_app.sh '01-02'
 cd $DIR_APP && sh mod_app.sh '01-03'
+cd $DIR_APP && sh mod_app.sh '01-04'
 
 echo '###########'
 echo 'FINAL SETUP'
 echo '###########'
 
-echo '--------------------------'
-echo 'bundle install > /dev/null'
-cd $DIR_APP && bundle install > /dev/null
+cd $DIR_APP && sh kill_spring.sh
+cd $DIR_APP && sh test_app.sh
 
-echo '----------------'
-echo 'rails db:migrate'
-cd $DIR_APP && rails db:migrate
-
-echo '----------'
-echo 'rails test'
-rails test
-
-echo '-------------'
-echo 'rails db:seed'
-cd $DIR_APP && rails db:seed
-
-echo '----------------------'
-echo 'bundle exec rubocop -D'
-cd $DIR_APP && bundle exec rubocop -D
+sh test_code.sh
