@@ -20,9 +20,9 @@ mv mod-01-04-git_check.sh git_check.sh
 
 ruby mod-01-04.rb
 
-echo '--------------'
-echo 'bundle install'
-bundle install
+echo '----------------------'
+echo 'bundle install --quiet'
+bundle install --quiet
 
 echo '----------------'
 echo 'rails db:migrate'

@@ -1,7 +1,9 @@
 # BEGIN: AllCops
 AllCops:
   Exclude:
+    - bin/setup
     - bin/spring
+    - bin/yarn
     - config/spring.rb
     - db/migrate/*
     - db/schema.rb

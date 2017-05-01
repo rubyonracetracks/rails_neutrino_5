@@ -4,6 +4,7 @@ require 'string_in_file'
 require 'gemfile_entry'
 require 'replace_quotes'
 require 'remove_double_blank'
+require 'line_containing'
 
 puts 'Adding RuboCop to the Gemfile'
 StringInFile.add_end("\n", 'Gemfile')
@@ -23,3 +24,5 @@ LineContaining.add_before('class ApplicationController', '#', 'app/controllers/a
 LineContaining.add_before('class ApplicationRecord', '#', 'app/models/application_record.rb')
 LineContaining.add_before('class ApplicationMailer', '#', 'app/mailers/application_mailer.rb')
 RemoveDoubleBlank.update('Gemfile')
+StringInFile.replace('require "test_helper"', "require 'test_helper'", 'test/application_system_test_case.rb')
+LineContaining.add_before('class Application', "  #", 'config/application.rb')

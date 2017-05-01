@@ -16,9 +16,9 @@ mv mod-01-03-rubocop_yml.txt .rubocop.yml
 
 ruby mod-01-03.rb
 
-echo '--------------'
-echo 'bundle install'
-bundle install
+echo '----------------------'
+echo 'bundle install --quiet'
+bundle install --quiet
 
 echo '----------------'
 echo 'rails db:migrate'
