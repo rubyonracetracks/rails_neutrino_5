@@ -1,0 +1,11 @@
+##############################################
+# BEGIN: gems that take a long time to install
+##############################################
+# Please pre-install the proper versions in the Docker image.
+gem 'nokogiri'
+gem 'pg'
+gem 'rails'
+############################################
+# END: gems that take a long time to install
+############################################
+

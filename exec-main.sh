@@ -50,6 +50,7 @@ cd $DIR_APP && sh mod_app.sh '01-01'
 cd $DIR_APP && sh mod_app.sh '01-02'
 cd $DIR_APP && sh mod_app.sh '01-03'
 cd $DIR_APP && sh mod_app.sh '01-04'
+cd $DIR_APP && sh mod_app.sh '02-01'
 
 echo '###########'
 echo 'FINAL SETUP'
