@@ -1,2 +1,2 @@
 #!/bin/bash
-sh build_fast.sh
+sh test_app.sh

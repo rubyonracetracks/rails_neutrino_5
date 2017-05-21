@@ -61,12 +61,12 @@ cd $DIR_APP && sh mod_app.sh '02-04'
 cd $DIR_APP && sh mod_app.sh '03-01'
 
 # Remove the mod* files from the new app
-# rm -rf $DIR_APP/mod
-# rm $DIR_APP/mod*
+rm -rf $DIR_APP/mod
+rm $DIR_APP/mod*
 
 echo '##########################################'
 echo 'The new app has been created from scratch!'
 echo ''
 echo 'Enter the following command:'
-echo "cd $DIR_APP && sh all.sh"
+echo "cd $DIR_APP && sh build_fast.sh"
 
