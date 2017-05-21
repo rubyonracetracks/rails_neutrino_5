@@ -3,6 +3,7 @@
 # AGENDA
 # * Add an initial index page to show that the app works
 # * Add the following scripts:
+#   all.sh
 #   build_fast.sh
 #   git_check.sh
 #   kill_spring.sh
