@@ -1,0 +1,4 @@
+  # Make app/helpers/application_helper.rb automatically available to
+  # all integration tests
+  include ApplicationHelper
+

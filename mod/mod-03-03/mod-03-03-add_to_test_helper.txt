@@ -1,7 +1,5 @@
 
-#######################
 # BEGIN: Capybara setup
-#######################
 require 'capybara/rails'
 require 'capybara/email'
 
@@ -15,9 +13,7 @@ class ActionDispatch::IntegrationTest
     teardown_universal
   end
 end
-#######################
 # END: Capybara setup
-#######################
 
 def teardown_universal
   Capybara.reset_sessions!

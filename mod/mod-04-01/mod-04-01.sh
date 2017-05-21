@@ -9,9 +9,9 @@
 # NOTE: At the end of this chapter, Rails Best Practices flags the title
 # helper as an unused method.  This will be used in the next chapter.
 
-echo '####################'
-echo 'UNIT 4: STATIC PAGES'
-echo '####################'
+echo '######################'
+echo 'UNIT 4: STATIC CONTENT'
+echo '######################'
 
 echo '##############################'
 echo 'Unit 4 Chapter 1: Title Helper'
