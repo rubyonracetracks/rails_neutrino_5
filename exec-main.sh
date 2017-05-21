@@ -39,9 +39,9 @@ cd $DIR_PARENT && rails new $APP_NAME
 wait
 
 # Migration
-echo '----------------------------------'
-echo "cd $DIR_PARENT && rails db:migrate"
-cd $DIR_PARENT && rails db:migrate
+echo '-------------------------------'
+echo "cd $DIR_APP && rails db:migrate"
+cd $DIR_APP && rails db:migrate
 wait
 
 # Copy credentials.sh to the new app's root directory
