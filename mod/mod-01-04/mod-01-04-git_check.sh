@@ -2,7 +2,7 @@
 
 # Run this script before entering "git add" and "git commit".
 
-sh build_fast.sh
+sh test_app.sh
 
 echo '----------------------------'
 echo 'bundle exec brakeman -Aq -w2'
