@@ -19,9 +19,9 @@ git checkout -b 02-01-heroku_gems
 
 ruby mod-02-01.rb
 
-echo '----------------------'
-echo 'bundle install --quiet'
-bundle install --quiet
+echo '--------------'
+echo 'bundle install'
+bundle install
 
 git add .
 git commit -m "Updated the Gemfile"
