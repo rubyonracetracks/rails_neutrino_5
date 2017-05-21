@@ -24,10 +24,6 @@ echo '----------------------'
 echo 'bundle install --quiet'
 bundle install --quiet
 
-echo '----------------'
-echo 'rails db:migrate'
-rails db:migrate
-
 # Generates the Rails Best Practices configuration file at config/rails_best_practices.yml
 bundle exec rails_best_practices -g
 
