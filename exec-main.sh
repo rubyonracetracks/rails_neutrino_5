@@ -54,16 +54,15 @@ cd $DIR_APP && sh mod_app.sh '02-01'
 cd $DIR_APP && sh mod_app.sh '02-02'
 cd $DIR_APP && sh mod_app.sh '02-03'
 cd $DIR_APP && sh mod_app.sh '02-04'
+cd $DIR_APP && sh mod_app.sh '03-01'
 
 # Remove the mod* files from the new app
-rm $DIR_APP/mod*
-rm -rf $DIR_APP/mod
+# rm -rf $DIR_APP/mod
+# rm $DIR_APP/mod*
 
-echo '###########'
-echo 'FINAL SETUP'
-echo '###########'
+echo '##########################################'
+echo 'The new app has been created from scratch!'
+echo ''
+echo 'Enter the following command:'
+echo "cd $DIR_APP && sh build_fast.sh"
 
-cd $DIR_APP && sh kill_spring.sh
-cd $DIR_APP && sh test_app.sh
-
-sh test_code.sh

@@ -37,7 +37,4 @@ LineContaining.replace("gem 'listen'", "  #{GemfileEntry.active('listen')}", "Ge
 LineContaining.replace("gem 'spring'", "  #{GemfileEntry.active('spring')}", "Gemfile")
 LineContaining.replace("gem 'spring-watcher-listen'", "  #{GemfileEntry.active('spring-watcher-listen')}", "Gemfile")
 
-puts '***************'
-puts GemfileEntry.active('sqlite3')
-puts '***************'
 LineContaining.replace("gem 'sqlite3'", "  #{GemfileEntry.active('sqlite3')}", "Gemfile")
