@@ -5,7 +5,9 @@
 # controller tests.
 
 # AGENDA
-# * Add testh.sh, testhl.sh, testm.sh, testml.sh, testc.sh, and testcl.sh.
+# Add capybara-email and capybara-slow_finder_errors to the Gemfile
+# Set up test/test_helper.rb for Capybara
+# Add additional integration tests and make them pass
 
 echo '##########################'
 echo 'Unit 3 Chapter 3: Capybara'

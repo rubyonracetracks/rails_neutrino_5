@@ -9,6 +9,7 @@
 # * Add test/rake_rerun_reporter.rb
 # * Update test/test_helper.rb to run Minitest
 # * Update .gitignore
+# * Added first integration test and public/index.html
 
 
 echo '##################'
