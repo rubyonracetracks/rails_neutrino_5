@@ -22,6 +22,9 @@ git checkout -b 01-02-basic_scripts
 echo 'Adding build_fast.sh'
 mv mod-01-02-build_fast.sh build_fast.sh
 
+echo 'Adding all.sh'
+mv mod-01-02-all.sh all.sh
+
 echo 'Adding git_check.sh'
 mv mod-01-02-git_check.sh git_check.sh
 

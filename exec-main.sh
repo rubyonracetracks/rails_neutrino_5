@@ -33,10 +33,14 @@ echo 'FINISHED: installing gems needed by Rails Neutrino'
 echo '-----------------------------------------------'
 
 # Creating the new Rails app
+echo '-------------------------------------'
+echo "cd $DIR_PARENT && rails new $APP_NAME"
 cd $DIR_PARENT && rails new $APP_NAME
 wait
 
 # Copy credentials.sh to the new app's root directory
+echo '------------------------------------------------------------------------'
+echo 'Copying credentials.sh, mod_app.sh, and the mod directory to the new app'
 cp $DIR_MAIN/credentials.sh $DIR_APP
 
 # Copy mod_app.sh to the new app's root directory
@@ -64,5 +68,5 @@ echo '##########################################'
 echo 'The new app has been created from scratch!'
 echo ''
 echo 'Enter the following command:'
-echo "cd $DIR_APP && sh build_fast.sh"
+echo "cd $DIR_APP && sh all.sh"
 
