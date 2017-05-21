@@ -12,6 +12,9 @@ LineContaining.add_before('rubocop', "  #{GemfileEntry.latest('gemsurance')}", "
 LineContaining.add_before('rubocop', "  #{GemfileEntry.latest('rails_best_practices')}", "Gemfile")
 LineContaining.add_after('rubocop', "  #{GemfileEntry.latest('sandi_meter')}", "Gemfile")
 
+puts 'bundle install --quiet'
+system('bundle install --quiet')
+
 puts 'Adding test_code.sh to all.sh'
 StringInFile.add_end("sh test_code.sh\n", 'all.sh')
 

@@ -34,3 +34,6 @@ LineContaining.replace("gem 'spring'", "  #{GemfileEntry.active('spring')}", "Ge
 LineContaining.replace("gem 'spring-watcher-listen'", "  #{GemfileEntry.active('spring-watcher-listen')}", "Gemfile")
 
 LineContaining.replace("gem 'sqlite3'", "  #{GemfileEntry.active('sqlite3')}", "Gemfile")
+
+puts 'bundle install --quiet'
+system('bundle install --quiet')
