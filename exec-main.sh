@@ -38,6 +38,12 @@ echo "cd $DIR_PARENT && rails new $APP_NAME"
 cd $DIR_PARENT && rails new $APP_NAME
 wait
 
+# Migration
+echo '----------------------------------'
+echo "cd $DIR_PARENT && rails db:migrate"
+cd $DIR_PARENT && rails db:migrate
+wait
+
 # Copy credentials.sh to the new app's root directory
 echo '------------------------------------------------------------------------'
 echo 'Copying credentials.sh, mod_app.sh, and the mod directory to the new app'
