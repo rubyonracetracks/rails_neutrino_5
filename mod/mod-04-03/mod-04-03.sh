@@ -17,6 +17,6 @@ git checkout -b 04-03-static_page_views
 ruby mod-04-03.rb
 
 git add .
-git commit -m "Created static pages"
+git commit -m "Created static page views"
 git checkout master
 git merge 04-03-static_page_views
