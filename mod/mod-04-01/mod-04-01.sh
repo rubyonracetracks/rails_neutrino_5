@@ -7,7 +7,7 @@
 # * Add app/helpers/application_helper.rb
 
 # NOTE: At the end of this chapter, Rails Best Practices flags the title
-# helper as an unused method.  This will be used in the next chapter.
+# helper as an unused method.  This will be resolved in a later chapter.
 
 echo '######################'
 echo 'UNIT 4: STATIC CONTENT'
