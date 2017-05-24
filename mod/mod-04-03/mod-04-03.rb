@@ -25,8 +25,10 @@ InsertFromFile.add_after('mod-04-03-test_helper.txt', 'test/test_helper.rb', 'cl
 
 puts 'Adding email_munger to the Gemfile'
 StringInFile.add_end("\n", 'Gemfile')
-StringInFile.add_end("#{GemfileEntry.latest('email_munger')} # Encodes email address to prevent harvesting by bots", 'Gemfile')
-
+StringInFile.add_end("gem 'email_munger' # Encodes email address to prevent harvesting by bots\n", 'Gemfile')
+puts 'bundle install --quiet'
+system('bundle install --quiet')
+StringInFile.replace("gem 'email_munger'", GemfileEntry.active('email_munger'), 'Gemfile')
 puts 'bundle install --quiet'
 system('bundle install --quiet')
 
