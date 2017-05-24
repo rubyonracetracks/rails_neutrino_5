@@ -6,8 +6,10 @@ require 'line_containing'
 
 puts 'Adding devise to the Gemfile'
 StringInFile.add_end("\n", 'Gemfile')
-StringInFile.add_end("#{GemfileEntry.latest('devise')} # Provides admin/user authentication", 'Gemfile')
-
+StringInFile.add_end("gem 'devise' # Provides admin/user authentication\n", 'Gemfile')
+puts 'bundle install --quiet'
+system('bundle install --quiet')
+StringInFile.replace("gem 'devise'", GemfileEntry.active('devise'), 'Gemfile')
 puts 'bundle install --quiet'
 system('bundle install --quiet')
 

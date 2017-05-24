@@ -6,6 +6,8 @@ require 'string_in_file'
 
 puts 'Adding minitest and minitest-reporters to the Gemfile'
 InsertFromFile.add_end('mod-03-01-add_to_Gemfile.txt', 'Gemfile')
+puts 'bundle install --quiet'
+system('bundle install --quiet')
 StringInFile.replace("gem 'minitest'", "#{GemfileEntry.active('minitest')}", 'Gemfile')
 StringInFile.replace("gem 'minitest-reporters'", "#{GemfileEntry.active('minitest-reporters')}", 'Gemfile')
 puts 'bundle install --quiet'
