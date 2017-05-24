@@ -5,8 +5,10 @@ require 'gemfile_entry'
 
 puts 'Adding bootstrap-sass to the Gemfile'
 StringInFile.add_end("\n", 'Gemfile')
-StringInFile.add_end("#{GemfileEntry.latest('bootstrap-sass')} # Bootstrap styling", 'Gemfile')
-
+StringInFile.add_end("gem 'bootstrap-sass' # Bootstrap styling\n", 'Gemfile')
+puts 'bundle install --quiet'
+system('bundle install --quiet')
+StringInFile.replace("gem 'bootstrap-sass'", GemfileEntry.active('bootstrap-sass'),'Gemfile')
 puts 'bundle install --quiet'
 system('bundle install --quiet')
 
