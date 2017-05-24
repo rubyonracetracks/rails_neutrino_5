@@ -1,5 +1,3 @@
-#!/usr/bin/ruby
-
 # rubocop:disable Metrics/LineLength
 # rubocop:disable Style/PercentLiteralDelimiters
 # rubocop:disable Style/UnneededPercentQ

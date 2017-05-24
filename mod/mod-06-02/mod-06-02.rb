@@ -3,6 +3,7 @@
 require 'insert_from_file'
 require 'gemfile_entry'
 require 'string_in_file'
+require 'line_containing'
 
 puts 'Adding annotate, railroady, and rails-erd to the Gemfile'
 InsertFromFile.add_end('mod-06-02-Gemfile.txt', 'Gemfile')
@@ -19,3 +20,9 @@ system('mv mod-06-02-outline-short.sh outline-short.sh')
 
 puts 'Adding outline.sh'
 system('mv mod-06-02-outline.sh outline.sh')
+
+puts 'Adding outline-short.sh to git_check.sh'
+InsertFromFile.add_end('mod-06-02-git_check.txt', 'git_check.sh')
+
+puts 'Adding outline.sh to all.sh'
+LineContaining.add_before('sh test_code.sh', 'sh outline.sh', 'all.sh')
