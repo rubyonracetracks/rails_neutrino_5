@@ -21,10 +21,6 @@ mv mod-01-04-git_check.sh git_check.sh
 
 ruby mod-01-04.rb
 
-echo '----------------------'
-echo 'bundle install --quiet'
-bundle install --quiet
-
 # Generates the Rails Best Practices configuration file at config/rails_best_practices.yml
 bundle exec rails_best_practices -g
 

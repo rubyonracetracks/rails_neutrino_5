@@ -8,7 +8,6 @@ puts 'Adding figaro, line_containing, remove_double_blank, and string_in_file to
 InsertFromFile.add_end('mod-06-01-Gemfile.txt', 'Gemfile')
 puts 'bundle install --quiet'
 system('bundle install --quiet')
-puts 'Pinning the versions of new gems'
 StringInFile.replace("gem 'figaro'", "#{GemfileEntry.active('figaro')}", "Gemfile")
 StringInFile.replace("gem 'line_containing'", "#{GemfileEntry.active('line_containing')}", "Gemfile")
 StringInFile.replace("gem 'remove_double_blank'", "#{GemfileEntry.active('remove_double_blank')}", "Gemfile")
