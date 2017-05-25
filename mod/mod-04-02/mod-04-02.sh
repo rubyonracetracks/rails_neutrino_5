@@ -10,9 +10,9 @@
 # NOTE: Rails Best Practices still flags the title helper as an unused method.
 # This will be resolved in a later chapter.
 
-echo '##############################'
-echo 'Unit 4 Chapter 2: Static Pages'
-echo '##############################'
+echo '########################################'
+echo 'Unit 4 Chapter 2: Static Page Controller'
+echo '########################################'
 
 git checkout -b 04-02-static_page_controller
 
