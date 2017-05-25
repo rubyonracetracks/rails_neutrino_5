@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Providing scripts to generate outlines and block diagrams of the app
+# Adding MailCatcher for simulating the email interactions
 
 # AGENDA
 # * Update config/environments/development.rb.

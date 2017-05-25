@@ -1,0 +1,2 @@
+
+gem 'pry-rails' # Improves the screen output in the Rails console
