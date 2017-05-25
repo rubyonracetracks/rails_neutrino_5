@@ -1,10 +1,9 @@
 #!/bin/bash
 
-# Providing scripts to generate outlines and block diagrams of the app
+# Adding the better_errors and binding_of_caller gems
 
 # AGENDA
-# * Update config/environments/development.rb.
-# * Add mailcatcher.sh.
+# * Update the Gemfile.
 
 # NOTE: MailCatcher is NOT added to the Gemfile, because it will likely
 # conflict with other gems sooner or later.
