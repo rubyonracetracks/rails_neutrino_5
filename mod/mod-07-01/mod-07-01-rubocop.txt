@@ -1,0 +1,6 @@
+
+# BEGIN: Style/CommentIndentation
+Style/CommentIndentation:
+  Exclude:
+    - app/controllers/users/*
+# END: Style/CommentIndentation

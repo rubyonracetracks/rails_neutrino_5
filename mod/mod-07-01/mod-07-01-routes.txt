@@ -1,0 +1,6 @@
+
+  # BEGIN: user section
+  devise_for :users,
+             controllers: { registrations: 'users/registrations' }
+  # END: user section
+
