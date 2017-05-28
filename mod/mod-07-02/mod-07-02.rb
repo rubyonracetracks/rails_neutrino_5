@@ -39,6 +39,6 @@ puts 'Updating app/models/user.rb'
 InsertFromFile.add_after('mod-07-02-user.txt', 'app/models/user.rb', 'class User < ApplicationRecord')
 
 puts 'Updating config/initializers/devise.rb'
-LineContaining.add_after('Devise.setup do |config|', 'config.authentication_keys = [ :login ]', 'config/initializers/devise.rb')
+LineContaining.add_after('Devise.setup do |config|', '  config.authentication_keys = [:login]', 'config/initializers/devise.rb')
 
 puts 'Updating '
