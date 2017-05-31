@@ -41,4 +41,5 @@ InsertFromFile.add_after('mod-07-02-user.txt', 'app/models/user.rb', 'class User
 puts 'Updating config/initializers/devise.rb'
 LineContaining.add_after('Devise.setup do |config|', '  config.authentication_keys = [:login]', 'config/initializers/devise.rb')
 
-puts 'Updating '
+puts 'Updating config/rails_best_practices.yml'
+InsertFromFile.replace('mod-07-02-rails_best_practices.txt', 'config/rails_best_practices.yml', 'RemoveUnusedMethodsInModelsCheck')
