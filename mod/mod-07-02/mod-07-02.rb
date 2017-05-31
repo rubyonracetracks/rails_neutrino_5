@@ -33,7 +33,7 @@ system('mv mod-07-02-home.html.erb app/views/static_pages/home.html.erb')
 # REFERENCE: https://github.com/plataformatec/devise/wiki/How-To:-Allow-users-to-sign-in-using-their-username-or-email-address
 
 puts 'Updating app/controllers/application_controller.rb'
-InsertFromFile.replace_between('mod-07-02-application_controller.txt', 'app/controllers/application_controller.rb', 'class ApplicationController < ActionController::Base', 'end')
+InsertFromFile.add_before('mod-07-02-application_controller.txt', 'app/controllers/application_controller.rb', 'end')
 
 puts 'Updating app/models/user.rb'
 InsertFromFile.add_after('mod-07-02-user.txt', 'app/models/user.rb', 'class User < ApplicationRecord')
