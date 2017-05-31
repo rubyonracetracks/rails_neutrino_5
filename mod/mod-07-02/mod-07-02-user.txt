@@ -6,7 +6,9 @@
     conditions = warden_conditions.dup
     # rubocop:disable Lint/AssignmentInCondition
     if login = conditions.delete(:login)
+      # rubocop:disable Metrics/LineLength
       where(conditions.to_h).where(['lower(username) = :value OR lower(email) = :value', { value: login.downcase }]).first
+      # rubocop:enable Metrics/LineLength
     elsif conditions._key?(:username) || conditions.key?(:email)
       where(conditions.to_h).first
     end

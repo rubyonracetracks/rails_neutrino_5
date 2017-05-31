@@ -3,6 +3,8 @@
   protected
 
   def configure_permitted_parameters
+    # rubocop:disable Lint/UselessAssignment
     added_attrs = [:username, :email, :password, :password_confirmation,
                    :remember_me]
+    # rubocop:enable Lint/UselessAssignment
   end
