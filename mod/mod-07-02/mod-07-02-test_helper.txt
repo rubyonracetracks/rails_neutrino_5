@@ -1,8 +1,8 @@
 
-def login_user(str_uname, str_pwd, status_remember)
+def login_user(str_login, str_pwd, status_remember)
   visit root_path
   click_on 'Login'
-  fill_in('Login', with: str_uname)
+  fill_in('Login', with: str_login)
   fill_in('Password', with: str_pwd)
   if status_remember == true
     check('Remember me')
