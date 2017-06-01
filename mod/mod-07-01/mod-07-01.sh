@@ -18,6 +18,7 @@ git checkout -b 07-01-user_sign_up
 
 ruby mod-07-01.rb
 
+sh outline-short.sh
 git add .
 git commit -m "Add user sign-up capability"
 git checkout master

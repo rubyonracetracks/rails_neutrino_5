@@ -17,6 +17,7 @@ git checkout -b 06-02-outlining
 
 ruby mod-06-02.rb
 
+sh outline-short.sh
 git add .
 git commit -m "Added outlining gems and scripts"
 git checkout master

@@ -12,6 +12,7 @@ git checkout -b 07-02-user_login
 
 ruby mod-07-02.rb
 
+sh outline-short.sh
 git add .
 git commit -m "Add user login capability"
 git checkout master
