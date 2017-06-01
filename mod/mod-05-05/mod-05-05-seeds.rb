@@ -83,8 +83,8 @@ User.create!(last_name: 'User', first_name: 'Example',
              confirmed_at: Time.now)
 
 n_users = 52
-puts '--------------------------------------'
-puts "Creating first #{n_users} random users"
+puts '------------------------------------------'
+puts "Creating the first #{n_users} random users"
 pbar = ProgressBar.create(total: n_users)
 n_users.times do |n|
   name_l = Faker::Name.last_name
@@ -100,9 +100,9 @@ n_users.times do |n|
 end
 
 n_users = 53
-puts '---------------------------------------'
+puts '-------------------------------------------'
 pbar = ProgressBar.create(total: n_users)
-puts "Creating second #{n_users} random users"
+puts "Creating the second #{n_users} random users"
 n_users.times do |n|
   name_l = Faker::Name.last_name
   name_f = Faker::Name.first_name
