@@ -49,11 +49,8 @@ puts 'Updating config/environments/development.rb and config/environments/test.r
 InsertFromFile.add_after('mod-07-01-development.txt', 'config/environments/development.rb', 'Rails.application.configure do')
 InsertFromFile.add_after('mod-07-01-development.txt', 'config/environments/test.rb', 'Rails.application.configure do')
 
-puts 'Adding Bootstrap styling for forms'
+puts 'Adding Bootstrap styling for forms, errors, and alerts'
 InsertFromFile.add_end('mod-07-01-custom_scss.txt', 'app/assets/stylesheets/custom.scss')
-
-puts 'Updating .rubocop.yml (Style/CommentIndentation)'
-InsertFromFile.add_after('mod-07-01-rubocop.txt', '.rubocop.yml', '# END: Style/ClassAndModuleChildren')
 
 puts 'Updating .rubocop.yml (Style/ClassAndModuleChildren)'
 LineContaining.add_before('# END: Style/ClassAndModuleChildren', '    - app/controllers/users/*', '.rubocop.yml')
