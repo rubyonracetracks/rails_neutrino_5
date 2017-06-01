@@ -1,0 +1,56 @@
+# Read about fixtures at
+# http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+elle_woods: 
+  username: 'ewoods'
+  last_name: 'Woods'
+  first_name: 'Elle'
+  email: 'elle_woods@example.com'
+  super: true
+  encrypted_password: <%= Admin.new.send(:password_digest, 'endorphins') %>
+  confirmed_at: <%= Time.zone.now %>
+
+vivian_kensington:
+  username: 'vkensington'
+  last_name: 'Kensington'
+  first_name: 'Vivian'
+  email: 'vivian_kensingston@example.com'
+  super: true
+  encrypted_password: <%= Admin.new.send(:password_digest, 'nice outfit') %>
+  confirmed_at: <%= Time.zone.now %>
+
+emmett_richmond:
+  username: 'erichmond'
+  last_name: 'Richmond'
+  first_name: 'Emmett'
+  email: 'emmett_richmond@example.com'
+  super: false
+  encrypted_password: <%= Admin.new.send(:password_digest, "new representation") %>
+  confirmed_at: <%= Time.zone.now %>
+  
+paulette_bonafonte:
+  username: 'pbonafonte'
+  last_name: 'Bonafonte'
+  first_name: 'Paulette'
+  email: 'paulette_bonafonte@example.com'
+  super: false
+  encrypted_password: <%= Admin.new.send(:password_digest, "Neptune's Beauty Nook") %>
+  confirmed_at: <%= Time.zone.now %>
+  
+professor_callahan:
+  username: 'pcallahan'
+  last_name: 'Callahan'
+  first_name: 'Professor'
+  email: 'professor_callahan@example.com'
+  super: true
+  encrypted_password: <%= Admin.new.send(:password_digest, 'Titanic guy') %>
+  confirmed_at: <%= Time.zone.now %>
+
+warner_huntington:
+  username: 'whuntington'
+  last_name: 'Huntington'
+  first_name: 'Warner'
+  email: 'warner_huntington@example.com'
+  super: false
+  encrypted_password: <%= Admin.new.send(:password_digest, 'need someone serious') %>
+  confirmed_at: <%= Time.zone.now %>
