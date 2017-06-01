@@ -1,0 +1,7 @@
+
+# BEGIN: gems used in db/seeds.rb
+group :test, :development do
+  gem 'faker' # Generates fake data used for seeding the database
+  gem 'ruby-progressbar' # Provides a progress bar to be used during long loop actions
+end
+# END: gems used in db/seeds.rb
