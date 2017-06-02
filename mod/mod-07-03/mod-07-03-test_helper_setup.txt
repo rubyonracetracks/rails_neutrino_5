@@ -1,0 +1,5 @@
+  # Execute before each integration test
+  def setup
+    setup_universal
+  end
+
