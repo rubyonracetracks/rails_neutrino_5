@@ -1,0 +1,8 @@
+
+def begin_user_password_reset(str_login)
+  visit root_path
+  click_on 'Login'
+  click_on 'Forgot your password?'
+  fill_in('Login', with: str_login)
+  click_on 'Send me reset password instructions'
+end
