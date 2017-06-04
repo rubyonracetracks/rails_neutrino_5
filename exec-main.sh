@@ -97,5 +97,5 @@ echo '##########################################'
 echo 'The new app has been created from scratch!'
 echo ''
 echo 'Enter the following command:'
-echo "cd $DIR_APP && sh build_fast.sh"
+echo "cd $DIR_APP && sh neutrino.sh"
 

@@ -1,11 +1,12 @@
 #!/bin/bash
 
 # AGENDA
-# * Update test_code.sh
-# * Update git_check.sh
-# * Add brakeman, bundler-audit, gemsurance, rails_best_practices, and sandi_meter
-# * Generate the initial config/rails_best_practices.yml
-# * Update .rubocop.yml to omit files in the tmp directory
+# * Update test_code.sh.
+# * Update git_check.sh.
+# * Add brakeman, bundler-audit, gemsurance, rails_best_practices, and sandi_meter.
+# * Generate the initial config/rails_best_practices.yml.
+# * Update .rubocop.yml to omit files in the tmp directory.
+# * Add neutrino.sh.
 
 echo '###############################'
 echo 'Unit 1 Chapter 4: Other Metrics'

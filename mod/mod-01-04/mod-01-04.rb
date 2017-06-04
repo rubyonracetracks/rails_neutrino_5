@@ -24,5 +24,8 @@ system('bundle install --quiet')
 puts 'Adding test_code.sh to all.sh'
 StringInFile.add_end("sh test_code.sh\n", 'all.sh')
 
+puts 'Adding neutrino.sh'
+system('mv mod-01-04-neutrino.sh neutrino.sh')
+
 puts 'Updating .rubocop.yml to omit files in the tmp directory'
 InsertFromFile.add_before('mod-01-04-rubocop.txt', '.rubocop.yml', '# END: AllCops')
