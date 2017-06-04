@@ -1,0 +1,6 @@
+
+# BEGIN: Layout/TrailingWhitespace
+Layout/TrailingWhitespace:
+  Exclude:
+    - config/routes.rb
+# END: Layout/TrailingWhitespace
