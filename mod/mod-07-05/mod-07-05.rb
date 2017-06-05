@@ -19,4 +19,4 @@ puts 'Updating config/routes.rb'
 InsertFromFile.replace_between('mod-07-05-routes.txt', 'config/routes.rb', '# BEGIN: user section', '# END: user section')
 
 puts 'Updating app/views/users/confirmations/new.html.erb'
-system('mv mod-07-05-new-html.erb app/views/users/confirmations/new.html.erb')
+system('mv mod-07-05-new.html.erb app/views/users/confirmations/new.html.erb')
