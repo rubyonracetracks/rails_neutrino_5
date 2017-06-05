@@ -63,33 +63,41 @@ cd $DIR_APP && sh mod_app.sh '01-01'
 cd $DIR_APP && sh mod_app.sh '01-02'
 cd $DIR_APP && sh mod_app.sh '01-03'
 cd $DIR_APP && sh mod_app.sh '01-04'
+
 cd $DIR_APP && sh mod_app.sh '02-01'
 cd $DIR_APP && sh mod_app.sh '02-02'
 cd $DIR_APP && sh mod_app.sh '02-03'
 cd $DIR_APP && sh mod_app.sh '02-04'
+
 cd $DIR_APP && sh mod_app.sh '03-01'
 cd $DIR_APP && sh mod_app.sh '03-02'
 cd $DIR_APP && sh mod_app.sh '03-03'
+
 cd $DIR_APP && sh mod_app.sh '04-01'
 cd $DIR_APP && sh mod_app.sh '04-02'
 cd $DIR_APP && sh mod_app.sh '04-03'
 cd $DIR_APP && sh mod_app.sh '04-04'
+
 cd $DIR_APP && sh mod_app.sh '05-01'
 cd $DIR_APP && sh mod_app.sh '05-02'
 cd $DIR_APP && sh mod_app.sh '05-03'
 cd $DIR_APP && sh mod_app.sh '05-04'
 cd $DIR_APP && sh mod_app.sh '05-05'
+
 cd $DIR_APP && sh mod_app.sh '06-01'
 cd $DIR_APP && sh mod_app.sh '06-02'
 cd $DIR_APP && sh mod_app.sh '06-03'
 cd $DIR_APP && sh mod_app.sh '06-04'
 cd $DIR_APP && sh mod_app.sh '06-05'
+
 cd $DIR_APP && sh mod_app.sh '07-01'
 cd $DIR_APP && sh mod_app.sh '07-02'
 cd $DIR_APP && sh mod_app.sh '07-03'
 cd $DIR_APP && sh mod_app.sh '07-04'
 cd $DIR_APP && sh mod_app.sh '07-05'
 cd $DIR_APP && sh mod_app.sh '07-06'
+
+cd $DIR_APP && sh mod_app.sh '08-01'
 
 # Remove the mod* files from the new app
 rm -rf $DIR_APP/mod
