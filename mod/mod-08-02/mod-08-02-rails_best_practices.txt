@@ -1,0 +1,2 @@
+RemoveUnusedMethodsInControllersCheck: { except_methods: [],
+                                         ignored_files: ['app/controllers/admins/registrations_controller'] }

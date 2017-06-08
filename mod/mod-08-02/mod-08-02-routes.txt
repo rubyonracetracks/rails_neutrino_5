@@ -1,0 +1,4 @@
+  # BEGIN: admin
+  devise_for :admins,
+             controllers: { registrations: 'admins/registrations' }
+  # END: admin
