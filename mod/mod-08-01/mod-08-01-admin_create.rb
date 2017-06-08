@@ -1,5 +1,3 @@
-#!/usr/bin/env ruby
-
 arg_username = ''
 arg_email = ''
 arg_first_name = ''
@@ -60,7 +58,7 @@ puts "Enter 'Y' or 'y' to answer yes."
 arg_super = gets.chomp
 
 puts
-if arg_super == 'y' || arg_super == 'Y'
+if %w[Y y].include? arg_super
   Admin.create!(username: arg_username, last_name: arg_last_name,
                 first_name: arg_first_name, email: arg_email,
                 password: arg_pwd, password_confirmation: arg_pwd_conf,
