@@ -43,7 +43,7 @@ StringInFile.add_beginning("#\n", 'app/controllers/users/registrations_controlle
 
 puts 'Updating app/controllers/users/registrations_controller.rb'
 StringInFile.replace('# before_action :configure_sign_up_params', 'before_action :configure_sign_up_params', 'app/controllers/users/registrations_controller.rb')
-InsertFromFile.add_before('mod-07-01-registrations_controller.rb', 'app/controllers/users/registrations_controller.rb', '# def configure_sign_up_params')
+InsertFromFile.add_before('mod-07-01-registrations_controller.txt', 'app/controllers/users/registrations_controller.rb', '# def configure_sign_up_params')
 
 puts 'Updating config/environments/development.rb and config/environments/test.rb'
 InsertFromFile.add_after('mod-07-01-development.txt', 'config/environments/development.rb', 'Rails.application.configure do')
