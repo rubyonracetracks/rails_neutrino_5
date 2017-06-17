@@ -1,4 +1,4 @@
-  test 'Cannot sign up as admin' do
+  test 'Prevent signing up as admin' do
     visit new_admin_registration_path
 
     # Flash message

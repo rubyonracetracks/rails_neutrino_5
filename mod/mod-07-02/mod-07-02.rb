@@ -13,7 +13,7 @@ LineContaining.delete('  # end', 'test/integration/user_login_test.rb')
 LineContaining.delete_between('class UserLoginTest < ActionDispatch::IntegrationTest', 'end', 'test/integration/user_login_test.rb')
 InsertFromFile.add_after('mod-07-02-user_login_test.txt', 'test/integration/user_login_test.rb', 'class UserLoginTest < ActionDispatch::IntegrationTest')
 StringInFile.add_beginning("# rubocop:disable Metrics/AbcSize", 'test/integration/user_login_test.rb')
-StringInFile.add_end("\n# rubocop:enable Metrics/AbcSize", 'test/integration/user_login_test.rb')
+StringInFile.add_end("# rubocop:enable Metrics/AbcSize", 'test/integration/user_login_test.rb')
 
 puts 'Adding the login_user function to test/test_helper.rb'
 InsertFromFile.add_end('mod-07-02-test_helper.txt', 'test/test_helper.rb')
