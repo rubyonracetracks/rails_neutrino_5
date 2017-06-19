@@ -12,7 +12,6 @@ system('git rm test/integration/test1_test.rb')
 system('git rm test/integration/test2_test.rb')
 system('git rm test/integration/test3_test.rb')
 
-system('sh kill_spring.sh')
 puts 'Adding integration tests'
 system('rails generate integration_test static_pages')
 system('wait')

@@ -17,13 +17,11 @@ system('bundle install --quiet')
 puts 'Adding the Capybara setup to test/test_helper.rb'
 InsertFromFile.add_end('mod-03-03-add_to_test_helper.txt', 'test/test_helper.rb')
 
-system('sh kill_spring.sh')
 puts 'Adding second integration test'
 system('rails generate integration_test test2')
 system('wait')
 InsertFromFile.add_after('mod-03-03-test2.txt', 'test/integration/test2_test.rb', 'class Test2Test < ActionDispatch::IntegrationTest')
 
-system('sh kill_spring.sh')
 puts 'Adding third integration test'
 system('rails generate integration_test test3')
 system('wait')

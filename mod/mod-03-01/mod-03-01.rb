@@ -22,7 +22,6 @@ StringInFile.add_end("test/html_reports/\n", '.gitignore')
 puts 'Adding test/rake_rerun_reporter.rb'
 system('mv mod-03-01-rake_run_reporter.rb test/rake_rerun_reporter.rb')
 
-system('sh kill_spring.sh')
 puts 'Adding first integration test'
 system('rails generate integration_test test1')
 system('wait')
