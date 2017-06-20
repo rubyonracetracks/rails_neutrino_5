@@ -9,9 +9,12 @@ StringInFile.add_end("\n", 'Gemfile')
 StringInFile.add_end("gem 'devise' # Provides admin/user authentication\n", 'Gemfile')
 puts 'bundle install --quiet'
 system('bundle install --quiet')
+
 StringInFile.replace("gem 'devise'", GemfileEntry.active('devise'), 'Gemfile')
 puts 'bundle install --quiet'
 system('bundle install --quiet')
+
+system('sh kill_spring.sh')
 
 puts 'rails generate devise:install'
 system('rails generate devise:install')

@@ -31,6 +31,7 @@ mv mod-01-02-git_check.sh git_check.sh
 
 echo 'Adding kill_spring.sh'
 mv mod-01-02-kill_spring.sh kill_spring.sh
+sh kill_spring.sh
 
 echo 'Adding log_test_app.sh'
 mv mod-01-02-log_test_app.sh log_test_app.sh

@@ -2,7 +2,6 @@
 
 # AGENDA
 # * Add integration tests for allowing users to edit their parameters
-# * 
 
 echo '###########################'
 echo 'Unit 7 Chapter 3: User Edit'
