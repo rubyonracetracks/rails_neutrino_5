@@ -13,6 +13,7 @@ DATE1=$(date +%s)
 cp mod/mod-$CHAPTER/* $PWD
 SCRIPT="mod-$CHAPTER.sh"
 sh $SCRIPT
+rm mod-$CHAPTER-*
 
 DATE2=$(date +%s)
 
