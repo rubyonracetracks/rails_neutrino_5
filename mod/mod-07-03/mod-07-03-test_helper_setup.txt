@@ -1,4 +1,4 @@
-  # Execute before each integration test
+  # Execute before each integration and controller test
   def setup
     setup_universal
   end

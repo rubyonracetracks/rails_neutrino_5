@@ -1,0 +1,86 @@
+  # BEGIN: SHOW
+  # BEGIN: show-public
+  test 'should redirect profile page when not logged in' do
+    get user_path(@u1)
+    assert_redirected_to root_path
+    get user_path(@u2)
+    assert_redirected_to root_path
+    get user_path(@u3)
+    assert_redirected_to root_path
+    get user_path(@u4)
+    assert_redirected_to root_path
+    get user_path(@u5)
+    assert_redirected_to root_path
+    get user_path(@u6)
+    assert_redirected_to root_path
+    get user_path(@u7)
+    assert_redirected_to root_path
+  end
+  # END: show-public
+
+  # BEGIN: show-other_users
+  test 'should redirect users from profiles other than their own' do
+    sign_in @u1, scope: :user
+    get user_path(@u2)
+    assert_redirected_to root_path
+    get user_path(@u3)
+    assert_redirected_to root_path
+    get user_path(@u4)
+    assert_redirected_to root_path
+    get user_path(@u5)
+    assert_redirected_to root_path
+    get user_path(@u6)
+    assert_redirected_to root_path
+    get user_path(@u7)
+    assert_redirected_to root_path
+  end
+  # END: show-other_users
+
+  # BEGIN: show-that_user
+  test 'should not redirect users from their own profiles' do
+    sign_in @u1, scope: :user
+    get user_path(@u1)
+    assert :success
+  end
+  # END: show-that_user
+
+  # BEGIN: show-regular_admin
+  test 'should not redirect profile page when logged in as a regular admin' do
+    sign_in @a4, scope: :admin
+    get user_path(@u1)
+    assert :success
+    get user_path(@u2)
+    assert :success
+    get user_path(@u3)
+    assert :success
+    get user_path(@u4)
+    assert :success
+    get user_path(@u5)
+    assert :success
+    get user_path(@u6)
+    assert :success
+    get user_path(@u7)
+    assert :success
+  end
+  # END: show-regular_admin
+
+  # BEGIN: show-super_admin
+  test 'should not redirect profile page when logged in as a super admin' do
+    sign_in @a1, scope: :admin
+    get user_path(@u1)
+    assert :success
+    get user_path(@u2)
+    assert :success
+    get user_path(@u3)
+    assert :success
+    get user_path(@u4)
+    assert :success
+    get user_path(@u5)
+    assert :success
+    get user_path(@u6)
+    assert :success
+    get user_path(@u7)
+    assert :success
+  end
+  # END: show-super_admin
+  # END: SHOW

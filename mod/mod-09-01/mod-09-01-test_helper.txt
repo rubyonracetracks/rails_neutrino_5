@@ -1,0 +1,3 @@
+
+  # Needed to allow sign_in to work in controller tests
+  include Devise::Test::IntegrationHelpers

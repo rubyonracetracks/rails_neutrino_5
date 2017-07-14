@@ -105,6 +105,8 @@ cd $DIR_APP && sh mod_app.sh '08-05'
 cd $DIR_APP && sh mod_app.sh '08-06'
 cd $DIR_APP && sh mod_app.sh '08-07'
 
+cd $DIR_APP && sh mod_app.sh '09-01'
+
 # Remove the mod* files from the new app
 rm -rf $DIR_APP/mod
 rm $DIR_APP/mod*
