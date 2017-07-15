@@ -7,11 +7,11 @@ require 'capybara/email'
 # The ActionDispatch::IntegrationTest class applies to
 # integration tests AND controller tests.
 class ActionDispatch::IntegrationTest
-  # Make the Capybara DSL available in all integration tests
+  # Make the Capybara DSL available
   include Capybara::DSL
   include Capybara::Email::DSL
 
-  # Reset sessions and driver after each test
+  # Reset sessions and driver after each integration and controller test
   def teardown
     teardown_universal
   end
