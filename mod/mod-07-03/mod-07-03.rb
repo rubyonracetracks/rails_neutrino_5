@@ -29,7 +29,7 @@ StringInFile.add_end("# rubocop:enable Metrics/MethodLength\n", 'test/integratio
 StringInFile.add_end("# rubocop:enable Metrics/ParameterLists\n", 'test/integration/user_edit_test.rb')
 
 puts 'Updating test/test_helper.rb'
-InsertFromFile.add_before('mod-07-03-test_helper_setup.txt', 'test/test_helper.rb', '# Reset sessions and driver after each test')
+InsertFromFile.add_before('mod-07-03-test_helper_setup.txt', 'test/test_helper.rb', '# Reset sessions and driver after each integration and controller test')
 InsertFromFile.add_end('mod-07-03-test_helper_end.txt', 'test/test_helper.rb')
 
 puts 'Updating app/views/layouts/_header.html.erb'

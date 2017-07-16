@@ -6,6 +6,8 @@
 # * Add integration tests for new admin registrations
 # * Make the changes needed to allow the tests to pass
 
+TOGGLE_OUTLINE=$1
+
 echo '##############################'
 echo 'Unit 8 Chapter 2: Admin Signup'
 echo '##############################'
@@ -14,7 +16,13 @@ git checkout -b 08-02-admin_sign_up
 
 ruby mod-08-02.rb
 
-sh outline-short.sh
+if [ $TOGGLE_OUTLINE = 'outline' ]
+then
+  sh outline-short.sh
+else
+  echo 'Skipping the outlining process to save time'
+fi
+
 git add .
 git commit -m "Prevented the general public from signing up as admins"
 git checkout master
