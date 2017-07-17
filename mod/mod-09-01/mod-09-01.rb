@@ -21,6 +21,9 @@ InsertFromFile.add_after('mod-09-01-test_helper.txt', 'test/test_helper.rb', 'in
 puts 'Updating config/routes.rb'
 InsertFromFile.add_before('mod-09-01-routes.txt', 'config/routes.rb', '# END: user section')
 
+puts "Removing get 'users/new' from config/routes.rb"
+LineContaining.delete_between('Rails.application.routes.draw do', '# BEGIN: admin section', 'config/routes.rb')
+
 puts 'Updating app/controllers/users_controller.rb'
 StringInFile.replace('  end', '', 'app/controllers/users_controller.rb')
 LineContaining.delete_between('class UsersController < ApplicationController', 'end', 'app/controllers/users_controller.rb')

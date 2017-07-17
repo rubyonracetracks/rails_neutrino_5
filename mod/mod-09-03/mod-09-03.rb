@@ -3,6 +3,7 @@
 require 'insert_from_file'
 require 'line_containing'
 require 'string_in_file'
+require 'gemfile_entry'
 
 puts 'Adding pagination gems to the Gemfile'
 InsertFromFile.add_end('mod-09-03-Gemfile.txt', 'Gemfile')
@@ -26,5 +27,3 @@ InsertFromFile.add_before('mod-09-03-users_controller_private.txt', 'app/control
 
 puts 'touch app/views/users/index.html.erb'
 system('touch app/views/users/index.html.erb')
-
-puts 'Updating config/rails_best_practices.yml'

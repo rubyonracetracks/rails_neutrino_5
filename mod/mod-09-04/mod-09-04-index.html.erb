@@ -1,0 +1,14 @@
+<% provide(:title, 'User Index') %>
+
+<h1>User Index</h1>
+<%= will_paginate %>
+<table class="users">
+  <tr>
+    <td><b>Last Name</b></td>
+    <td><b>First Name</b></td>
+    <td><b>Username</b></td>
+    <td><b>Email</b></td>
+  </tr>
+  <%= render @users %>
+</table>
+<%= will_paginate %>
