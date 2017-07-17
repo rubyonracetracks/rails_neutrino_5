@@ -1,0 +1,4 @@
+
+# Pagination gems
+gem 'bootstrap-will_paginate' # Twitter Bootstrap for pagination
+gem 'will_paginate' # For pagination

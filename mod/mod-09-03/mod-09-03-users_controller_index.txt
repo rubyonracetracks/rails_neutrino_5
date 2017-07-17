@@ -1,0 +1,6 @@
+
+  # BEGIN: index
+  def index
+    @users = User.paginate(page: params[:page])
+  end
+  # END: index
