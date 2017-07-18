@@ -1,0 +1,3 @@
+  resources :users do
+    collection { post :search, to: 'users#index' }
+  end

@@ -1,5 +1,6 @@
 #
 module ApplicationHelper
+  # BEGIN: full_title
   # Returns the full title on a per-page basis
   def full_title(page_title = '')
     base_title = 'Generic App Template'
@@ -9,4 +10,5 @@ module ApplicationHelper
       page_title + ' | ' + base_title
     end
   end
+  # END: full_title
 end
