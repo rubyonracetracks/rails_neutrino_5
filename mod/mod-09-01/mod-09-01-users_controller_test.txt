@@ -18,7 +18,7 @@
   end
   # END: show-public
 
-  # BEGIN: show-other_users
+  # BEGIN: show-other_user
   test 'should redirect users from profiles other than their own' do
     sign_in @u1, scope: :user
     get user_path(@u2)
@@ -34,15 +34,15 @@
     get user_path(@u7)
     assert_redirected_to root_path
   end
-  # END: show-other_users
+  # END: show-other_user
 
-  # BEGIN: show-that_user
+  # BEGIN: show-self
   test 'should not redirect users from their own profiles' do
     sign_in @u1, scope: :user
     get user_path(@u1)
     assert :success
   end
-  # END: show-that_user
+  # END: show-self
 
   # BEGIN: show-regular_admin
   test 'should not redirect profile page when logged in as a regular admin' do

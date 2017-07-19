@@ -1,0 +1,44 @@
+
+  # BEGIN: DELETE
+  # BEGIN: delete-public
+  test 'should not allow visitor to delete user' do
+    delete user_path(@u7)
+    assert_redirected_to root_path
+  end
+  # END: delete-public
+
+  # BEGIN: delete-other_user
+  test 'should not allow user to delete another user' do
+    sign_in @u1, scope: :user
+    delete user_path(@u7)
+    assert_redirected_to root_path
+  end
+  # END: delete-other_user
+
+  # BEGIN: delete-self
+  # NOTE: User can delete self through edit registration form.
+  test 'should not allow user to delete self' do
+    sign_in @u7, scope: :user
+    delete user_path(@u7)
+    assert_redirected_to root_path
+  end
+  # END: delete-self
+
+  # BEGIN: delete-regular_admin
+  test 'should allow regular admin to delete user' do
+    sign_in @a4, scope: :admin
+    delete user_path(@u7)
+    assert :success
+    assert_redirected_to users_path
+  end
+  # END: delete-regular_admin
+
+  # BEGIN: delete-super_admin
+  test 'should allow super admin to delete user' do
+    sign_in @a1, scope: :admin
+    delete user_path(@u7)
+    assert :success
+    assert_redirected_to users_path
+  end
+  # END: delete-super_admin
+  # END: DELETE
