@@ -1,0 +1,5 @@
+
+  def may_index_admin
+    may_show_admin
+  end
+  helper_method :may_index_admin

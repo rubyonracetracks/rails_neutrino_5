@@ -1,0 +1,6 @@
+
+  # BEGIN: index
+  def index
+    @admins = Admin.paginate(page: params[:page])
+  end
+  # END: index

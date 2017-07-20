@@ -1,9 +1,9 @@
 #!/bin/bash
 
-# User show view
+# Admin show view
 
 # AGENDA
-# * Display the user profile web page
+# * Display the admin profile web page
 
 TOGGLE_OUTLINE=$1
 
