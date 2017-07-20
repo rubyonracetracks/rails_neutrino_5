@@ -1,0 +1,1 @@
+              <li><%= link_to "Your Profile", admin_path(current_admin) %></li>
