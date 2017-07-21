@@ -113,6 +113,7 @@ cd $DIR_APP && sh mod_app.sh '10-01' $TOGGLE_OUTLINE
 cd $DIR_APP && sh mod_app.sh '10-02' $TOGGLE_OUTLINE
 cd $DIR_APP && sh mod_app.sh '10-03' $TOGGLE_OUTLINE
 cd $DIR_APP && sh mod_app.sh '10-04' $TOGGLE_OUTLINE
+cd $DIR_APP && sh mod_app.sh '10-05' $TOGGLE_OUTLINE
 
 # Remove the mod* files from the new app
 rm -rf $DIR_APP/mod

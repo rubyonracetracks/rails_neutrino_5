@@ -1,0 +1,6 @@
+
+  def destroy
+    Admin.find(params[:id]).destroy
+    flash[:success] = 'Admin deleted'
+    redirect_to(admins_path)
+  end
