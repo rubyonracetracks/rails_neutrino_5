@@ -22,7 +22,7 @@
   # BEGIN: delete-self-regular
   # NOTE: regular admin can delete self through edit registration form
   test 'should not allow regular admin to delete self' do
-    sign_in @a6, scope: :user
+    sign_in @a6, scope: :admin
     delete admin_path(@a6)
     assert_redirected_to root_path
   end
@@ -31,7 +31,7 @@
   # BEGIN: delete-self-super
   # NOTE: super admin can delete self through edit registration form
   test 'should not allow super admin to delete self' do
-    sign_in @a5, scope: :user
+    sign_in @a5, scope: :admin
     delete admin_path(@a5)
     assert_redirected_to root_path
   end
@@ -62,7 +62,7 @@
   # END: delete-super-super
 
   # BEGIN: delete-super_regular
-  test 'should allow super admin to delete user' do
+  test 'should allow super admin to delete regular admin' do
     sign_in @a5, scope: :admin
     delete admin_path(@a6)
     assert :success
