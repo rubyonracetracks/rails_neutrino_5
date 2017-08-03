@@ -5,7 +5,7 @@ require 'gemfile_entry'
 require 'insert_from_file'
 
 puts 'Adding figaro, line_containing, remove_double_blank, and string_in_file to the Gemfile'
-InsertFromFile.add_end('mod-06-01-Gemfile.txt', 'Gemfile')
+InsertFromFile.add_end('mod-03B-01-Gemfile.txt', 'Gemfile')
 puts 'bundle install --quiet'
 system('bundle install --quiet')
 StringInFile.replace("gem 'figaro'", "#{GemfileEntry.active('figaro')}", "Gemfile")
