@@ -9,14 +9,14 @@
 # * Remove the original static pages and associated tests.
 
 echo '###################################'
-echo 'Unit 4 Chapter 3: Static Page Views'
+echo 'Unit 5 Chapter 3: Static Page Views'
 echo '###################################'
 
-git checkout -b 04-03-static_page_views
+git checkout -b 05-03-static_page_views
 
-ruby mod-04-03.rb
+ruby mod-05-03.rb
 
 git add .
 git commit -m "Created static page views"
 git checkout master
-git merge 04-03-static_page_views
+git merge 05-03-static_page_views

@@ -17,10 +17,10 @@ system('rails generate integration_test static_pages')
 system('wait')
 StringInFile.replace('  # end', '', 'test/integration/static_pages_test.rb')
 LineContaining.delete_between('class StaticPagesTest < ActionDispatch::IntegrationTest', 'end', 'test/integration/static_pages_test.rb')
-InsertFromFile.add_after('mod-04-03-static_pages_test.txt', 'test/integration/static_pages_test.rb', 'class StaticPagesTest < ActionDispatch::IntegrationTest')
+InsertFromFile.add_after('mod-05-03-static_pages_test.txt', 'test/integration/static_pages_test.rb', 'class StaticPagesTest < ActionDispatch::IntegrationTest')
 
 puts 'Configuring all configuration tests to automatically load the title helper'
-InsertFromFile.add_after('mod-04-03-test_helper.txt', 'test/test_helper.rb', 'class ActionDispatch::IntegrationTest')
+InsertFromFile.add_after('mod-05-03-test_helper.txt', 'test/test_helper.rb', 'class ActionDispatch::IntegrationTest')
 
 puts 'Adding email_munger to the Gemfile'
 StringInFile.add_end("\n", 'Gemfile')
@@ -32,25 +32,25 @@ puts 'bundle install --quiet'
 system('bundle install --quiet')
 
 puts 'Updating app/views/layouts/application.html.erb'
-system('mv mod-04-03-application.html.erb app/views/layouts/application.html.erb')
+system('mv mod-05-03-application.html.erb app/views/layouts/application.html.erb')
 
 puts 'Adding the header'
-system('mv mod-04-03-header.html.erb app/views/layouts/_header.html.erb')
+system('mv mod-05-03-header.html.erb app/views/layouts/_header.html.erb')
 
 puts 'Adding the footer'
-system('mv mod-04-03-footer.html.erb app/views/layouts/_footer.html.erb')
+system('mv mod-05-03-footer.html.erb app/views/layouts/_footer.html.erb')
 
 puts 'Adding the shim'
-system('mv mod-04-03-shim.html.erb app/views/layouts/_shim.html.erb')
+system('mv mod-05-03-shim.html.erb app/views/layouts/_shim.html.erb')
 
 puts 'Downloading the Ruby on Rails logo'
 system('curl -o app/assets/images/rails.png -OL railstutorial.org/rails.png')
 
 puts 'Updating the home page'
-system('mv mod-04-03-home.html.erb app/views/static_pages/home.html.erb')
+system('mv mod-05-03-home.html.erb app/views/static_pages/home.html.erb')
 
 puts 'Updating the about page'
-system('mv mod-04-03-about.html.erb app/views/static_pages/about.html.erb')
+system('mv mod-05-03-about.html.erb app/views/static_pages/about.html.erb')
 
 puts 'Updating the contact page'
-system('mv mod-04-03-contact.html.erb app/views/static_pages/contact.html.erb')
+system('mv mod-05-03-contact.html.erb app/views/static_pages/contact.html.erb')

@@ -11,14 +11,14 @@
 # This will be resolved in a later chapter.
 
 echo '########################################'
-echo 'Unit 4 Chapter 2: Static Page Controller'
+echo 'Unit 5 Chapter 2: Static Page Controller'
 echo '########################################'
 
-git checkout -b 04-02-static_page_controller
+git checkout -b 05-02-static_page_controller
 
-ruby mod-04-02.rb
+ruby mod-05-02.rb
 
 git add .
 git commit -m "Added static pages controller"
 git checkout master
-git merge 04-02-static_page_controller
+git merge 05-02-static_page_controller
