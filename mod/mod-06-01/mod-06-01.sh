@@ -8,18 +8,18 @@
 # * Change the email address in config/initializers/devise.rb to somebody@rubyonracetracks.com
 
 echo '########################################'
-echo 'UNIT 5: USER/ADMIN AUTHENTICATION MODELS'
+echo 'UNIT 6: USER/ADMIN AUTHENTICATION MODELS'
 echo '########################################'
 
 echo '########################'
-echo 'Unit 5 Chapter 1: Devise'
+echo 'Unit 6 Chapter 1: Devise'
 echo '########################'
 
-git checkout -b 05-01-devise
+git checkout -b 06-01-devise
 
-ruby mod-05-01.rb
+ruby mod-06-01.rb
 
 git add .
 git commit -m "Added and configured Devise"
 git checkout master
-git merge 05-01-devise
+git merge 06-01-devise

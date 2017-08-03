@@ -75,17 +75,16 @@ cd $DIR_APP && sh mod_app.sh '03B-03' $TOGGLE_OUTLINE
 cd $DIR_APP && sh mod_app.sh '03B-04' $TOGGLE_OUTLINE
 cd $DIR_APP && sh mod_app.sh '03B-05' $TOGGLE_OUTLINE
 
-
 cd $DIR_APP && sh mod_app.sh '04-01' $TOGGLE_OUTLINE
 cd $DIR_APP && sh mod_app.sh '04-02' $TOGGLE_OUTLINE
 cd $DIR_APP && sh mod_app.sh '04-03' $TOGGLE_OUTLINE
 cd $DIR_APP && sh mod_app.sh '04-04' $TOGGLE_OUTLINE
 
-cd $DIR_APP && sh mod_app.sh '05-01' $TOGGLE_OUTLINE
-cd $DIR_APP && sh mod_app.sh '05-02' $TOGGLE_OUTLINE
-cd $DIR_APP && sh mod_app.sh '05-03' $TOGGLE_OUTLINE
-cd $DIR_APP && sh mod_app.sh '05-04' $TOGGLE_OUTLINE
-cd $DIR_APP && sh mod_app.sh '05-05' $TOGGLE_OUTLINE
+cd $DIR_APP && sh mod_app.sh '06-01' $TOGGLE_OUTLINE
+cd $DIR_APP && sh mod_app.sh '06-02' $TOGGLE_OUTLINE
+cd $DIR_APP && sh mod_app.sh '06-03' $TOGGLE_OUTLINE
+cd $DIR_APP && sh mod_app.sh '06-04' $TOGGLE_OUTLINE
+cd $DIR_APP && sh mod_app.sh '06-05' $TOGGLE_OUTLINE
 
 cd $DIR_APP && sh mod_app.sh '07-01' $TOGGLE_OUTLINE
 cd $DIR_APP && sh mod_app.sh '07-02' $TOGGLE_OUTLINE
