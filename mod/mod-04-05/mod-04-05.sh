@@ -9,14 +9,14 @@
 # * Update the Gemfile.
 
 echo '#####################'
-echo 'Unit 3B Chapter 5: Pry'
+echo 'Unit 4 Chapter 5: Pry'
 echo '#####################'
 
-git checkout -b 03B-05-pry_rails
+git checkout -b 04-05-pry_rails
 
-ruby mod-03B-05.rb
+ruby mod-04-05.rb
 
 git add .
 git commit -m "Added pry_rails gem"
 git checkout master
-git merge 03B-05-pry_rails
+git merge 04-05-pry_rails

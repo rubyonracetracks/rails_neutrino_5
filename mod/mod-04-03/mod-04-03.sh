@@ -10,14 +10,14 @@
 # conflict with other gems sooner or later.
 
 echo '#############################'
-echo 'Unit 3B Chapter 3: MailCatcher'
+echo 'Unit 4 Chapter 3: MailCatcher'
 echo '#############################'
 
-git checkout -b 03B-03-mailcatcher
+git checkout -b 04-03-mailcatcher
 
-ruby mod-03B-03.rb
+ruby mod-04-03.rb
 
 git add .
 git commit -m "Added outlining gems and scripts"
 git checkout master
-git merge 03B-03-mailcatcher
+git merge 04-03-mailcatcher
