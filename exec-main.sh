@@ -74,6 +74,7 @@ cd $DIR_APP && sh mod_app.sh '04-02' $TOGGLE_OUTLINE
 cd $DIR_APP && sh mod_app.sh '04-03' $TOGGLE_OUTLINE
 cd $DIR_APP && sh mod_app.sh '04-04' $TOGGLE_OUTLINE
 cd $DIR_APP && sh mod_app.sh '04-05' $TOGGLE_OUTLINE
+cd $DIR_APP && sh mod_app.sh '04-06' $TOGGLE_OUTLINE
 
 cd $DIR_APP && sh mod_app.sh '05-01' $TOGGLE_OUTLINE
 cd $DIR_APP && sh mod_app.sh '05-02' $TOGGLE_OUTLINE
