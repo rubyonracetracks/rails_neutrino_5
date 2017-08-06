@@ -127,4 +127,7 @@ echo 'The new app has been created from scratch!'
 echo ''
 echo 'Enter the following command:'
 echo "cd $DIR_APP && sh neutrino.sh"
+echo ''
+echo 'Further instructions on what to do next are at'
+echo "$DIR_APP/README-to_do.txt"
 
