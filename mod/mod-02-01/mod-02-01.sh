@@ -6,6 +6,10 @@
 # * Grouping rails, pg, and nokogiri together in the Gemfile
 # * Pinning gems
 
+# NOTES
+# * In the Gemfile, the pg gem MUST be specified for the production environment.
+# * In the Gemfile, the sqlite3 gem must NOT be specified for the production environment. 
+#   (You may use it in the development and testing environments.)
 
 echo '##############################'
 echo 'UNIT 2: PRODUCTION ENVIRONMENT'

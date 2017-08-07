@@ -12,7 +12,12 @@
 #   sandbox.sh
 #   server.sh
 #   test_app.sh
-# * NOTE: credentials.sh was added prior to the execution of this script.
+
+# * NOTE 1: credentials.sh was added prior to the execution of this script.
+# * NOTE 2: The public/index.html page replaces the default Rails splash screen.
+# * NOTE 3: The default Rails splash screen does not work in the Heroku
+#           production environment.  If no index page is specified, the
+#           Heroku splash screen appears instead.
 
 echo '###############################'
 echo 'Unit 1 Chapter 2: Basic Scripts'
