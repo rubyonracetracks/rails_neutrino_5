@@ -31,6 +31,14 @@ cp mod-06-02-test_fixtures_initial.yml test/fixtures/admins.yml
 
 ruby mod-06-02.rb
 
+if [ $TOGGLE_OUTLINE = 'outline' ]
+then
+  sh outline-short.sh
+else
+  echo 'Skipping the outlining process to save time'
+fi
+
+
 git add .
 git commit -m "Created the user and admin models"
 git checkout master

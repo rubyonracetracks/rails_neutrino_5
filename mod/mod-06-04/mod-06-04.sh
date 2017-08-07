@@ -13,6 +13,13 @@ git checkout -b 06-04-admin-params
 
 ruby mod-06-04.rb
 
+if [ $TOGGLE_OUTLINE = 'outline' ]
+then
+  sh outline-short.sh
+else
+  echo 'Skipping the outlining process to save time'
+fi
+
 git add .
 git commit -m "Added admin parameters"
 git checkout master

@@ -13,6 +13,13 @@ git checkout -b 06-03-user-params
 
 ruby mod-06-03.rb
 
+if [ $TOGGLE_OUTLINE = 'outline' ]
+then
+  sh outline-short.sh
+else
+  echo 'Skipping the outlining process to save time'
+fi
+
 git add .
 git commit -m "Added user parameters"
 git checkout master

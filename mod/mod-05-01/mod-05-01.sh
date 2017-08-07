@@ -22,6 +22,13 @@ git checkout -b 05-01-title_helper
 mv 05-01-application_helper_test.rb test/helpers/application_helper_test.rb
 mv 05-01-application_helper.rb app/helpers/application_helper.rb
 
+if [ $TOGGLE_OUTLINE = 'outline' ]
+then
+  sh outline-short.sh
+else
+  echo 'Skipping the outlining process to save time'
+fi
+
 git add .
 git commit -m "Added title helper"
 git checkout master

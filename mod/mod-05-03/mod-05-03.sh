@@ -16,6 +16,13 @@ git checkout -b 05-03-static_page_views
 
 ruby mod-05-03.rb
 
+if [ $TOGGLE_OUTLINE = 'outline' ]
+then
+  sh outline-short.sh
+else
+  echo 'Skipping the outlining process to save time'
+fi
+
 git add .
 git commit -m "Created static page views"
 git checkout master

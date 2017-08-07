@@ -18,6 +18,13 @@ git checkout -b 05-02-static_page_controller
 
 ruby mod-05-02.rb
 
+if [ $TOGGLE_OUTLINE = 'outline' ]
+then
+  sh outline-short.sh
+else
+  echo 'Skipping the outlining process to save time'
+fi
+
 git add .
 git commit -m "Added static pages controller"
 git checkout master
