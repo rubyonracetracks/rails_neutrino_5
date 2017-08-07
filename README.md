@@ -8,11 +8,11 @@ complete a task that would require many hours of grueling work to do manually.
 * Enter the command "sh main.sh" to automatically create a new Rails app,
 starting from the "rails new" step.  The resulting app's name contains
 a time stamp.
-* Enter the command "sh short.sh" performs the same procedure as the
+* Enter the command "sh short.sh".  This performs the same procedure as the
 main.sh script does, but the resulting app's name is "tmp1".  This script
 is used in the development process, because skipping the outlining process
-in each chapter saves time.  However, it's better to use the main.sh script
-so that the app outlines are updated in each chapter.
+in each chapter saves time.  The longer main.sh script is used to generate
+the template app used by the Generic App gem.
 
 ## Naming
 A neutrino is type of subatomic particle with no electrical charge that
