@@ -4,11 +4,11 @@
 # conform to Heroku's restrictions.
 # NOTE 2: The name of the Rails app has the time of creation encoded to
 # ensure uniqueness.
-# NOTE 3: The time stamp in the Rails app name includes nanoseconds to
+# NOTE 3: The time stamp in the Rails app name includes milliseconds to
 # ensure uniqueness even if a large number of people (perhaps in a workshop)
 # using Rails Neutrino create apps simultaneously.
 
-DATE=`date +%Y%m%d%H%M-%N`
+DATE=`date +%Y%m%d-%H%M%S-%3N`
 
 APP_NAME=rails-$DATE
 
