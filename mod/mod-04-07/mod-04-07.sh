@@ -5,14 +5,15 @@
 # AGENDA
 # * Add upgrade_gems.sh
 
-echo '############################'
-echo 'Unit 4 Chapter 7: To Do List'
-echo '############################'
+echo '##############################'
+echo 'Unit 4 Chapter 7: README files'
+echo '##############################'
 
-git checkout -b 04-07-to_do
+git checkout -b 04-07-README_files
 mv mod-04-07-README-to_do.txt README-to_do.txt
+mv mod-04-07-README.md README.md
 
 git add .
-git commit -m "Added the to do list for Rails Neutrino"
+git commit -m "Added the README files"
 git checkout master
-git merge 04-07-to_do
+git merge 04-07-README_files

@@ -46,7 +46,7 @@ echo 'Copying credentials.sh, mod_app.sh, and the mod directory to the new app'
 cp $DIR_MAIN/credentials.sh $DIR_APP
 
 # Adding config/rails_neutrino_timestamp.txt
-echo $DATE > $DIR_APP/config/rails_neutrino_timestamp.txt
+echo $APP_NAME > $DIR_APP/config/rails_neutrino_timestamp.txt
 
 # Copy mod_app.sh to the new app's root directory
 cp $DIR_MAIN/mod_app.sh $DIR_APP
