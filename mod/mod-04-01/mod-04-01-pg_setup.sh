@@ -78,7 +78,7 @@ db_password_def="long_way_stinks"
 echo
 echo "Default password: ${db_password_def}"
 echo
-echo 'Do NOT use spaces or other whitespace characters in your password'
+echo 'Do NOT use spaces or other whitespace characters in your password.'
 echo
 echo 'Enter the desired password for the database:'
 read db_password_sel
