@@ -77,6 +77,9 @@ db_username=$(anti_blank $db_username_sel $db_username_def)
 db_password_def="long_way_stinks"
 echo
 echo "Default password: ${db_password_def}"
+echo
+echo 'Do NOT use spaces or other whitespace characters in your password'
+echo
 echo 'Enter the desired password for the database:'
 read db_password_sel
 db_password=$(anti_blank $db_password_sel $db_password_def)
