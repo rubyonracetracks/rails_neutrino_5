@@ -1,0 +1,6 @@
+
+# BEGIN: Lint/AssignmentInCondition
+Lint/AssignmentInCondition:
+  Exclude:
+    - app/models/user.rb
+# END: Lint/AssignmentInCondition

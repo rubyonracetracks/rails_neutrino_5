@@ -40,3 +40,9 @@ InsertFromFile.add_after('mod-08-03-admin.txt', 'app/models/admin.rb', 'class Ad
 
 puts 'Updating app/views/static_pages/home.html.erb'
 InsertFromFile.add_after('mod-08-03-home.txt', 'app/views/static_pages/home.html.erb', '<% # END: USER SECTION %>')
+
+puts 'Making the admin model exempt from the Lint/AssignmentInCondition cop'
+LineContaining.add_before('# END: Lint/AssignmentInCondition', '    - app/models/admin.rb', '.rubocop.yml')
+
+puts 'Making the admin model exempt from the Lint/AssignmentInCondition cop'
+LineContaining.add_before('# END: Metrics/LineLength', '    - app/models/admin.rb', '.rubocop.yml')
