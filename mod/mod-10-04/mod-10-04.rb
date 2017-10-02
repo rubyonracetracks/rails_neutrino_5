@@ -24,6 +24,3 @@ LineContaining.add_after('<li><%= link_to "User Index",   users_path %></li>', '
 puts 'Updating app/models/admin.rb'
 puts 'to list 50 admins per page'
 InsertFromFile.add_after('mod-10-04-admin.txt', 'app/models/admin.rb', 'class Admin < ApplicationRecord')
-
-puts 'Updating .rubocop.yml'
-LineContaining.add_before('# END: Style/SymbolArray', '    - config/routes.rb', '.rubocop.yml')
