@@ -19,8 +19,7 @@ echo '##############################'
 
 git checkout -b 05-01-title_helper
 
-mv 05-01-application_helper_test.rb test/helpers/application_helper_test.rb
-mv 05-01-application_helper.rb app/helpers/application_helper.rb
+ruby mod-05-01.rb
 
 if [ $TOGGLE_OUTLINE = 'outline' ]
 then

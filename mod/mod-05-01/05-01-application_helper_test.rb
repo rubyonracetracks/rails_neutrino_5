@@ -1,5 +1,3 @@
-# rubocop:disable Metrics/LineLength
-
 require 'test_helper'
 
 class ApplicationHelperTest < ActionView::TestCase
@@ -10,5 +8,3 @@ class ApplicationHelperTest < ActionView::TestCase
     assert_equal full_title('Michael Hartl'), 'Michael Hartl | Generic App Template'
   end
 end
-
-# rubocop:enable Metrics/LineLength
