@@ -13,7 +13,8 @@
   # rubocop:disable Metrics/AbcSize
   # rubocop:disable Metrics/MethodLength
   def check_index_enabled
-    visit users_path
+    visit root_path
+    click_on 'User Index'
     assert page.has_css?('title', text: full_title('User Index'),
                                   visible: false)
     assert page.has_css?('h1', text: 'User Index')
