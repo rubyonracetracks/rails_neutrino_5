@@ -2,9 +2,9 @@
 
 # This is a slightly longer version of testm.sh.
 
-echo '----------------------------'
-echo 'bundle exec brakeman -Aq -w2'
-bundle exec brakeman -Aq -w2
+echo '---------------------------------------'
+echo 'bundle exec brakeman -Aq -w2 --no-pager'
+bundle exec brakeman -Aq -w2 --no-pager
 
 echo '----------------------'
 echo 'bundle exec rubocop -D'

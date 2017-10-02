@@ -17,9 +17,9 @@ bundle install --quiet
 # -A: runs all checks
 # -q: output the report only; suppress information warnings
 # -w2: level 2 warnings (medium and high only)
-echo '----------------------------'
-echo 'bundle exec brakeman -Aq -w2'
-bundle exec brakeman -Aq -w2
+echo '---------------------------------------'
+echo 'bundle exec brakeman -Aq -w2 --no-pager'
+bundle exec brakeman -Aq -w2 --no-pager
 
 # Checks for compliance with Sandi Metz' four rules
 echo '-----------------------'
