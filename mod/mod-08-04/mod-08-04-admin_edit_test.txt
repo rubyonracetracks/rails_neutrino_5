@@ -58,19 +58,11 @@
     login_as(@a1, scope: :admin)
     visit root_path
     assert page.has_link?('Edit Settings', href: edit_admin_registration_path(@a1))
-    visit about_path
-    assert page.has_link?('Edit Settings', href: edit_admin_registration_path(@a1))
-    visit contact_path
-    assert page.has_link?('Edit Settings', href: edit_admin_registration_path(@a1))
   end
 
   test 'regular admin can access the page for editing settings' do
     login_as(@a4, scope: :admin)
     visit root_path
-    assert page.has_link?('Edit Settings', href: edit_admin_registration_path(@a4))
-    visit about_path
-    assert page.has_link?('Edit Settings', href: edit_admin_registration_path(@a4))
-    visit contact_path
     assert page.has_link?('Edit Settings', href: edit_admin_registration_path(@a4))
   end
 
