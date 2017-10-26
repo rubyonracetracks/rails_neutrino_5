@@ -38,17 +38,17 @@
   test 'should not redirect profile page when logged in as a regular admin' do
     sign_in @a4, scope: :admin
     get admin_path(@a1)
-    assert :success
+    assert_response :success
     get admin_path(@a2)
-    assert :success
+    assert_response :success
     get admin_path(@a3)
-    assert :success
+    assert_response :success
     get admin_path(@a4)
-    assert :success
+    assert_response :success
     get admin_path(@a5)
-    assert :success
+    assert_response :success
     get admin_path(@a6)
-    assert :success
+    assert_response :success
   end
   # END: show-regular_admin
 
@@ -56,17 +56,17 @@
   test 'should not redirect profile page when logged in as a super admin' do
     sign_in @a1, scope: :admin
     get admin_path(@a1)
-    assert :success
+    assert_response :success
     get admin_path(@a2)
-    assert :success
+    assert_response :success
     get admin_path(@a3)
-    assert :success
+    assert_response :success
     get admin_path(@a4)
-    assert :success
+    assert_response :success
     get admin_path(@a5)
-    assert :success
+    assert_response :success
     get admin_path(@a6)
-    assert :success
+    assert_response :success
   end
   # END: show-super_admin
   # END: SHOW

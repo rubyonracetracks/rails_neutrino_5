@@ -19,7 +19,7 @@
   test 'should not redirect index page when logged in as a regular admin' do
     sign_in @a4, scope: :admin
     get users_path
-    assert :success
+    assert_response :success
   end
   # END: index regular admin
 
@@ -27,7 +27,7 @@
   test 'should not redirect index page when logged in as a super admin' do
     sign_in @a1, scope: :admin
     get users_path
-    assert :success
+    assert_response :success
   end
   # END: index super admin
   # END: INDEX

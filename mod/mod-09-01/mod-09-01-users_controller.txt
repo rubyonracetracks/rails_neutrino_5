@@ -11,8 +11,12 @@
   private
 
   # BEGIN: private section
+  def correct_user
+    current_user == User.find(params[:id])
+  end
+
   def admin_or_correct_user
-    User.find(params[:id]) || admin_signed_in?
+    correct_user || admin_signed_in?
   end
   helper_method :admin_or_correct_user
 

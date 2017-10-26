@@ -40,7 +40,7 @@
   test 'should not redirect users from their own profiles' do
     sign_in @u1, scope: :user
     get user_path(@u1)
-    assert :success
+    assert_response :success
   end
   # END: show-self
 
@@ -48,19 +48,19 @@
   test 'should not redirect profile page when logged in as a regular admin' do
     sign_in @a4, scope: :admin
     get user_path(@u1)
-    assert :success
+    assert_response :success
     get user_path(@u2)
-    assert :success
+    assert_response :success
     get user_path(@u3)
-    assert :success
+    assert_response :success
     get user_path(@u4)
-    assert :success
+    assert_response :success
     get user_path(@u5)
-    assert :success
+    assert_response :success
     get user_path(@u6)
-    assert :success
+    assert_response :success
     get user_path(@u7)
-    assert :success
+    assert_response :success
   end
   # END: show-regular_admin
 
@@ -68,19 +68,19 @@
   test 'should not redirect profile page when logged in as a super admin' do
     sign_in @a1, scope: :admin
     get user_path(@u1)
-    assert :success
+    assert_response :success
     get user_path(@u2)
-    assert :success
+    assert_response :success
     get user_path(@u3)
-    assert :success
+    assert_response :success
     get user_path(@u4)
-    assert :success
+    assert_response :success
     get user_path(@u5)
-    assert :success
+    assert_response :success
     get user_path(@u6)
-    assert :success
+    assert_response :success
     get user_path(@u7)
-    assert :success
+    assert_response :success
   end
   # END: show-super_admin
   # END: SHOW
