@@ -72,4 +72,4 @@ input {
     text-align: left;
 }
 
-/* BEGIN: flash */
+/* END: flash */
