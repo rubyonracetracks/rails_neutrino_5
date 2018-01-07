@@ -39,7 +39,7 @@ StringInFile.add_beginning("#\n", 'app/controllers/users/confirmations_controlle
 StringInFile.add_beginning("#\n", 'app/controllers/users/sessions_controller.rb')
 StringInFile.add_beginning("#\n", 'app/controllers/users/passwords_controller.rb')
 StringInFile.add_beginning("#\n", 'app/controllers/users/unlocks_controller.rb')
-StringInFile.add_beginning("#\n", 'app/controllers/users/registrations_controller.rb')
+LineContaining.add_before('class Users::RegistrationsController < Devise::RegistrationsController', '#', 'app/controllers/users/registrations_controller.rb')
 
 puts 'Updating app/controllers/users/registrations_controller.rb'
 StringInFile.replace('# before_action :configure_sign_up_params', 'before_action :configure_sign_up_params', 'app/controllers/users/registrations_controller.rb')

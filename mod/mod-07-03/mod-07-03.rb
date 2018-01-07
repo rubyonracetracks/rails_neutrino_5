@@ -32,6 +32,9 @@ puts 'Updating test/test_helper.rb'
 InsertFromFile.add_before('mod-07-03-test_helper_setup.txt', 'test/test_helper.rb', '# Reset sessions and driver after each integration and controller test')
 InsertFromFile.add_end('mod-07-03-test_helper_end.txt', 'test/test_helper.rb')
 
+puts 'Updating .rubocop.yml'
+LineContaining.add_before('# END: Style/MixinUsage', '    - test/test_helper.rb', '.rubocop.yml')
+
 puts 'Updating app/views/layouts/_header.html.erb'
 InsertFromFile.replace_between('mod-07-03-header.txt', 'app/views/layouts/_header.html.erb', '<%-# BEGIN: USER SECTION -%>', '<%-# END: USER SECTION -%>')
 

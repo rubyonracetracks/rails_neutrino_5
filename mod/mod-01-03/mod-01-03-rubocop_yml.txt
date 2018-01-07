@@ -44,6 +44,12 @@ Style/ClassAndModuleChildren:
     - test/test_helper.rb
 # END: Style/ClassAndModuleChildren
 
+# BEGIN: Style/MixinUsage
+Style/MixinUsage:
+  Exclude:
+    - bin/update
+# END: Style/MixinUsage
+
 # BEGIN: Style/SymbolArray
 Style/SymbolArray:
   Exclude:
