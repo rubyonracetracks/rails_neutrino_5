@@ -21,7 +21,7 @@ git checkout -b 05-01-title_helper
 
 ruby mod-05-01.rb
 
-if [ $TOGGLE_OUTLINE = 'outline' ]
+if [ "$TOGGLE_OUTLINE" = 'outline' ]
 then
   sh outline-short.sh
 else

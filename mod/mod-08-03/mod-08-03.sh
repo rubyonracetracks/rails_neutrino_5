@@ -13,7 +13,7 @@ git checkout -b 08-03-admin_login
 
 ruby mod-08-03.rb
 
-if [ $TOGGLE_OUTLINE = 'outline' ]
+if [ "$TOGGLE_OUTLINE" = 'outline' ]
 then
   sh outline-short.sh
 else

@@ -16,7 +16,7 @@ git checkout -b 05-03-static_page_views
 
 ruby mod-05-03.rb
 
-if [ $TOGGLE_OUTLINE = 'outline' ]
+if [ "$TOGGLE_OUTLINE" = 'outline' ]
 then
   sh outline-short.sh
 else

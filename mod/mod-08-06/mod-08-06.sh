@@ -14,7 +14,7 @@ git checkout -b 08-06-admin_resend_conf
 
 ruby mod-08-06.rb
 
-if [ $TOGGLE_OUTLINE = 'outline' ]
+if [ "$TOGGLE_OUTLINE" = 'outline' ]
 then
   sh outline-short.sh
 else

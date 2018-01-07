@@ -20,7 +20,7 @@ git checkout -b 09-01-user_show_controller
 
 ruby mod-09-01.rb
 
-if [ $TOGGLE_OUTLINE = 'outline' ]
+if [ "$TOGGLE_OUTLINE" = 'outline' ]
 then
   sh outline-short.sh
 else

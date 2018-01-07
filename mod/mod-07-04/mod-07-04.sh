@@ -13,7 +13,7 @@ git checkout -b 07-04-user_password_reset
 
 ruby mod-07-04.rb
 
-if [ $TOGGLE_OUTLINE = 'outline' ]
+if [ "$TOGGLE_OUTLINE" = 'outline' ]
 then
   sh outline-short.sh
 else

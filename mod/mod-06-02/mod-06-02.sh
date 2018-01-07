@@ -31,7 +31,7 @@ cp mod-06-02-test_fixtures_initial.yml test/fixtures/admins.yml
 
 ruby mod-06-02.rb
 
-if [ $TOGGLE_OUTLINE = 'outline' ]
+if [ "$TOGGLE_OUTLINE" = 'outline' ]
 then
   sh outline-short.sh
 else

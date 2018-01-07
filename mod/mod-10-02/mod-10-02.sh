@@ -15,7 +15,7 @@ git checkout -b 10-02-admin_show_view
 
 ruby mod-10-02.rb
 
-if [ $TOGGLE_OUTLINE = 'outline' ]
+if [ "$TOGGLE_OUTLINE" = 'outline' ]
 then
   sh outline-short.sh
 else

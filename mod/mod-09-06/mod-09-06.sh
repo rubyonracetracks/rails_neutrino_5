@@ -13,7 +13,7 @@ git checkout -b 09-06-user_delete_controller
 
 ruby mod-09-06.rb
 
-if [ $TOGGLE_OUTLINE = 'outline' ]
+if [ "$TOGGLE_OUTLINE" = 'outline' ]
 then
   sh outline-short.sh
 else
