@@ -1,6 +1,19 @@
 #!/usr/bin/ruby
 
-require 'string_in_file'
+require 'line_containing'
+require 'insert_from_file'
 
-StringInFile.add_beginning("#\n", 'app/models/user.rb')
-StringInFile.add_beginning("#\n", 'app/models/admin.rb')
+puts 'Updating app/models/user.rb'
+LineContaining.add_before('class User < ApplicationRecord', '#', 'app/models/user.rb')
+LineContaining.add_after('class User < ApplicationRecord', '  # BEGIN: devise section', 'app/models/user.rb')
+LineContaining.add_after('class User < ApplicationRecord', '  # BEGIN: public section', 'app/models/user.rb')
+LineContaining.add_before('end', '  # END: devise section', 'app/models/user.rb')
+LineContaining.add_before('end', '  # END: public section', 'app/models/user.rb')
+
+puts 'Updating app/models/admin.rb'
+LineContaining.add_before('class Admin < ApplicationRecord', '#', 'app/models/admin.rb')
+LineContaining.add_after('class Admin < ApplicationRecord', '  # BEGIN: devise section', 'app/models/admin.rb')
+LineContaining.add_after('class Admin < ApplicationRecord', '  # BEGIN: public section', 'app/models/admin.rb')
+LineContaining.add_before('end', '  # END: devise section', 'app/models/admin.rb')
+LineContaining.add_before('end', '  # END: public section', 'app/models/admin.rb')
+InsertFromFile.replace_between('mod-06-02-devise.txt', 'app/models/admin.rb', '# BEGIN: devise section', '# END: devise section')

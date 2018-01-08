@@ -26,8 +26,11 @@ StringInFile.replace('# add_index', 'add_index', FILE_MIGRATE)
 system('rails db:migrate:reset')
 system('wait')
 
-puts 'Updating app/models/admin.rb'
-system('mv mod-06-04-admin.rb app/models/admin.rb')
+puts 'Adding conditions section to app/models/admin.rb'
+InsertFromFile.add_before('mod-06-04-admin-constraints.txt', 'app/models/admin.rb', '# END: public section')
+
+puts 'Adding private section to app/models/admin.rb'
+InsertFromFile.add_after('mod-06-04-admin-private.txt', 'app/models/admin.rb', '# END: public section')
 
 puts 'Updating the password length in config/initializers/devise.rb'
 LineContaining.replace('config.password_length', '  config.password_length = 10..128', 'config/initializers/devise.rb')
