@@ -36,7 +36,7 @@ puts 'Updating app/controllers/application_controller.rb'
 InsertFromFile.add_before('mod-07-02-application_controller.txt', 'app/controllers/application_controller.rb', 'end')
 
 puts 'Updating app/models/user.rb'
-InsertFromFile.add_after('mod-07-02-user.txt', 'app/models/user.rb', 'class User < ApplicationRecord')
+InsertFromFile.add_after('mod-07-02-user.txt', 'app/models/user.rb', '# END: devise section')
 
 puts 'Updating config/initializers/devise.rb'
 LineContaining.add_after('Devise.setup do |config|', '  config.authentication_keys = [:login]', 'config/initializers/devise.rb')

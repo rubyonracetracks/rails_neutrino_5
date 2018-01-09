@@ -32,7 +32,7 @@ puts 'Updating app/assets/javascripts/users.coffee'
 InsertFromFile.add_end('mod-09-05-users_coffee.txt', 'app/assets/javascripts/users.coffee')
 
 puts 'Updating app/models/user.rb'
-InsertFromFile.add_after('mod-09-05-user.txt', 'app/models/user.rb', 'class User < ApplicationRecord')
+InsertFromFile.add_after('mod-09-05-user.txt', 'app/models/user.rb', '# END: devise section')
 
 puts 'Updating config/rails_best_practices.yml'
 LineContaining.replace('MoveModelLogicIntoModelCheck', "MoveModelLogicIntoModelCheck: { ignored_files: ['app/controllers/users_controller.rb'] }", 'config/rails_best_practices.yml')

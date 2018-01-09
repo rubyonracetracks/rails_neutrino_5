@@ -36,7 +36,7 @@ LineContaining.delete('link_to "Sign up"', 'app/views/admins/shared/_links.html.
 # REFERENCE: https://github.com/plataformatec/devise/wiki/How-To:-Allow-users-to-sign-in-using-their-username-or-email-address
 
 puts 'Updating app/models/admin.rb'
-InsertFromFile.add_after('mod-08-03-admin.txt', 'app/models/admin.rb', '  # END: devise modules')
+InsertFromFile.add_after('mod-08-03-admin.txt', 'app/models/admin.rb', '  # END: devise section')
 
 puts 'Updating app/views/static_pages/home.html.erb'
 InsertFromFile.add_after('mod-08-03-home.txt', 'app/views/static_pages/home.html.erb', '<% # END: USER SECTION %>')
