@@ -14,7 +14,7 @@ puts 'bundle install --quiet'
 system('bundle install --quiet')
 
 puts 'Updating config/routes.rb'
-InsertFromFile.add_before('mod-09-05-routes.txt', 'config/routes.rb', '# END: user section')
+InsertFromFile.replace('mod-09-05-routes.txt', 'config/routes.rb', 'resources :users')
 
 puts 'Updating app/controllers/users_controller.rb'
 InsertFromFile.replace_between('mod-09-05-users_controller.txt', 'app/controllers/users_controller.rb', '# BEGIN: index', '# END: index')
