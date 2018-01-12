@@ -4,7 +4,7 @@ Welcome to Generic App Template!
 
 ## How was this app created?
 This Rails app was created with the 
-[Rails Neutrino](https://github.com/jhsu802701/rails_neutrino_5) scripts.  The time at which this app was created is denoted in the config/rails_neutrino_timestamp.txt file.
+[Rails Neutrino](https://github.com/jhsu802701/rails_neutrino_5) scripts or the [Generic App](https://github.com/jhsu802701/generic_app) gem.  The time at which this app was created with the Rails Neutrino script is denoted in the config/rails_neutrino_timestamp.txt file.
 
 ## What's the point?
 * Rails Neutrino begins with the "rails new" command and automatically constructs a comprehensive Rails template app that includes the features that all or most Rails apps need.  This 1-step process is completed in minutes, not hours or days.
