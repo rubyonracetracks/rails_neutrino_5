@@ -3,3 +3,4 @@
 group :development, :testing do
   gem 'rubocop' # Checks for violations of the Ruby Style Guide, not recommended for legacy apps
 end
+# END: gems for test_code.sh
