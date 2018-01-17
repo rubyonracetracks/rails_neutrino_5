@@ -54,6 +54,13 @@
     # Verify that root page provides access to index page
     click_on 'Home'
     assert page.has_link?('Admin Index', href: admins_path)
+
+    # Verify that the second page of the index works
+    click_on 'Admin Index'
+    first(:link, '2').click
+    assert page.has_css?('title', text: full_title('Admin Index'),
+                                  visible: false)
+    assert page.has_css?('h1', text: 'Admin Index')
   end
   # rubocop:enable Metrics/AbcSize
   # rubocop:enable Metrics/MethodLength

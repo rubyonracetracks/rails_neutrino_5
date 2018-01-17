@@ -1,3 +1,5 @@
   resources :users, except: [:new, :create, :edit, :update] do
-    collection { post :search, to: 'users#index' }
+    collection do
+      get 'search'
+    end
   end

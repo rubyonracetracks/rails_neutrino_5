@@ -2,5 +2,6 @@
   # BEGIN: index
   def index
     @admins = Admin.paginate(page: params[:page])
+    @admins = @admins.order('last_name')
   end
   # END: index

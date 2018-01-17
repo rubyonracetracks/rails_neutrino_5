@@ -2,5 +2,6 @@
   # BEGIN: index
   def index
     @users = User.paginate(page: params[:page])
+    @users = @users.order('last_name')
   end
   # END: index
