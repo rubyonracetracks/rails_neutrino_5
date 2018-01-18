@@ -12,7 +12,8 @@ puts 'Adding the rails/pg/nokogiri section to the Gemfile'
 LineContaining.delete('# Bundle edge Rails instead', 'Gemfile')
 InsertFromFile.replace('mod-02-01-Gemfile-rails_pg_nokogiri.txt', 'Gemfile', "gem 'rails'")
 
-puts 'Pinning rails, nokogiri, and pg'
+puts 'Pinning rails, nokogiri, pg, and ffi'
+LineContaining.replace("gem 'ffi'", "#{GemfileEntry.active('ffi')}", "Gemfile")
 LineContaining.replace("gem 'nokogiri'", "#{GemfileEntry.active('nokogiri')}", "Gemfile")
 LineContaining.replace("gem 'pg'", "#{GemfileEntry.active('pg')}", "Gemfile")
 LineContaining.replace("gem 'rails'", "#{GemfileEntry.active('rails')}", "Gemfile")
