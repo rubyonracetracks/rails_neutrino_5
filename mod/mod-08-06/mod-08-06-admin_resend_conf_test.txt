@@ -29,6 +29,8 @@
 
     # Open and follow instructions
     open_email(e)
+    assert current_email.subject.include?('Generic App Template: Confirmation instructions')
+    assert current_email.body.include?('message from Generic App Template')
     current_email.click_link 'Confirm my account'
     clear_emails # Clear the message queue
 
