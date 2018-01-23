@@ -24,6 +24,13 @@ puts 'rails generate devise:views admins'
 system('rails generate devise:views admins')
 system('wait')
 
+puts 'Updating the messages to admins in app/views/admins/mailer/*'
+InsertFromFile.add_beginning('mod-08-02-message_start.txt', 'app/views/admins/mailer/confirmation_instructions.html.erb')
+InsertFromFile.add_beginning('mod-08-02-message_start.txt', 'app/views/admins/mailer/email_changed.html.erb')
+InsertFromFile.add_beginning('mod-08-02-message_start.txt', 'app/views/admins/mailer/password_change.html.erb')
+InsertFromFile.add_beginning('mod-08-02-message_start.txt', 'app/views/admins/mailer/reset_password_instructions.html.erb')
+InsertFromFile.add_beginning('mod-08-02-message_start.txt', 'app/views/admins/mailer/unlock_instructions.html.erb')
+
 puts 'rm app/views/admins/registrations/new.html.erb'
 system('rm app/views/admins/registrations/new.html.erb')
 

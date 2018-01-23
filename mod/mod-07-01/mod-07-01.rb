@@ -30,6 +30,13 @@ puts 'rails generate devise:views users'
 system('rails generate devise:views users')
 system('wait')
 
+puts 'Updating the messages to users in app/views/users/mailer/*'
+InsertFromFile.add_beginning('mod-07-01-message_start.txt', 'app/views/users/mailer/confirmation_instructions.html.erb')
+InsertFromFile.add_beginning('mod-07-01-message_start.txt', 'app/views/users/mailer/email_changed.html.erb')
+InsertFromFile.add_beginning('mod-07-01-message_start.txt', 'app/views/users/mailer/password_change.html.erb')
+InsertFromFile.add_beginning('mod-07-01-message_start.txt', 'app/views/users/mailer/reset_password_instructions.html.erb')
+InsertFromFile.add_beginning('mod-07-01-message_start.txt', 'app/views/users/mailer/unlock_instructions.html.erb')
+
 puts 'Adding app/views/users/registrations/new.html.erb'
 system('mv mod-07-01-new.html.erb app/views/users/registrations/new.html.erb')
 

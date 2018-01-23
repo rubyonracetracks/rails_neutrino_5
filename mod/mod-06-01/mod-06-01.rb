@@ -19,6 +19,13 @@ system('sh kill_spring.sh')
 puts 'rails generate devise:install'
 system('rails generate devise:install')
 
+puts 'Updating the subject lines of email messages in config/locales/devise.en.yml'
+StringInFile.replace('Confirmation instructions', 'Generic App Template: Confirmation instructions', 'config/locales/devise.en.yml')
+StringInFile.replace('Reset password instructions', 'Generic App Template: Reset password instructions', 'config/locales/devise.en.yml')
+StringInFile.replace('Unlock instructions', 'Generic App Template: Unlock instructions', 'config/locales/devise.en.yml')
+StringInFile.replace('Email Changed', 'Generic App Template: Email Changed', 'config/locales/devise.en.yml')
+StringInFile.replace('Password Changed', 'Generic App Template: Password Changed', 'config/locales/devise.en.yml')
+
 puts 'Updating the email address in config/initializers/devise.rb'
 LineContaining.replace('config.mailer_sender', "  config.mailer_sender = 'somebody@rubyonracetracks.com'", 'config/initializers/devise.rb')
 
