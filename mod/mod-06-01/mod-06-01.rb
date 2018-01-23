@@ -29,5 +29,10 @@ StringInFile.replace('Password Changed', 'Generic App Template: Password Changed
 puts 'Updating the email address in config/initializers/devise.rb'
 LineContaining.replace('config.mailer_sender', "  config.mailer_sender = 'somebody@rubyonracetracks.com'", 'config/initializers/devise.rb')
 
+puts 'Updating the config.scoped_views setting in config/initializers/devise.rb'
+puts '(allows the use of custom mailer views)'
+LineContaining.replace('config.scoped_views', '  config.scoped_views = true', 'config/initializers/devise.rb')
+
+
 puts 'Updating .rubocop.yml'
 LineContaining.add_before('# END: Metrics/LineLength', '    - config/initializers/devise.rb', ".rubocop.yml")
