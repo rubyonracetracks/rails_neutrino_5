@@ -1,2 +1,4 @@
 <p>This is an automated message from Generic App Template.</p>
 
+<p>This message pertains to your ADMIN account, not your user account.</p>
+
