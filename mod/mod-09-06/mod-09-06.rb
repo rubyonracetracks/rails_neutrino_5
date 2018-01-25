@@ -10,7 +10,7 @@ StringInFile.add_beginning("# rubocop:disable Metrics/ClassLength\n", 'test/cont
 StringInFile.add_end("# rubocop:enable Metrics/ClassLength\n", 'test/controllers/users_controller_test.rb')
 
 puts 'Updating config/routes.rb'
-LineContaining.replace('resources :users, only: [:show, :index]', '  resources :users, only: [:show, :index, :destroy]', 'config/routes.rb')
+LineContaining.replace('resources :users, only: [:show, :index]', '  resources :users, only: [:show, :index, :destroy] do', 'config/routes.rb')
 
 puts 'Updating app/controllers/users_controller.rb'
 LineContaining.add_before('# END: before_action section', '  before_action :may_destroy_user, only: [:destroy]', 'app/controllers/users_controller.rb')

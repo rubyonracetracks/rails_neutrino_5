@@ -1,7 +1,6 @@
   # rubocop:disable Metrics/AbcSize
   def index
     @search = User.search(params[:q].presence)
-    @users = @search.result.paginate(page: params[:page])
     # NOTE: The following line specifies the sort order.
     # This is reflected in the default sort criteria shown.
     # The user is free to remove these default criteria.
@@ -9,6 +8,7 @@
     @search.build_condition if @search.conditions.empty?
     @search.build_sort if @search.sorts.empty?
     @users = @search.result
-    @users = @users.order('last_name').page(params[:page])
+    @users = @users.order('last_name asc').page(params[:page]).per(50)
+    @users_count = User.count
   end
   # rubocop:enable Metrics/AbcSize

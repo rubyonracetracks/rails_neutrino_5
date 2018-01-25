@@ -2,7 +2,9 @@
 
 <h1>Admin Index</h1>
 
-<%= will_paginate %>
+Number of admins: <%= @admins_count %>
+<br>
+<%= paginate @admins %>
 <table class="admins">
   <tr>
     <td><b>Last Name</b></td>
@@ -13,4 +15,4 @@
   </tr>
   <%= render @admins %>
 </table>
-<%= will_paginate %>
+<%= paginate @admins %>

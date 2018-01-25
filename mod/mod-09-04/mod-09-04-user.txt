@@ -1,4 +1,0 @@
-
-  # Specify the number of entries per page given use of the will_paginate gem
-  self.per_page = 50
-

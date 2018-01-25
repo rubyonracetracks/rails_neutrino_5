@@ -1,7 +1,8 @@
 
   # BEGIN: index
   def index
-    @users = User.paginate(page: params[:page])
-    @users = @users.order('last_name')
+    @users = User.all
+    @users = @users.order('last_name asc').page(params[:page]).per(50)
+    @users_count = User.count
   end
   # END: index

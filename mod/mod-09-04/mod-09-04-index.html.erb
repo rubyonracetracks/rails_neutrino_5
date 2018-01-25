@@ -1,7 +1,9 @@
 <% provide(:title, 'User Index') %>
 
 <h1>User Index</h1>
-<%= will_paginate %>
+Number of users: <%= @users_count %>
+<br>
+<%= paginate @users %>
 <table class="users">
   <tr>
     <td><b>Last Name</b></td>
@@ -11,4 +13,4 @@
   </tr>
   <%= render @users %>
 </table>
-<%= will_paginate %>
+<%= paginate @users %>

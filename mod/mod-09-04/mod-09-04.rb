@@ -24,9 +24,5 @@ LineContaining.add_after('<%-# BEGIN: ADMIN SECTION -%>', '          <li><%= lin
 puts 'Updating app/assets/stylesheets/custom.scss'
 InsertFromFile.add_end('mod-09-04-bootstrap.txt', 'app/assets/stylesheets/custom.scss')
 
-puts 'Updating app/models/user.rb'
-puts 'to list 50 users per page'
-InsertFromFile.add_after('mod-09-04-user.txt', 'app/models/user.rb', '# BEGIN: public section')
-
 puts 'Updating .rubocop.yml'
 LineContaining.add_before('# END: Style/SymbolArray', '    - config/routes.rb', '.rubocop.yml')

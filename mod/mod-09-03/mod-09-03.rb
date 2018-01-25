@@ -9,10 +9,12 @@ puts 'Adding pagination gems to the Gemfile'
 InsertFromFile.add_end('mod-09-03-Gemfile.txt', 'Gemfile')
 puts 'bundle install --quiet'
 system('bundle install --quiet')
-StringInFile.replace("gem 'bootstrap-will_paginate'", "#{GemfileEntry.active('bootstrap-will_paginate')}", 'Gemfile')
-StringInFile.replace("gem 'will_paginate'", "#{GemfileEntry.active('will_paginate')}", 'Gemfile')
+StringInFile.replace("gem 'kaminari'", "#{GemfileEntry.active('kaminari')}", 'Gemfile')
 puts 'bundle install --quiet'
 system('bundle install --quiet')
+
+puts 'Updating config/locales/en.yml'
+InsertFromFile.add_end('mod-09-03-config_locales_en_yml.txt', 'config/locales/en.yml')
 
 puts 'Updating the user controller tests'
 InsertFromFile.add_after('mod-09-03-users_controller_test.txt', 'test/controllers/users_controller_test.rb', '# END: SHOW')
