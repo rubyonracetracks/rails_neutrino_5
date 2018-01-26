@@ -5,6 +5,14 @@ require 'line_containing'
 require 'string_in_file'
 require 'gemfile_entry'
 
+system('rails generate integration_test user_search')
+system('wait')
+
+LineContaining.delete('  # end', 'test/integration/user_search_test.rb')
+LineContaining.delete_between('class UserSearchTest < ActionDispatch::IntegrationTest', 'end', 'test/integration/user_search_test.rb')
+puts 'Filling in integration tests'
+InsertFromFile.replace_between('mod-09-05-user_search_test.txt', 'test/integration/user_search_test.rb', 'class UserSearchTest < ActionDispatch::IntegrationTest', 'end')
+
 puts 'Adding ransack to the Gemfile'
 InsertFromFile.add_end('mod-09-05-Gemfile.txt', 'Gemfile')
 puts 'bundle install --quiet'
