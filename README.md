@@ -48,4 +48,4 @@ paste text.
 * Includes the ability to resend confirmation emails and reset passwords
 * Preconfigured for deploying to Heroku
 * Automatically pins the gems in the Gemfile for easier upgrading later
-* Enables SSL and the Puma web server
+* Enables the Puma web server
