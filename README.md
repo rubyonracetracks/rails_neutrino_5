@@ -29,3 +29,29 @@ their path that they fly through the entire diameter of the Earth unimpeded.
 Similarly, Rails Neutrino creates a new app very rapidly because it
 bypasses the need to manually read, open and close files, and cut and
 paste text.
+
+## Safety Features
+* Advises users and admins to use KeePassX or similar password management software to create, encrypt, and save passwords
+* Prevents accidental data destruction in the production environment by requiring the right environment variable setting
+* Locks accounts after the 6th unsuccessful login attempt and reinstates them after the user/admin follows the unlocking instructions or waits 30 minutes, whichever comes first
+
+## Privacy Features
+* Keeps user information private (until manually changed in a specific project)
+* Enables SSL
+
+## Testing and Troubleshooting Features
+* Includes comprehensive model, controller, and Capybara integration tests (including tests of the email confirmation process)
+* Uses the timecop gem to test temporarily locked accounts
+* Includes RuboCop, Brakeman, bundler-audit, Gemsurance, and Rails Best Practices gems
+* Includes the MailCatcher gem for viewing confirmation email messages in the development environment in the local browser
+* Includes the Better Errors, binding_of_caller, and pry-rails gems
+* Includes the Annotate, RailRoady, and Rails ERD gems for automatically outlining the app
+
+## Convenience Features
+* Includes Bash scripts for completing routine multi-step tasks in only one step
+* Includes a script for automatically setting up PostgreSQL
+* Uses the devise gem to provide user and admin authentication
+* Includes the ability to resend confirmation emails and reset passwords
+* Preconfigured for deploying to Heroku
+* Automatically pins the gems in the Gemfile for easier upgrading later
+* Enables the Puma web server
