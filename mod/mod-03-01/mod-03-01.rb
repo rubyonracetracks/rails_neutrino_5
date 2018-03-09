@@ -19,6 +19,7 @@ InsertFromFile.add_before('mod-03-01-add_to_test_helper.txt', 'test/test_helper.
 puts 'Adding the HTML test reports to .gitignore'
 StringInFile.add_end("test/html_reports/\n", '.gitignore')
 
+# WICHTIG: print the command to run a failed test again
 puts 'Adding test/rake_rerun_reporter.rb'
 system('mv mod-03-01-rake_run_reporter.rb test/rake_rerun_reporter.rb')
 

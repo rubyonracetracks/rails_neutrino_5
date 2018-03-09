@@ -13,6 +13,7 @@ echo '###########################################################'
 
 git checkout -b 02-04-restrict_dangerous_tasks
 
+# WICHTIG: restrict dangerous tasks in production
 mv mod-02-04-disable.rake lib/tasks/disable_db_tasks_on_production.rake
 
 git add .

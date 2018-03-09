@@ -13,6 +13,8 @@ echo '#######################################'
 
 git checkout -b 03-02-quick_testing
 
+# WICHTIG: add testh.sh, testm.sh, and testc.sh
+
 mv mod-03-02-testh.sh testh.sh
 mv mod-03-02-testhl.sh testhl.sh
 mv mod-03-02-testm.sh testm.sh

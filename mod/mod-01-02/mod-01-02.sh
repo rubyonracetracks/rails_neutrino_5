@@ -25,6 +25,10 @@ echo '###############################'
 
 git checkout -b 01-02-basic_scripts
 
+# WICHTIG: add all.sh, build_fast.sh, credentials.sh, git_check.sh,
+# kill_spring.sh, log_test_app.sh, pg-start.sh, sandbox.sh, server.sh,
+# and test_app.sh
+
 echo 'Adding build_fast.sh'
 mv mod-01-02-build_fast.sh build_fast.sh
 

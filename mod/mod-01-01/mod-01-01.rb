@@ -1,6 +1,7 @@
 #!/usr/bin/ruby
 require 'insert_from_file'
 
+# WICHTIG: Add .DS_Store to the .gitignore file
 puts '-----------------------------------------------------------'
 puts 'Updating .gitignore to mark the initial contents and to add'
 puts 'pesky files you do not want committed, such as .DS_Store.'
