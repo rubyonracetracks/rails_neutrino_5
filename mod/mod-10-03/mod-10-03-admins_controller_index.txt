@@ -3,6 +3,6 @@
   def index
     @admins = Admin.all
     @admins = @admins.order('last_name asc').page(params[:page]).per(50)
-    @admins_count = Admin.count
+    @admins_count = @admins.count
   end
   # END: index
