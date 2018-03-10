@@ -17,6 +17,7 @@ system('bundle install --quiet')
 puts 'Making additional changes to comply with RuboCop'
 StringInFile.replace('[ :request_id ]', '[:request_id]', 'config/environments/production.rb')
 StringInFile.replace('"/"', "'/'", 'Gemfile')
+StringInFile.replace("expand_path('../../config/environment', __FILE__)", "expand_path('../config/environment', __dir__)", 'test/test_helper.rb')
 ReplaceQuotes.update('config/environments/production.rb')
 ReplaceQuotes.update('config/puma.rb')
 LineContaining.add_before('module ApplicationHelper', '#', 'app/helpers/application_helper.rb')

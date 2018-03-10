@@ -1,3 +1,4 @@
+  # rubocop:disable Naming/UncommunicativeMethodParamName
   def edit(a, uname, e, fname, lname, password_n, password_c)
     edit_admin_start(a)
     fill_in('Username', with: uname)
@@ -39,6 +40,7 @@
     assert page.has_text?('Signed in successfully.')
     click_on 'Logout'
   end
+  # rubocop:enable Naming/UncommunicativeMethodParamName
 
   test 'resend confirmation from super admin changing all params' do
     edit(@a1, 'rwitherspoon', 'reese_witherspoon@example.com',
