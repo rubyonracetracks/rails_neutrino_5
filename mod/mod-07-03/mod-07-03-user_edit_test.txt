@@ -1,3 +1,4 @@
+  # rubocop:disable Naming/UncommunicativeMethodParamName
   # Edit all parameters except email
   def edit_all_but_email(u, uname, fname, lname, password_n, password_c)
     edit_user_start(u)
@@ -55,6 +56,7 @@
     assert page.has_text?('Signed in successfully.')
     click_on 'Logout'
   end
+  # rubocop:enable Naming/UncommunicativeMethodParamName
 
   test 'user can access the page for editing settings' do
     login_as(@u1, scope: :user)
