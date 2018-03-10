@@ -1,6 +1,10 @@
 Layout/EmptyComment:
   Enabled: false
 
+Naming/UncommunicativeMethodParamName:
+  Exclude:
+    - test/test_helper.rb
+
 # BEGIN: AllCops
 AllCops:
   Exclude:
