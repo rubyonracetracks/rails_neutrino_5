@@ -17,6 +17,7 @@ system('bundle install --quiet')
 puts 'Updating db/seeds.rb'
 system('mv mod-06-05-seeds.rb db/seeds.rb')
 
+# WICHTIG: seed.sh
 puts 'Adding seed.sh'
 system('mv mod-06-05-seed.sh seed.sh')
 
