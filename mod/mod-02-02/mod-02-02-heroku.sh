@@ -8,7 +8,7 @@ then
 else
   echo 'If you have not already done so, you must create this app on Heroku.'
   echo 'Instructions for doing this are at'
-  echo 'https://gist.github.com/jhsu802701/fdfd6e0732773b379413625463f2d2c0'
+  echo 'https://github.com/rubyonracetracks/cheat_sheets/blob/master/rails_heroku.md'
   echo ''
   echo 'Once you have done this, you are ready to move on.'
   echo ''
