@@ -35,4 +35,4 @@ LineContaining.replace('config.scoped_views', '  config.scoped_views = true', 'c
 
 
 puts 'Updating .rubocop.yml'
-LineContaining.add_before('# END: Metrics/LineLength', '    - config/initializers/devise.rb', ".rubocop.yml")
+LineContaining.add_before('# END: AllCops', '    - config/initializers/devise.rb', ".rubocop.yml")
