@@ -1,2 +1,2 @@
-Go to https://gist.github.com/jhsu802701/e35882eac52322bd224533ef7464711f
+Go to https://github.com/rubyonracetracks/cheat_sheets/blob/master/post_rails_neutrino.md
 for further instructions.
