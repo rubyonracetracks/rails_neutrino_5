@@ -31,6 +31,7 @@ StringInFile.replace("gem 'email_munger'", GemfileEntry.active('email_munger'), 
 puts 'bundle install --quiet'
 system('bundle install --quiet')
 
+# WICHTIG: debug information
 puts 'Updating app/views/layouts/application.html.erb'
 system('mv mod-05-03-application.html.erb app/views/layouts/application.html.erb')
 
