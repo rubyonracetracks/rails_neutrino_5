@@ -4,11 +4,18 @@ require 'insert_from_file'
 require 'string_in_file'
 require 'gemfile_entry'
 
+# NOTE: As of 5-4-2018, the current version of capybara is incompatible with capybara-slow_finder_errors.
+# Thus, capybara must be downgraded.
+puts 'Unpinning capybara in the Gemfile'
+LineContaining.replace("#{GemfileEntry.active('capybara')}", "gem 'capybara'", 'Gemfile')
+puts 'Uninstalling capybara'
+system('gem uninstall capybara')
 puts 'Adding capybara-email and capybara-slow_finder_errors to the Gemfile'
 InsertFromFile.add_end('mod-03-03-add_to_Gemfile.txt', 'Gemfile')
-puts 'bundle install --quiet'
-system('bundle install --quiet')
-puts 'Pinning the versions of capybara-email and capybara-slow_finder_errors'
+puts 'bundle update --quiet'
+system('bundle update --quiet')
+puts 'Pinning the versions of capybara, capybara-email, and capybara-slow_finder_errors'
+LineContaining.replace("gem 'capybara'", "  #{GemfileEntry.active('capybara')}", "Gemfile")
 StringInFile.replace("gem 'capybara-email'", "#{GemfileEntry.active('capybara-email')}", "Gemfile")
 StringInFile.replace("gem 'capybara-slow_finder_errors'", "#{GemfileEntry.active('capybara-slow_finder_errors')}", "Gemfile")
 puts 'bundle install --quiet'

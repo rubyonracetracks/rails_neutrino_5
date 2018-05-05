@@ -1,6 +1,9 @@
 Layout/EmptyComment:
   Enabled: false
 
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
 Naming/UncommunicativeMethodParamName:
   Exclude:
     - test/test_helper.rb
@@ -9,6 +12,7 @@ Naming/UncommunicativeMethodParamName:
 AllCops:
   Exclude:
     - bin/*
+    - config/initializers/content_security_policy.rb
     - config/spring.rb
     - db/migrate/*
     - db/schema.rb

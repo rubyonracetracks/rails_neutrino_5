@@ -21,6 +21,8 @@ LineContaining.replace("gem 'rails'", "#{GemfileEntry.active('rails')}", "Gemfil
 
 # WICHTIG: pin all other gems listed in the Gemfile
 puts 'Pinning other gems'
+LineContaining.replace("gem 'bootsnap'", "#{GemfileEntry.active('bootsnap')}, require: false", "Gemfile")
+StringInFile.replace("gem 'byebug'", "#{GemfileEntry.active('byebug')}", "Gemfile")
 LineContaining.replace("gem 'puma'", "#{GemfileEntry.active('puma')}", "Gemfile")
 LineContaining.replace("gem 'sass-rails'", "#{GemfileEntry.active('sass-rails')}", "Gemfile")
 LineContaining.replace("gem 'uglifier'", "#{GemfileEntry.active('uglifier')}", "Gemfile")
@@ -30,6 +32,9 @@ LineContaining.replace("gem 'jbuilder'", "#{GemfileEntry.active('jbuilder')}", "
 
 LineContaining.replace("gem 'capybara'", "  #{GemfileEntry.active('capybara')}", "Gemfile")
 LineContaining.replace("gem 'selenium-webdriver'", "  #{GemfileEntry.active('selenium-webdriver')}", "Gemfile")
+LineContaining.replace("gem 'chromedriver-helper'", "  #{GemfileEntry.active('chromedriver-helper')}", "Gemfile")
+
+LineContaining.add_before("gem 'tzinfo-data'", '# NOTE: tzinfo-data is not installed under the Ruby on Racetracks system', 'Gemfile')
 
 LineContaining.replace("gem 'web-console'", "  #{GemfileEntry.active('web-console')}", "Gemfile")
 LineContaining.replace("gem 'listen'", "  #{GemfileEntry.active('listen')}", "Gemfile")

@@ -7,6 +7,10 @@ DIR_MAIN=$PWD
 DIR_PARENT="$(dirname "$DIR_MAIN")"
 DIR_APP=$DIR_PARENT/$APP_NAME
 
+gem uninstall capybara-slow_finder_errors
+gem uninstall capybara-email
+gem uninstall capybara
+
 sh credentials.sh
 
 # Removing the old Rails app (if necessary)
@@ -125,8 +129,14 @@ rm $DIR_APP/mod*
 echo '##########################################'
 echo 'The new app has been created from scratch!'
 echo ''
+echo "It is located at: $DIR_APP"
+echo ''
+echo 'Things to check:'
+echo '* All gems in the Gemfile should be pinned.'
+echo ''
 echo 'Enter the following command:'
 echo "cd $DIR_APP && sh neutrino.sh"
+echo 'If all goes well, all tests pass, and there are no offenses.'
 echo ''
 echo 'Further instructions on what to do next are in the'
 echo 'README-to_do.txt file within your app.'
