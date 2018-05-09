@@ -13,6 +13,8 @@ gem uninstall capybara
 
 sh credentials.sh
 
+DATE_START=$(date +%s)
+
 # Removing the old Rails app (if necessary)
 if [ -d "$DIR_APP" ]; then
   rm -rf $DIR_APP
@@ -126,10 +128,26 @@ cd $DIR_APP && bash mod_app.sh '10-06' $TOGGLE_OUTLINE
 rm -rf $DIR_APP/mod
 rm $DIR_APP/mod*
 
+DATE_END=$(date +%s)
+
+T_SEC=$((DATE_END-DATE_START))
+
+function displaytime {
+  local T=$1
+  local M=$((T/60%60))
+  local S=$((T%60))
+  [[ $M > 0 ]] && printf '%d minutes ' $M
+  [[ $D > 0 || $H > 0 || $M > 0 ]] && printf 'and '
+  printf '%d seconds\n' $S
+}
+
 echo '##########################################'
 echo 'The new app has been created from scratch!'
 echo ''
 echo "It is located at: $DIR_APP"
+echo ''
+echo "Time used:"
+displaytime $T_SEC
 echo ''
 echo 'Things to check:'
 echo '* All gems in the Gemfile should be pinned.'
