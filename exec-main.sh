@@ -132,22 +132,13 @@ DATE_END=$(date +%s)
 
 T_SEC=$((DATE_END-DATE_START))
 
-function displaytime {
-  local T=$1
-  local M=$((T/60%60))
-  local S=$((T%60))
-  [[ $M > 0 ]] && printf '%d minutes ' $M
-  [[ $D > 0 || $H > 0 || $M > 0 ]] && printf 'and '
-  printf '%d seconds\n' $S
-}
-
 echo '##########################################'
 echo 'The new app has been created from scratch!'
 echo ''
 echo "It is located at: $DIR_APP"
 echo ''
 echo "Time used:"
-displaytime $T_SEC
+echo "$((T_SEC/60)) minutes and $((T_SEC%60)) seconds"
 echo ''
 echo 'Things to check:'
 echo '* All gems in the Gemfile should be pinned.'
