@@ -21,5 +21,6 @@ system('mv mod-06-05-seeds.rb db/seeds.rb')
 puts 'Adding seed.sh'
 system('mv mod-06-05-seed.sh seed.sh')
 
+# WICHTIG: update all.sh
 puts 'Updating all.sh'
 LineContaining.add_after('sh test_app.sh', 'sh seed.sh', 'all.sh')

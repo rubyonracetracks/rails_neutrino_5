@@ -5,7 +5,8 @@ require 'gemfile_entry'
 require 'string_in_file'
 require 'line_containing'
 
-# WICHTIG: add annotate, railroady, and rails-erd to the Gemfile
+# WICHTIG: add annotate to the Gemfile (not recommended for legacy apps if you need to keep it out of pull requests)
+# WICHTIG: railroady, and rails-erd to the Gemfile
 puts 'Adding annotate, railroady, and rails-erd to the Gemfile'
 InsertFromFile.add_end('mod-04-02-Gemfile.txt', 'Gemfile')
 puts 'bundle install --quiet'
