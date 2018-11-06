@@ -1,4 +1,4 @@
-1.  Go to the Rails Neutrino web site at https://www.rubyonracetracks.com .
+1.  Go to the Rails Neutrino web site at https://www.genericapp.com/ .
 2.  Go to the tutorial.
 3.  Go to the chapter for running the main script, and follow the instructions
     in the "follow up" section.

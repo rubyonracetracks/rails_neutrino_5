@@ -143,10 +143,6 @@ echo ''
 echo 'Things to check:'
 echo '* All gems in the Gemfile should be pinned.'
 echo ''
-echo 'Enter the following command:'
-echo "cd $DIR_APP && sh neutrino.sh"
-echo 'If all goes well, all tests pass, and there are no offenses.'
-echo ''
 echo 'Further instructions on what to do next are in the'
 echo 'README-to_do.txt file within your app.'
 
