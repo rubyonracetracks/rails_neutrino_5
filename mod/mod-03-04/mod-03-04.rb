@@ -15,3 +15,7 @@ system('bundle install --quiet')
 
 puts 'Adding the SimpleCov setup to test/test_helper.rb'
 InsertFromFile.add_beginning('mod-03-04-add_to_test_helper.txt', 'test/test_helper.rb')
+
+puts 'Adding the coverage directory to .gitignore'
+StringInFile.add_end("\n# Keep SimpleCov test results out of the source code\n", '.gitignore')
+StringInFile.add_end("coverage\n", '.gitignore')
