@@ -1,5 +1,8 @@
 # Generic App Template
 
+<!--- BEGIN: badges --->
+<!--- END: badges --->
+
 Welcome to Generic App Template!
 
 ## How was this app created?
