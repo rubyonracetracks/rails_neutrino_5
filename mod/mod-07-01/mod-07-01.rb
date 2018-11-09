@@ -26,6 +26,9 @@ puts 'rails generate devise:controllers users'
 system('rails generate devise:controllers users')
 system('wait')
 
+puts 'Filtering /app/controllers/users/omniauth_callbacks_controller.rb from SimpleCov'
+LineContaining.add_after('SimpleCov.start :rails', "  add_filter '/app/controllers/users/omniauth_callbacks_controller.rb'", 'test/test_helper.rb')
+
 puts 'rails generate devise:views users'
 system('rails generate devise:views users')
 system('wait')
