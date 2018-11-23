@@ -1,3 +1,0 @@
-    - tmp/vulnerabilities/*
-    - tmp/vulnerabilities/lib/*
-    - tmp/vulnerabilities/spec/*

@@ -143,6 +143,8 @@ echo "$((T_SEC/60)) minutes and $((T_SEC%60)) seconds"
 echo ''
 echo 'Things to check:'
 echo '* All gems in the Gemfile should be pinned.'
+echo '* When you run the neutrino.sh script, there should be no errors,'
+echo '  no test failures, and no offenses.'
 echo ''
 echo 'Further instructions on what to do next are in the'
 echo 'README-to_do.txt file within your app.'
