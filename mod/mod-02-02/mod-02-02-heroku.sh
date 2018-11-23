@@ -7,8 +7,6 @@ then
   HEROKU_NAME=$(cat $PATH_HEROKU_NAME)
 else
   echo 'If you have not already done so, you must create this app on Heroku.'
-  echo 'Instructions for doing this are at'
-  echo 'https://github.com/rubyonracetracks/cheat_sheets/blob/master/rails_heroku.md'
   echo ''
   echo 'Once you have done this, you are ready to move on.'
   echo ''
