@@ -4,7 +4,7 @@ require 'insert_from_file'
 require 'string_in_file'
 require 'gemfile_entry'
 
-# WICHTIG: add better_errors and binding_of_caller to the Gemfile
+# WICHTIG/LEGACY/recommended: add better_errors and binding_of_caller to the Gemfile
 puts 'Adding better_errors and binding_of_caller to the Gemfile'
 InsertFromFile.add_end('mod-04-04-Gemfile.txt', 'Gemfile')
 puts 'bundle install --quiet'

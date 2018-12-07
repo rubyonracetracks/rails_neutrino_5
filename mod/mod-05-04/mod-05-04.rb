@@ -3,6 +3,7 @@
 require 'string_in_file'
 require 'gemfile_entry'
 
+# WICHTIG/LEGACY/all_or_nothing: add Bootstrap (if necessary)
 puts 'Adding bootstrap-sass to the Gemfile'
 StringInFile.add_end("\n", 'Gemfile')
 StringInFile.add_end("gem 'bootstrap-sass' # Bootstrap styling\n", 'Gemfile')
