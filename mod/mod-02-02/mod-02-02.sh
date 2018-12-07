@@ -10,7 +10,7 @@ echo '##################################################'
 
 git checkout -b 02-02-heroku_scripts
 
-# WICHTIG/LEGACY/script: add heroku.sh (if necessary)
+# WICHTIG/LEGACY/bash: add heroku.sh (if necessary)
 mv mod-02-02-heroku.sh heroku.sh
 ruby mod-02-02.rb
 

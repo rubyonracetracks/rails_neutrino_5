@@ -14,10 +14,11 @@ echo '###############################'
 
 git checkout -b 01-04-other_metrics
 
-# WICHTIG/LEGACY/script: Add test_code.sh
+# WICHTIG/LEGACY/bash: Add test_code.sh
+# WICHTIG/LEGACY/bash: Add rubocop and rails_best_practices to test_code.sh (if necessary)
 mv mod-01-04-test_code.sh test_code.sh
 
-# WICHTIG/LEGACY/script: Update git_check.sh
+# WICHTIG/LEGACY/bash: Update git_check.sh
 mv mod-01-04-git_check.sh git_check.sh
 
 ruby mod-01-04.rb

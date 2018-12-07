@@ -13,7 +13,7 @@ echo '#######################################'
 
 git checkout -b 03-02-quick_testing
 
-# WICHTIG/LEGACY/scripts: add testh.sh, testm.sh, and testc.sh
+# WICHTIG/LEGACY/bash: add testh.sh, testm.sh, and testc.sh
 
 mv mod-03-02-testh.sh testh.sh
 mv mod-03-02-testhl.sh testhl.sh

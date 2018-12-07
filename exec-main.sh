@@ -47,7 +47,7 @@ cd $DIR_APP && rails db:migrate
 wait
 
 # Copy credentials.sh to the new app's root directory
-# WICHTIG/LEGACY/script: add credentials.sh
+# WICHTIG/LEGACY/bash: add credentials.sh
 echo '------------------------------------------------------------------------'
 echo 'Copying credentials.sh, mod_app.sh, and the mod directory to the new app'
 cp $DIR_MAIN/credentials.sh $DIR_APP

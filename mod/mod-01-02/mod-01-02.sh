@@ -25,7 +25,7 @@ echo '###############################'
 
 git checkout -b 01-02-basic_scripts
 
-# WICHTIG/LEGACY/script: add *.sh scripts from this chapter
+# WICHTIG/LEGACY/bash: add *.sh scripts from this chapter
 
 echo 'Adding build_fast.sh'
 mv mod-01-02-build_fast.sh build_fast.sh
