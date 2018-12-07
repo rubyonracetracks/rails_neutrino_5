@@ -2,6 +2,6 @@
 
 require 'line_containing'
 
-# WICHTIG: enable ssl
+# WICHTIG/LEGACY/master: enable ssl (if necessary)
 puts 'Automatically enabling the use of SSL'
 LineContaining.replace('config.force_ssl = true', '  config.force_ssl = true', 'config/environments/production.rb')

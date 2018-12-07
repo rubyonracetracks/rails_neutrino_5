@@ -12,14 +12,14 @@ puts 'Adding the rails/pg/nokogiri section to the Gemfile'
 LineContaining.delete('# Bundle edge Rails instead', 'Gemfile')
 InsertFromFile.replace('mod-02-01-Gemfile-rails_pg_nokogiri.txt', 'Gemfile', "gem 'rails'")
 
-# WICHTIG/recommended: pin ffi, nokogiri, pg, and rails in the Gemfile
+# WICHTIG/LEGACY/recommended: pin ffi, nokogiri, pg, and rails in the Gemfile
 puts 'Pinning rails, nokogiri, pg, and ffi'
 LineContaining.replace("gem 'ffi'", "#{GemfileEntry.active('ffi')}", "Gemfile")
 LineContaining.replace("gem 'nokogiri'", "#{GemfileEntry.active('nokogiri')}", "Gemfile")
 LineContaining.replace("gem 'pg'", "#{GemfileEntry.active('pg')}", "Gemfile")
 LineContaining.replace("gem 'rails'", "#{GemfileEntry.active('rails')}", "Gemfile")
 
-# WICHTIG/recommended: pin all other gems listed in the Gemfile
+# WICHTIG/LEGACY/recommended: pin all other gems listed in the Gemfile
 puts 'Pinning other gems'
 LineContaining.replace("gem 'bootsnap'", "#{GemfileEntry.active('bootsnap')}, require: false", "Gemfile")
 StringInFile.replace("gem 'byebug'", "#{GemfileEntry.active('byebug')}", "Gemfile")

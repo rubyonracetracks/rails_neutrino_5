@@ -17,11 +17,11 @@ git checkout -b 02-03-production_parameters
 
 ruby mod-02-03.rb
 
-# WICHTIG: update config/puma.rb
+# WICHTIG/LEGACY/master: update config/puma.rb (if necessary)
 echo 'Updating config/puma.rb'
 mv mod-02-03-puma.rb config/puma.rb
 
-# WICHTIG: update the Procfile
+# WICHTIG/LEGACY/master: update the Procfile (if necessary)
 echo 'Specifying the use of Puma in the Procfile'
 mv mod-02-03-Procfile Procfile
 
