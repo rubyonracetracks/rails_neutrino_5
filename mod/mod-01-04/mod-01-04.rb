@@ -5,7 +5,7 @@ require 'line_containing'
 require 'gemfile_entry'
 require 'string_in_file'
 
-# WICHTIG: add brakeman, bundler-audit, and gemsurance to the Gemfile
+# WICHTIG/LEGACY/recommended: add brakeman, bundler-audit, and gemsurance to the Gemfile
 
 puts 'Updating the Gemfile'
 LineContaining.add_before('rubocop', "  gem 'brakeman'", "Gemfile")
@@ -23,7 +23,7 @@ StringInFile.replace("gem 'sandi_meter'", GemfileEntry.active('sandi_meter'),'Ge
 puts 'bundle install --quiet'
 system('bundle install --quiet')
 
-# WICHTIG: add test_code.sh
+# WICHTIG/LEGACY/script: add test_code.sh
 puts 'Adding test_code.sh to all.sh'
 StringInFile.add_end("sh test_code.sh\n", 'all.sh')
 
