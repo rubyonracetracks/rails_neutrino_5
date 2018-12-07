@@ -23,7 +23,7 @@ StringInFile.replace("gem 'sandi_meter'", GemfileEntry.active('sandi_meter'),'Ge
 puts 'bundle install --quiet'
 system('bundle install --quiet')
 
-# WICHTIG/LEGACY/script: add test_code.sh
+# WICHTIG/LEGACY/script: add test_code.sh to all.sh (if necessary)
 puts 'Adding test_code.sh to all.sh'
 StringInFile.add_end("sh test_code.sh\n", 'all.sh')
 

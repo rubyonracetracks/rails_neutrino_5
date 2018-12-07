@@ -14,10 +14,10 @@ echo '###############################'
 
 git checkout -b 01-04-other_metrics
 
-# Add test_code.sh
+# WICHTIG/LEGACY/script: Add test_code.sh
 mv mod-01-04-test_code.sh test_code.sh
 
-# Update git_check.sh
+# WICHTIG/LEGACY/script: Update git_check.sh
 mv mod-01-04-git_check.sh git_check.sh
 
 ruby mod-01-04.rb
