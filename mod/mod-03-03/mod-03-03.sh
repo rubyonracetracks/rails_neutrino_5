@@ -1,8 +1,6 @@
 #!/bin/bash
 
-# This chapter creates scripts for testing just a portion of the test suite.
-# These portions include the helpers/mailers, the model tests, and the
-# controller tests.
+# This chapter adds Capybara.
 
 # AGENDA
 # Add capybara-email and capybara-slow_finder_errors to the Gemfile

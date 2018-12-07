@@ -4,6 +4,8 @@ require 'insert_from_file'
 require 'string_in_file'
 require 'gemfile_entry'
 
+# WICHTIG/LEGACY/master: Add SimpleCov (if necessary); add coverage to .gitignore
+
 puts 'Adding SimpleCov to the Gemfile'
 InsertFromFile.add_end('mod-03-04-add_to_Gemfile.txt', 'Gemfile')
 puts 'bundle update --quiet'
