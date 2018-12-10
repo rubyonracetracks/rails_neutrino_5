@@ -7,6 +7,8 @@ require 'string_in_file'
 
 # WICHTIG/LEGACY/recommended: add brakeman, bundler-audit, and gemsurance to the Gemfile
 # WICHTIG/LEGACY/recommended: add brakeman, bundler-audit, and gemsurance to test_code.sh (if necessary)
+# WICHTIG/LEGACY/recommended: add brakeman to git_check.sh
+# WICHTIG/LEGACY/recommended: add gemsurance to upgrade_gems.sh
 
 puts 'Updating the Gemfile'
 LineContaining.add_before('rubocop', "  gem 'brakeman'", "Gemfile")
