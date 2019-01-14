@@ -23,7 +23,8 @@ echo
 
 echo '-----------------------------------------------------'
 echo 'Drawing gem dependency diagram (log/diagram-gems.jpg)'
-bundle viz --file=log/diagram-gems --format=jpg --requirements --version
+# NOTE: Using the --version flag causes the bundle viz command to fail
+bundle viz --file=log/diagram-gems --format=jpg --requirements # --version
 
 echo '************************'
 echo 'outline.sh OUTPUT FILES:'
