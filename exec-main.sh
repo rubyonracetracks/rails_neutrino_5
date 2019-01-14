@@ -7,9 +7,14 @@ DIR_MAIN=$PWD
 DIR_PARENT="$(dirname "$DIR_MAIN")"
 DIR_APP=$DIR_PARENT/$APP_NAME
 
-gem uninstall capybara-slow_finder_errors
-gem uninstall capybara-email
-gem uninstall capybara
+echo '--------------'
+echo 'rbenv versions'
+rbenv versions
+
+echo '------------------------'
+echo 'Press ENTER to continue.'
+echo 'Otherwise, press Ctrl-C to exit.'
+read cont
 
 # 1-14-2019: bundler 2.0.1 is incompatible with many gems
 echo '------------------------------------------------------'
@@ -22,6 +27,10 @@ echo ''
 gem uninstall bundler
 
 sh credentials.sh
+
+gem uninstall capybara-slow_finder_errors
+gem uninstall capybara-email
+gem uninstall capybara
 
 DATE_START=$(date +%s)
 
