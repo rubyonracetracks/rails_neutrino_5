@@ -167,6 +167,7 @@ echo "Time used:"
 echo "$((T_SEC/60)) minutes and $((T_SEC%60)) seconds"
 echo ''
 echo 'Things to check:'
+echo '* The .ruby-version and Gemfile should specify the correct Ruby version.'
 echo '* All gems in the Gemfile should be pinned.'
 echo '* When you run the neutrino.sh script, there should be no errors,'
 echo '  no test failures, and no offenses.'
