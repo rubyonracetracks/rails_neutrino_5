@@ -11,6 +11,9 @@ gem uninstall capybara-slow_finder_errors
 gem uninstall capybara-email
 gem uninstall capybara
 
+# 1-14-2019: bundler 2.0.1 is incompatible with many gems
+gem uninstall bundler
+
 sh credentials.sh
 
 DATE_START=$(date +%s)
