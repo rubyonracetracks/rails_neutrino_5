@@ -23,7 +23,8 @@ fi
 echo '-----------------------------------------------'
 echo 'BEGIN: installing gems needed by Rails Neutrino'
 echo '-----------------------------------------------'
-gem install bundler
+# 1-14-2019: bundler 2.0.1 is incompatible with many gems
+# gem install bundler 
 gem install insert_from_file
 gem install line_containing
 gem install gemfile_entry
