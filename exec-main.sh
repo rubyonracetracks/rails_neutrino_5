@@ -12,6 +12,13 @@ gem uninstall capybara-email
 gem uninstall capybara
 
 # 1-14-2019: bundler 2.0.1 is incompatible with many gems
+echo '------------------------------------------------------'
+echo 'As of 1-14-2019, the latest version of bundler (2.0.1)'
+echo 'is incompatible with many gems.'
+echo 'Therefore, it will be removed.'
+echo 'When prompted, enter "y" to remove the executable.'
+echo ''
+
 gem uninstall bundler
 
 sh credentials.sh
