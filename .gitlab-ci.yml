@@ -4,7 +4,7 @@
     - DIR_PARENT="$(dirname "$DIR_MAIN")"
     - git config --global user.email "you@example.com"
     - git config --global user.name "Your Name"
-    - apt-get update && apt-get install -y nodejs
+    - apt-get update && apt-get install -y nodejs curl
     - gem install rake
     - gem install rails
   script:
