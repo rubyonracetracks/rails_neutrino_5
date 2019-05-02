@@ -8,14 +8,9 @@ DIR_MAIN=$PWD
 DIR_PARENT="$(dirname "$DIR_MAIN")"
 DIR_APP=$DIR_PARENT/$APP_NAME
 
-echo '--------------'
-echo 'rbenv versions'
-rbenv versions
-
-echo '------------------------'
-echo 'Press ENTER to continue.'
-echo 'Otherwise, press Ctrl-C to exit.'
-read cont
+echo '-------'
+echo 'ruby -v'
+ruby -v
 
 # 1-14-2019: bundler 2.0.1 is incompatible with many gems
 echo '----------------'
