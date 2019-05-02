@@ -7,6 +7,7 @@
     - gem install rails
   script:
     - sh exec-main.sh 'tmp1' 'no_outline'
+    - cd tmp1 && sh neutrino.sh
   stage: build
 
 build_ruby_2_6_0:
