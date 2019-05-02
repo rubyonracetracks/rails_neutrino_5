@@ -2,6 +2,7 @@
   before_script:
     - git config --global user.email "you@example.com"
     - git config --global user.name "Your Name"
+    - gem install rake
     - gem install rails
   script:
     - sh exec-main.sh 'tmp1' 'no_outline'
