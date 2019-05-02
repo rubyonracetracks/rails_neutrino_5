@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 # Set up Minitest Reporters to provide red/green displays, a list of the
 # most time-consuming tests within your test suite, and commands for

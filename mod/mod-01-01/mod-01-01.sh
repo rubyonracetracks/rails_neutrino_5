@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 # AGENDA:
 # * Updating .gitignore to prevent accidental additions of .DS_Store

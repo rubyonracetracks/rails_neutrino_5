@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 # AGENDA
 # * Configure the production environment to automatically enable SSL.

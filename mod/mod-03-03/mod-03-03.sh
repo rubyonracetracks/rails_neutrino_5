@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 # This chapter adds Capybara.
 

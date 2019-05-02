@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 # AGENDA
 # * Add an initial index page to show that the app works

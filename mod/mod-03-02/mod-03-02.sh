@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 # This chapter creates scripts for testing just a portion of the test suite.
 # These portions include the helpers/mailers, the model tests, and the

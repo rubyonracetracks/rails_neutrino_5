@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 # AGENDA
 # * sqlite3 should be limited to the development and test environments.

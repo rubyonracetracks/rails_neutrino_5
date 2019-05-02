@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 # AGENDA
 # * Create a barrier to destroying data with rake commands in the

@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 # In this chapter, SimpleCov is added.
 

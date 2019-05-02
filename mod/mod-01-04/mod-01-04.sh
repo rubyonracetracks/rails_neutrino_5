@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 # AGENDA
 # * Update test_code.sh.
