@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 APP_NAME=$1
 TOGGLE_OUTLINE=$2
@@ -20,15 +21,6 @@ read cont
 echo '----------------'
 echo 'gem list bundler'
 gem list bundler
-echo '------------------------------------------------------'
-echo 'As of 1-14-2019, the latest version of bundler (2.0.1)'
-echo 'is incompatible with many gems.'
-echo ''
-echo 'Therefore, it will be removed.'
-echo 'When prompted, enter "y" to remove the executable.'
-echo ''
-
-gem uninstall bundler
 
 sh credentials.sh
 
