@@ -6,6 +6,12 @@ TOGGLE_OUTLINE=$2
 
 DIR_MAIN=$PWD
 DIR_PARENT="$(dirname "$DIR_MAIN")"
+
+if [ "$GITLAB_CI" = 'true' ]
+then
+  DIR_PARENT=$DIR_MAIN
+fi
+
 DIR_APP=$DIR_PARENT/$APP_NAME
 
 echo '-------'
