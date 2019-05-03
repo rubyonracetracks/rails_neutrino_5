@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 # Providing scripts to generate outlines and block diagrams of the app
 

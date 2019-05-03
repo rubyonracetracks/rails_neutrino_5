@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 # Adding a script that updates the gems with "bundle update"
 

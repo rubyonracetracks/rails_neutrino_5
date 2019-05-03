@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 # Provide scripts for converting from SQLite3 to PostgreSQL
 

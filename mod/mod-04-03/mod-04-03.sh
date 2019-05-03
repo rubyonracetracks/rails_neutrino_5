@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 # Adding MailCatcher for simulating the email interactions
 

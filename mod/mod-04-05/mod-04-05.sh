@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 # Adding the pry-rails gem to improve the screen output in the console environment
 

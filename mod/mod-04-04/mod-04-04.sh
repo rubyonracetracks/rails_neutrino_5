@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 # Adding the better_errors and binding_of_caller gems
 
