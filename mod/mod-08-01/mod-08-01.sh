@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 # Add scripts for creating new admins
 

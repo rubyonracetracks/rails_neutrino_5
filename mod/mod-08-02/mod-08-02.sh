@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 # Prevent the general public from signing up for an admin account
 
