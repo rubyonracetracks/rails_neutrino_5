@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 # Install and set up the Devise gem.
 

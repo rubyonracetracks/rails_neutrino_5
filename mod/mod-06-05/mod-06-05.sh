@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 # AGENDA
 # * Add the faker and ruby-progressbar gems to the Gemfile.
