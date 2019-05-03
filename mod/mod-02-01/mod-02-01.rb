@@ -12,6 +12,12 @@ puts 'Adding the rails/pg/nokogiri section to the Gemfile'
 LineContaining.delete('# Bundle edge Rails instead', 'Gemfile')
 InsertFromFile.replace('mod-02-01-Gemfile-rails_pg_nokogiri.txt', 'Gemfile', "gem 'rails'")
 
+# MUST execute "bundle install" before using the gemfile_entry gem.
+# Not executing "bundle install" in the GitLab CI environment
+# causes the gemfile_entry gem to choke.
+puts 'bundle install --quiet'
+system('bundle install --quiet')
+
 # WICHTIG/LEGACY/all_or_nothing: pin ffi, nokogiri, pg, and rails in the Gemfile
 puts 'Pinning rails, nokogiri, pg, and ffi'
 LineContaining.replace("gem 'ffi'", "#{GemfileEntry.active('ffi')}", "Gemfile")
