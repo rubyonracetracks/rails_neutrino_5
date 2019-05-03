@@ -12,10 +12,10 @@
     - cd $DIR_PARENT/tmp1 && sh neutrino.sh
   stage: build
 
+build_ruby_latest:
+  <<: *build_definition
+  image: ruby:latest
+
 build_ruby_2_6_0:
   <<: *build_definition
   image: ruby:2.6.0
-
-build_ruby_2_6_3:
-  <<: *build_definition
-  image: ruby:2.6.3
