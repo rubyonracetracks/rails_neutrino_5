@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 # AGENDA
 # * Temporarily lock the accounts of users who make too many incorrect logins

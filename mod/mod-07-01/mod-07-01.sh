@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 # Allow the general public to sign up for a user account
 
