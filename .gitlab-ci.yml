@@ -1,7 +1,5 @@
 .build: &build_definition
   before_script:
-    - DIR_MAIN=$PWD
-    - DIR_PARENT="$(dirname "$DIR_MAIN")"
     - git config --global user.email "you@example.com"
     - git config --global user.name "Your Name"
     - apt-get update && apt-get install -y nodejs curl tree
@@ -9,7 +7,7 @@
     - gem install rails
   script:
     - sh exec-main.sh 'tmp1' 'no_outline'
-    - cd $DIR_PARENT/tmp1 && sh all.sh
+    - cd tmp1 && sh all.sh
   stage: build
 
 build_ruby_latest:
