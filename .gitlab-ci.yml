@@ -9,7 +9,7 @@
     - gem install rails
   script:
     - sh exec-main.sh 'tmp1' 'no_outline'
-    - cd $DIR_PARENT/tmp1 && sh neutrino.sh
+    - cd $DIR_PARENT/tmp1 && sh all.sh
   stage: build
 
 build_ruby_latest:
