@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 # Set up the title helper
 

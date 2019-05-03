@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 # Create the static page views
 
