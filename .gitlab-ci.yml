@@ -2,7 +2,7 @@
   before_script:
     - git config --global user.email "you@example.com"
     - git config --global user.name "Your Name"
-    - apt-get update && apt-get install -y nodejs curl tree sudo
+    - apt-get update && apt-get install -y nodejs curl tree sudo postgresql
     - gem install rake
     - gem install rails
   script:
