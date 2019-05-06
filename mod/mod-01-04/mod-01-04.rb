@@ -26,6 +26,9 @@ StringInFile.replace("gem 'sandi_meter'", GemfileEntry.active('sandi_meter'),'Ge
 puts 'bundle install --quiet'
 system('bundle install --quiet')
 
+# Updating .gitignore
+StringInFile.add_end("gemsurance_report.html\n", '.gitignore')
+
 # WICHTIG/LEGACY/bash: add test_code.sh to all.sh
 puts 'Adding test_code.sh to all.sh'
 StringInFile.add_end("sh test_code.sh\n", 'all.sh')
