@@ -44,5 +44,6 @@ bundle exec rails_best_practices .
 echo '----------------------'
 echo 'bundle exec gemsurance'
 bundle exec gemsurance
+wait
 mv gemsurance_report.html log/gemsurance_report.html
 echo 'The Gemsurance Report is at log/gemsurance_report.html .'
