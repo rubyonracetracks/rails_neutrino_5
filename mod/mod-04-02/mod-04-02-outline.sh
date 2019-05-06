@@ -2,35 +2,39 @@
 
 sh outline-short.sh
 
-d_mo='log/diagram-models.jpg'
-d_co='log/diagram-controllers.jpg'
-d_gems='log/diagram-gems.jpg'
+d_mo_1='log/diagram-models-1'
+d_mo_2='log/diagram-models-2.dot'
+d_co='log/diagram-controllers.dot'
+d_gems='log/diagram-gems'
 
 echo '---------------'
 echo 'Using rails-erd'
 bundle exec erd --attributes=foreign_keys,primary_keys,timestamps,inheritance,content \
---filetype=dot--filename=log/diagram-models --indirect=true \
---inheritance=true --notation=bachman --orientation=vertical \
---polymorphism=true
+--filetype=dot --filename=$d_mo_1 --inheritance=true \
+--notation=bachman --orientation=vertical --polymorphism=true
 echo
-echo "Models diagram is at $d_mo"
+echo "The rails-erd models diagram is at $d_mo_1.dot."
 echo
 
 echo '---------------'
 echo 'Using railroady'
-bundle exec railroady -i -l TestLabel -v -a --all-columns -j -m -p -z -t --engine-controllers -C | dot -Tjpg > $d_co
+bundle exec railroady -i -l -v \
+-a --show-belongs_to --all-columns -m -p -z --include-concerns -t -M \
+| dot -Tdot > $d_mo_2
+bundle exec railroady -i -l -v --engine-controllers -C | dot -Tdot > $d_co
 echo
-echo "Controllers diagram is at $d_co"
+echo "The railroady models diagram is at $d_mo_2."
+echo "The railroady controllers diagram is at $d_co."
 echo
 
 echo '-----------------------------------------------------'
 echo 'Drawing gem dependency diagram (log/diagram-gems.jpg)'
 # NOTE: Using the --version flag causes the bundle viz command to fail
-bundle viz --file=log/diagram-gems --format=jpg --requirements # --version
+bundle viz --file=$d_gems --format=dot --requirements # --version
 
 echo '************************'
 echo 'outline.sh OUTPUT FILES:'
-echo $d_mo
+echo $d_mo_1.dot
 echo $d_co
 echo $d_gems
 echo 'Directory trees are in the log directory.'
