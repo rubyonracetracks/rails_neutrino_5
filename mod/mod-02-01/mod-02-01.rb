@@ -12,6 +12,9 @@ puts 'Adding the rails/pg/nokogiri section to the Gemfile'
 LineContaining.delete('# Bundle edge Rails instead', 'Gemfile')
 InsertFromFile.replace('mod-02-01-Gemfile-rails_pg_nokogiri.txt', 'Gemfile', "gem 'rails'")
 
+puts 'Replacing chromedriver-helper with webdrivers'
+LineContaining.replace("gem 'chromedriver-helper'", "gem 'webdrivers'", "Gemfile")
+
 # MUST execute "bundle install" before using the gemfile_entry gem.
 # Not executing "bundle install" in the GitLab CI environment
 # causes the gemfile_entry gem to choke.
@@ -38,7 +41,7 @@ LineContaining.replace("gem 'jbuilder'", "#{GemfileEntry.active('jbuilder')}", "
 
 LineContaining.replace("gem 'capybara'", "  #{GemfileEntry.active('capybara')}", "Gemfile")
 LineContaining.replace("gem 'selenium-webdriver'", "  #{GemfileEntry.active('selenium-webdriver')}", "Gemfile")
-LineContaining.replace("gem 'chromedriver-helper'", "  #{GemfileEntry.active('chromedriver-helper')}", "Gemfile")
+LineContaining.replace("gem 'webdrivers'", "  #{GemfileEntry.active('webdrivers')}", "Gemfile")
 
 LineContaining.add_before("gem 'tzinfo-data'", '# NOTE: tzinfo-data is not installed under the Ruby on Racetracks system', 'Gemfile')
 
