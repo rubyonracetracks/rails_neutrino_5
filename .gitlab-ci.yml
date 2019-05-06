@@ -7,7 +7,7 @@
     - gem install rails
   script:
     - sh exec-main.sh 'tmp1' 'no_outline'
-    - cd tmp1 && sh all.sh
+    - cd tmp1 && sh build_fast.sh
   stage: build
 
 build_ruby_latest:
