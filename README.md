@@ -44,3 +44,7 @@ Similarly, Rails Neutrino creates a new app very rapidly because it bypasses the
 * Preconfigured for deploying to Heroku
 * Automatically pins the gems in the Gemfile for easier upgrading later
 * Enables the Puma web server
+
+## Continuous Integration Environment
+* GitLab CI always runs as root.  Do NOT do this in the development environment.
+* It takes more time to run the Rails Neutrino script in GitLabCI than in the recommended Docker environment.  The latter comes with the latest versions of Ruby and Rails pre-installed.
