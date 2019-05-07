@@ -1,9 +1,8 @@
   # rubocop:disable Naming/UncommunicativeMethodParamName
   # Edit all parameters except email
-  def edit_all_but_email(u, uname, fname, lname, password_n, password_c)
+  def edit_all_but_email(u, uname, lname, password_n, password_c)
     edit_user_start(u)
     fill_in('Username', with: uname)
-    fill_in('First name', with: fname)
     fill_in('Last name', with: lname)
     fill_in('user_password', with: password_n)
     fill_in('user_password_confirmation', with: password_n)
@@ -12,7 +11,6 @@
     assert page.has_text?('Your account has been updated successfully.')
     click_on 'Edit Settings'
     page.assert_selector(:xpath, xpath_input_str(uname))
-    page.assert_selector(:xpath, xpath_input_str(fname))
     page.assert_selector(:xpath, xpath_input_str(lname))
     click_on 'Logout'
     login_user(uname, password_n, false)
@@ -21,11 +19,10 @@
   end
 
   # Edit all parameters, including email
-  def edit_all(u, uname, e, fname, lname, password_n, password_c)
+  def edit_all(u, uname, e, lname, password_n, password_c)
     edit_user_start(u)
     fill_in('Username', with: uname)
     fill_in('Email', with: e)
-    fill_in('First name', with: fname)
     fill_in('Last name', with: lname)
     fill_in('user_password', with: password_n)
     fill_in('user_password_confirmation', with: password_n)
@@ -48,7 +45,6 @@
     visit root_path
     click_on 'Edit Settings'
     page.assert_selector(:xpath, xpath_input_str(uname))
-    page.assert_selector(:xpath, xpath_input_str(fname))
     page.assert_selector(:xpath, xpath_input_str(lname))
     click_on 'Logout'
 
@@ -74,13 +70,13 @@
   end
 
   test 'user can edit all parameters besides email' do
-    edit_all_but_email(@u1, 'jbond', 'James', 'Bond',
+    edit_all_but_email(@u1, 'jbond', 'Bond',
                        'You Only Live Twice', 'Goldfinger')
   end
 
   test 'user can edit all parameters, including email' do
     edit_all(@u1, 'jbond', '007@example.com',
-             'James', 'Bond', 'You Only Live Twice', 'Goldfinger')
+             'Bond', 'You Only Live Twice', 'Goldfinger')
   end
 
   test 'user can delete self' do

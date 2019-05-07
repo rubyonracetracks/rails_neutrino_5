@@ -10,7 +10,7 @@ LineContaining.delete_between('class UserTest < ActiveSupport::TestCase', 'end',
 InsertFromFile.add_after('mod-06-03-user_test.txt', 'test/models/user_test.rb', 'class UserTest < ActiveSupport::TestCase')
 
 puts 'Adding user parameters'
-system('rails generate migration add_params_to_users last_name:string first_name:string username:string:uniq')
+system('rails generate migration add_params_to_users last_name:string username:string:uniq')
 system('wait')
 system('rails db:migrate:reset')
 system('wait')

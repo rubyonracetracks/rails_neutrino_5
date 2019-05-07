@@ -1,5 +1,5 @@
   def setup
-    @admin = Admin.new(last_name: 'Bond', first_name: 'James',
+    @admin = Admin.new(last_name: 'Bond',
                        username: 'jbond007', email: '007@example.com',
                        password: 'bond_james_bond',
                        password_confirmation: 'bond_james_bond',
@@ -86,13 +86,6 @@
     assert_not @admin.valid?
     @admin.username = 'a' * 255
     assert @admin.valid?
-  end
-
-  test 'first name should be present and no longer than 50 characters' do
-    @admin.first_name = '     '
-    assert_not @admin.valid?
-    @admin.first_name = 'A' + 'a' * 50
-    assert_not @admin.valid?
   end
 
   test 'last name should be present and no longer than 50 characters' do

@@ -3,7 +3,6 @@
 
 connery:
   last_name: 'Connery'
-  first_name: 'Sean'
   username: 'sconnery'
   email: 'sean_connery@example.com'
   encrypted_password: <%= User.new.send(:password_digest, 'Goldfinger') %>
@@ -11,7 +10,6 @@ connery:
 
 lazenby:
   last_name: 'Lazenby'
-  first_name: 'George'
   username: 'glazenby'
   email: 'george_lazenby@example.com'
   encrypted_password: <%= User.new.send(:password_digest, 'ohmss1969') %>
@@ -19,7 +17,6 @@ lazenby:
 
 moore:
   last_name: 'Moore'
-  first_name: 'Roger'
   username: 'rmoore'
   email: 'roger_moore@example.com'
   encrypted_password: <%= User.new.send(:password_digest, 'moonraker') %>
@@ -27,7 +24,6 @@ moore:
 
 dalton:
   last_name: 'Dalton'
-  first_name: 'Timothy'
   username: 'tdalton'
   email: 'timothy_dalton@example.com'
   encrypted_password: <%= User.new.send(:password_digest, 'daylights') %>
@@ -35,7 +31,6 @@ dalton:
 
 brosnan:
   last_name: 'Brosnan'
-  first_name: 'Pierce'
   username: 'pbrosnan'
   email: 'pierce_brosnan@example.com'
   encrypted_password: <%= User.new.send(:password_digest, 'goldeneye') %>
@@ -43,7 +38,6 @@ brosnan:
 
 craig:
   last_name: 'Craig'
-  first_name: 'Daniel'
   username: 'dcraig'
   email: 'daniel_craig@example.com'
   encrypted_password: <%= User.new.send(:password_digest, 'reboot007') %>
@@ -51,7 +45,6 @@ craig:
 
 blofeld:
   last_name: 'Blofeld'
-  first_name: 'Ernst'
   username: 'eblofeld'
   email: 'ernst_blofeld@example.com'
   encrypted_password: <%= User.new.send(:password_digest, 'stainless steel') %>
@@ -60,7 +53,6 @@ blofeld:
 <% 100.times do |n| %>
 user_<%= n %>:
   last_name: <%= ['Zboncak', 'Zemlak', 'Ziemann', 'Zieme', 'Zulauf'].sample %>
-  first_name: <%= Faker::Name.first_name %>
   username: <%= "z_user_#{n}" %>
   email: <%= Faker::Internet.email %>
   encrypted_password: <%= User.new.send(:password_digest, 'password1234') %>

@@ -13,14 +13,13 @@
   # rubocop:disable Metrics/AbcSize
   # rubocop:disable Metrics/MethodLength
   def check_profile_enabled(user)
-    fn = user.first_name
     ln = user.last_name
     un = user.username
     e = user.email
     visit user_path(user)
-    assert page.has_css?('title', text: full_title("User: #{fn} #{ln}"),
+    assert page.has_css?('title', text: full_title("User: #{ln}"),
                                   visible: false)
-    assert page.has_css?('h1', text: "User: #{fn} #{ln}",
+    assert page.has_css?('h1', text: "User: #{ln}",
                                visible: false)
     assert page.has_text?("Username: #{un}")
     assert page.has_text?("Email: #{e}")

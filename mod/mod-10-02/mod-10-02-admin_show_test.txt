@@ -15,14 +15,13 @@
   end
 
   def check_profile_enabled(admin1)
-    fn = admin1.first_name
     ln = admin1.last_name
     un = admin1.username
     e = admin1.email
     visit admin_path(admin1)
-    assert page.has_css?('title', text: full_title("Admin: #{fn} #{ln}"),
+    assert page.has_css?('title', text: full_title("Admin: #{ln}"),
                                   visible: false)
-    assert page.has_css?('h1', text: "Admin: #{fn} #{ln}",
+    assert page.has_css?('h1', text: "Admin: #{ln}",
                                visible: false)
     assert page.has_text?("Username: #{un}")
     assert page.has_text?("Email: #{e}")
