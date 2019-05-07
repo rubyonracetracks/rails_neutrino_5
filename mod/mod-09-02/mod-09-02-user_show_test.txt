@@ -11,7 +11,6 @@
   end
 
   # rubocop:disable Metrics/AbcSize
-  # rubocop:disable Metrics/MethodLength
   def check_profile_enabled(user)
     ln = user.last_name
     un = user.username
@@ -25,7 +24,6 @@
     assert page.has_text?("Email: #{e}")
   end
   # rubocop:enable Metrics/AbcSize
-  # rubocop:enable Metrics/MethodLength
 
   def check_own_page(user1)
     login_as(user1, scope: :user)

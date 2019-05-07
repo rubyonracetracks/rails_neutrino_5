@@ -6,7 +6,6 @@
   end
 
   # rubocop:disable Metrics/AbcSize
-  # rubocop:disable Metrics/MethodLength
   def check_own_profile(admin1)
     login_as(admin1, scope: :admin)
     visit root_path
@@ -27,7 +26,6 @@
     assert page.has_text?("Email: #{e}")
   end
   # rubocop:enable Metrics/AbcSize
-  # rubocop:enable Metrics/MethodLength
 
   test 'unregistered visitors may not view admin profile pages' do
     check_profile_disabled(@a1)

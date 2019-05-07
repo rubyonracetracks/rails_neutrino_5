@@ -39,14 +39,14 @@ n_admins.times do |n|
 end
 
 n_admins = 51
-puts '------------------------------------'
+puts '---------------------------------------------'
 puts "Creating the second #{n_admins} random admins"
 pbar = ProgressBar.create(total: n_admins)
 n_admins.times do |n|
   name_l = Faker::Name.last_name
   email_address = Faker::Internet.email(name_l)
 
-  Admin.create!(last_name: name_l, 
+  Admin.create!(last_name: name_l,
                 username: "admin-faker#{n + 1}",
                 email: email_address, password: 'Daytona 500',
                 password_confirmation: 'Daytona 500',

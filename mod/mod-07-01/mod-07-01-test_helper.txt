@@ -1,5 +1,4 @@
 
-# rubocop:disable Metrics/ParameterLists
 def sign_up_user(name_u, name_l, e, p1, p2)
   visit root_path
   click_on 'Sign up now!'
@@ -10,4 +9,3 @@ def sign_up_user(name_u, name_l, e, p1, p2)
   fill_in('Password confirmation', with: p2)
   click_button('Sign up')
 end
-# rubocop:enable Metrics/ParameterLists
