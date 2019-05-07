@@ -35,6 +35,7 @@ bundle viz --file=$d_gems --format=dot --requirements # --version
 echo '************************'
 echo 'outline.sh OUTPUT FILES:'
 echo $d_mo_1.dot
+echo $d_mo_2.dot
 echo $d_co
 echo $d_gems
 echo 'Directory trees are in the log directory.'
