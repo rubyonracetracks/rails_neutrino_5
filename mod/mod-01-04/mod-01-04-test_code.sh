@@ -43,6 +43,8 @@ bundle exec rails_best_practices .
 # Checks for outdated and insecure gems
 echo '----------------------'
 echo 'bundle exec gemsurance'
+echo 'NOTE: Gemsurance fails intermittently.'
+echo 'If necessary, enter the command "bundle exec gemsurance".'
 bundle exec gemsurance
 wait
 mv gemsurance_report.html log/gemsurance_report.html
