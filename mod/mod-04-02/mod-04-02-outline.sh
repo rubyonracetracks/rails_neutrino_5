@@ -27,16 +27,16 @@ echo "The railroady models diagram is at $d_mo_2."
 echo "The railroady controllers diagram is at $d_co."
 echo
 
-echo '-----------------------------------------------------'
-echo 'Drawing gem dependency diagram (log/diagram-gems.jpg)'
+echo '--------------------------------------------'
+echo "Drawing gem dependency diagram ($d_gems.dot)"
 # NOTE: Using the --version flag causes the bundle viz command to fail
 bundle viz --file=$d_gems --format=dot --requirements # --version
 
 echo '************************'
 echo 'outline.sh OUTPUT FILES:'
-echo $d_mo_1.dot
-echo $d_mo_2.dot
-echo $d_co
-echo $d_gems
+echo "$d_mo_1.dot"
+echo "$d_mo_2"
+echo "$d_co"
+echo "$d_gems.dot"
 echo 'Directory trees are in the log directory.'
 echo

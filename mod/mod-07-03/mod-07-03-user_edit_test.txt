@@ -1,10 +1,9 @@
   # rubocop:disable Naming/UncommunicativeMethodParamName
   # Edit all parameters except email
-  def edit_all_but_email(u, uname, fname, lname, password_n, password_c)
+  def edit_all_but_email(u, uname, name, password_n, password_c)
     edit_user_start(u)
     fill_in('Username', with: uname)
-    fill_in('First name', with: fname)
-    fill_in('Last name', with: lname)
+    fill_in('Name', with: name)
     fill_in('user_password', with: password_n)
     fill_in('user_password_confirmation', with: password_n)
     fill_in('Current password', with: password_c)
@@ -12,8 +11,7 @@
     assert page.has_text?('Your account has been updated successfully.')
     click_on 'Edit Settings'
     page.assert_selector(:xpath, xpath_input_str(uname))
-    page.assert_selector(:xpath, xpath_input_str(fname))
-    page.assert_selector(:xpath, xpath_input_str(lname))
+    page.assert_selector(:xpath, xpath_input_str(name))
     click_on 'Logout'
     login_user(uname, password_n, false)
     assert page.has_text?('Signed in successfully.')
@@ -21,12 +19,11 @@
   end
 
   # Edit all parameters, including email
-  def edit_all(u, uname, e, fname, lname, password_n, password_c)
+  def edit_all(u, uname, e, name, password_n, password_c)
     edit_user_start(u)
     fill_in('Username', with: uname)
     fill_in('Email', with: e)
-    fill_in('First name', with: fname)
-    fill_in('Last name', with: lname)
+    fill_in('Name', with: name)
     fill_in('user_password', with: password_n)
     fill_in('user_password_confirmation', with: password_n)
     fill_in('Current password', with: password_c)
@@ -48,8 +45,7 @@
     visit root_path
     click_on 'Edit Settings'
     page.assert_selector(:xpath, xpath_input_str(uname))
-    page.assert_selector(:xpath, xpath_input_str(fname))
-    page.assert_selector(:xpath, xpath_input_str(lname))
+    page.assert_selector(:xpath, xpath_input_str(name))
     click_on 'Logout'
 
     login_user(uname, password_n, false)
@@ -74,13 +70,13 @@
   end
 
   test 'user can edit all parameters besides email' do
-    edit_all_but_email(@u1, 'jbond', 'James', 'Bond',
+    edit_all_but_email(@u1, 'jbond', 'James Bond',
                        'You Only Live Twice', 'Goldfinger')
   end
 
   test 'user can edit all parameters, including email' do
     edit_all(@u1, 'jbond', '007@example.com',
-             'James', 'Bond', 'You Only Live Twice', 'Goldfinger')
+             'James Bond', 'You Only Live Twice', 'Goldfinger')
   end
 
   test 'user can delete self' do

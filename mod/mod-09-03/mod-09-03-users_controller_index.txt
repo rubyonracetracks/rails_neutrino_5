@@ -2,7 +2,7 @@
   # BEGIN: index
   def index
     @users = User.all
-    @users = @users.order('last_name asc').page(params[:page]).per(50)
+    @users = @users.order('name asc').page(params[:page]).per(50)
     @users_count = @users.count
   end
   # END: index

@@ -1,10 +1,9 @@
   # rubocop:disable Naming/UncommunicativeMethodParamName
   # Edit all parameters except email
-  def edit_all_but_email(a, uname, fname, lname, password_n, password_c)
+  def edit_all_but_email(a, uname, name, password_n, password_c)
     edit_admin_start(a)
     fill_in('Username', with: uname)
-    fill_in('First name', with: fname)
-    fill_in('Last name', with: lname)
+    fill_in('Name', with: name)
     fill_in('admin_password', with: password_n)
     fill_in('admin_password_confirmation', with: password_n)
     fill_in('Current password', with: password_c)
@@ -12,8 +11,7 @@
     assert page.has_text?('Your account has been updated successfully.')
     click_on 'Edit Settings'
     page.assert_selector(:xpath, xpath_input_str(uname))
-    page.assert_selector(:xpath, xpath_input_str(fname))
-    page.assert_selector(:xpath, xpath_input_str(lname))
+    page.assert_selector(:xpath, xpath_input_str(name))
     click_on 'Logout'
     login_admin(uname, password_n, false)
     assert page.has_text?('Signed in successfully.')
@@ -21,12 +19,11 @@
   end
 
   # Edit all parameters, including email
-  def edit_all(a, uname, e, fname, lname, password_n, password_c)
+  def edit_all(a, uname, e, name, password_n, password_c)
     edit_admin_start(a)
     fill_in('Username', with: uname)
     fill_in('Email', with: e)
-    fill_in('First name', with: fname)
-    fill_in('Last name', with: lname)
+    fill_in('Name', with: name)
     fill_in('admin_password', with: password_n)
     fill_in('admin_password_confirmation', with: password_n)
     fill_in('Current password', with: password_c)
@@ -49,8 +46,7 @@
     visit root_path
     click_on 'Edit Settings'
     page.assert_selector(:xpath, xpath_input_str(uname))
-    page.assert_selector(:xpath, xpath_input_str(fname))
-    page.assert_selector(:xpath, xpath_input_str(lname))
+    page.assert_selector(:xpath, xpath_input_str(name))
     click_on 'Logout'
 
     login_admin(uname, password_n, false)
@@ -90,23 +86,23 @@
   end
 
   test 'super admin can edit all parameters besides email' do
-    edit_all_but_email(@a1, 'rwitherspoon', 'Reese', 'Witherspoon',
+    edit_all_but_email(@a1, 'rwitherspoon', 'Reese Witherspoon',
                        'Just Like Heaven', 'endorphins')
   end
 
   test 'regular admin can edit all parameters besides email' do
-    edit_all_but_email(@a4, 'jcoolidge', 'Jennifer', 'Coolidge',
+    edit_all_but_email(@a4, 'jcoolidge', 'Jennifer Coolidge',
                        'A Cinderella Story', "Neptune's Beauty Nook")
   end
 
   test 'super admin can edit all parameters, including email' do
     edit_all(@a1, 'rwitherspoon', 'reese_witherspoon@example.com',
-             'Reese', 'Witherspoon', 'Just Like Heaven', 'endorphins')
+             'Reese Witherspoon', 'Just Like Heaven', 'endorphins')
   end
 
   test 'regular admin can edit all parameters, including email' do
     edit_all(@a4, 'jcoolidge', 'jennifer_coolidge@example.com',
-             'Jennifer', 'Coolidge', 'A Cinderella Story',
+             'Jennifer Coolidge', 'A Cinderella Story',
              "Neptune's Beauty Nook")
   end
 

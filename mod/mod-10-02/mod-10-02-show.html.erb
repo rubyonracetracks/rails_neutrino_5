@@ -1,10 +1,10 @@
 <% require 'email_munger' %>
 
-<% provide(:title, "Admin: #{@admin.first_name} #{@admin.last_name}") %>
+<% provide(:title, "Admin: #{@admin.name}") %>
 <div class="row">
   <section class="admin_info">
     <h1>
-    Admin: <%= @admin.first_name %> <%= @admin.last_name %>
+    Admin: <%= @admin.name %>
     </h1>
     Username: <%= @admin.username %>
     <br>

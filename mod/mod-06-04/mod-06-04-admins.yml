@@ -3,8 +3,7 @@
 
 elle_woods: 
   username: 'ewoods'
-  last_name: 'Woods'
-  first_name: 'Elle'
+  name: 'Elle Woods'
   email: 'elle_woods@example.com'
   super: true
   encrypted_password: <%= Admin.new.send(:password_digest, 'endorphins') %>
@@ -12,8 +11,7 @@ elle_woods:
 
 vivian_kensington:
   username: 'vkensington'
-  last_name: 'Kensington'
-  first_name: 'Vivian'
+  name: 'Vivian Kensington'
   email: 'vivian_kensingston@example.com'
   super: true
   encrypted_password: <%= Admin.new.send(:password_digest, 'nice outfit') %>
@@ -21,8 +19,7 @@ vivian_kensington:
 
 emmett_richmond:
   username: 'erichmond'
-  last_name: 'Richmond'
-  first_name: 'Emmett'
+  name: 'Emmett Richmond'
   email: 'emmett_richmond@example.com'
   super: false
   encrypted_password: <%= Admin.new.send(:password_digest, "new representation") %>
@@ -30,8 +27,7 @@ emmett_richmond:
   
 paulette_bonafonte:
   username: 'pbonafonte'
-  last_name: 'Bonafonte'
-  first_name: 'Paulette'
+  name: 'Paulette Bonafonte'
   email: 'paulette_bonafonte@example.com'
   super: false
   encrypted_password: <%= Admin.new.send(:password_digest, "Neptune's Beauty Nook") %>
@@ -39,8 +35,7 @@ paulette_bonafonte:
   
 professor_callahan:
   username: 'pcallahan'
-  last_name: 'Callahan'
-  first_name: 'Professor'
+  name: 'Professor Callahan'
   email: 'professor_callahan@example.com'
   super: true
   encrypted_password: <%= Admin.new.send(:password_digest, 'Titanic guy') %>
@@ -48,8 +43,7 @@ professor_callahan:
 
 warner_huntington:
   username: 'whuntington'
-  last_name: 'Huntington'
-  first_name: 'Warner'
+  name: 'Warner Huntington'
   email: 'warner_huntington@example.com'
   super: false
   encrypted_password: <%= Admin.new.send(:password_digest, 'need someone serious') %>
@@ -57,8 +51,7 @@ warner_huntington:
 
 <% 100.times do |n| %>
 user_<%= n %>:
-  last_name: <%= ['Zboncak', 'Zemlak', 'Ziemann', 'Zieme', 'Zulauf'].sample %>
-  first_name: <%= Faker::Name.first_name %>
+  name: <%= ['Zboncak', 'Zemlak', 'Ziemann', 'Zieme', 'Zulauf'].sample %>
   username: <%= "z_admin_#{n}" %>
   email: <%= Faker::Internet.email %>
   encrypted_password: <%= User.new.send(:password_digest, 'password1234') %>

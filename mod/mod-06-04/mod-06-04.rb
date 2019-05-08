@@ -10,7 +10,7 @@ LineContaining.delete_between('class AdminTest < ActiveSupport::TestCase', 'end'
 InsertFromFile.add_after('mod-06-04-admin_test.txt', 'test/models/admin_test.rb', 'class AdminTest < ActiveSupport::TestCase')
 
 puts 'Adding admin parameters'
-system('rails generate migration add_params_to_admin last_name:string first_name:string username:string:uniq super:boolean')
+system('rails generate migration add_params_to_admin name:string username:string:uniq super:boolean')
 system('wait')
 system('rails db:migrate:reset')
 system('wait')

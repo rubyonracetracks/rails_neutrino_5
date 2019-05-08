@@ -11,22 +11,19 @@
   end
 
   # rubocop:disable Metrics/AbcSize
-  # rubocop:disable Metrics/MethodLength
   def check_profile_enabled(user)
-    fn = user.first_name
-    ln = user.last_name
+    n = user.name
     un = user.username
     e = user.email
     visit user_path(user)
-    assert page.has_css?('title', text: full_title("User: #{fn} #{ln}"),
+    assert page.has_css?('title', text: full_title("User: #{n}"),
                                   visible: false)
-    assert page.has_css?('h1', text: "User: #{fn} #{ln}",
+    assert page.has_css?('h1', text: "User: #{n}",
                                visible: false)
     assert page.has_text?("Username: #{un}")
     assert page.has_text?("Email: #{e}")
   end
   # rubocop:enable Metrics/AbcSize
-  # rubocop:enable Metrics/MethodLength
 
   def check_own_page(user1)
     login_as(user1, scope: :user)

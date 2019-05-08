@@ -1,7 +1,6 @@
 arg_username = ''
 arg_email = ''
-arg_first_name = ''
-arg_last_name = ''
+arg_name = ''
 arg_pwd = ''
 arg_pwd_conf = ''
 
@@ -20,16 +19,10 @@ while arg_email == ''
   arg_email = gets.chomp
 end
 
-while arg_first_name == ''
+while arg_name == ''
   puts
-  puts 'Enter the first name of the new admin:'
-  arg_first_name = gets.chomp
-end
-
-while arg_last_name == ''
-  puts
-  puts 'Enter the last name of the new admin:'
-  arg_last_name = gets.chomp
+  puts 'Enter the name of the new admin:'
+  arg_name = gets.chomp
 end
 
 while arg_pwd == ''
@@ -59,20 +52,19 @@ arg_super = gets.chomp
 
 puts
 if %w[Y y].include? arg_super
-  Admin.create!(username: arg_username, last_name: arg_last_name,
-                first_name: arg_first_name, email: arg_email,
-                password: arg_pwd, password_confirmation: arg_pwd_conf,
+  Admin.create!(username: arg_username, name: arg_name,
+                email: arg_email, password: arg_pwd,
+                password_confirmation: arg_pwd_conf,
                 super: true, confirmed_at: Time.now)
   puts 'Admin type: super'
 else
-  Admin.create!(username: arg_username, last_name: arg_email,
-                first_name: arg_first_name, email: arg_email,
-                password: arg_pwd, password_confirmation: arg_pwd_conf,
+  Admin.create!(username: arg_username, name: arg_email,
+                email: arg_email, password: arg_pwd,
+                password_confirmation: arg_pwd_conf,
                 super: false, confirmed_at: Time.now)
   puts 'Admin type: regular'
 end
 puts "Username: #{arg_username}"
-puts "First name: #{arg_first_name}"
-puts "Last name: #{arg_last_name}"
+puts "Name: #{arg_name}"
 puts "Email: #{arg_email}"
 puts "Password: #{arg_pwd}"
