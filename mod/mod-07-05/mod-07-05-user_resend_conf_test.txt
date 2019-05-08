@@ -1,5 +1,5 @@
   test 'resend confirmation for sign up' do
-    sign_up_user('magnumpi', 'Magnum', 'magnum_pi@example.com',
+    sign_up_user('magnumpi', 'Thomas Magnum', 'magnum_pi@example.com',
                  'Work the lock!', 'Work the lock!')
 
     # Check for the message about the account activation link
@@ -35,7 +35,7 @@
     edit_user_start(@u1)
     fill_in('Username', with: 'jbond')
     fill_in('Email', with: '007@example.com')
-    fill_in('Last name', with: 'Bond')
+    fill_in('Name', with: 'James Bond')
     fill_in('user_password', with: 'From Russia With Love')
     fill_in('user_password_confirmation', with: 'From Russia With Love')
     fill_in('Current password', with: 'Goldfinger')
@@ -70,6 +70,6 @@
     assert page.has_text?('Signed in successfully.')
     click_on 'Edit Settings'
     page.assert_selector(:xpath, xpath_input_str('jbond'))
-    page.assert_selector(:xpath, xpath_input_str('Bond'))
+    page.assert_selector(:xpath, xpath_input_str('James Bond'))
     click_on 'Logout'
   end

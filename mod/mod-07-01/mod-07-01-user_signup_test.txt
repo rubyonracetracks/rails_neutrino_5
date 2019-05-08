@@ -15,7 +15,7 @@
 
   test 'Proper response for invalid sign-up' do
     assert_no_difference 'User.count' do
-      sign_up_user('jhiggins', 'Higgins',
+      sign_up_user('jhiggins', 'Jonathan Quayle Higgins',
                    'jhiggins@example.com', 'Zeus and Apollo',
                    'Higgy Baby')
     end
@@ -24,7 +24,7 @@
 
   test 'Proper response for valid sign-up' do
     assert_difference 'User.count', 1 do
-      sign_up_user('jhiggins', 'Higgins',
+      sign_up_user('jhiggins', 'Jonathan Quayle Higgins',
                    'jhiggins@example.com', 'Zeus and Apollo',
                    'Zeus and Apollo')
     end

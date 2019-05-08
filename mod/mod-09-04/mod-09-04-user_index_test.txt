@@ -18,13 +18,13 @@
     assert page.has_css?('title', text: full_title('User Index'),
                                   visible: false)
     assert page.has_css?('h1', text: 'User Index')
-    assert page.has_text?('Connery')
-    assert page.has_text?('Lazenby')
-    assert page.has_text?('Moore')
-    assert page.has_text?('Dalton')
-    assert page.has_text?('Brosnan')
-    assert page.has_text?('Craig')
-    assert page.has_text?('Blofeld')
+    assert page.has_text?('Sean Connery')
+    assert page.has_text?('George Lazenby')
+    assert page.has_text?('Roger Moore')
+    assert page.has_text?('Timothy Dalton')
+    assert page.has_text?('Pierce Brosnan')
+    assert page.has_text?('Daniel Craig')
+    assert page.has_text?('Ernst Stavro Blofeld')
 
     # Verify that index page provides access to profile pages
     assert page.has_link?('sconnery', href: user_path(@u1))

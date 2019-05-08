@@ -69,7 +69,7 @@
   end
 
   test 'Proper response for new user login and logout' do
-    sign_up_user('jhiggins', 'Higgins',
+    sign_up_user('jhiggins', 'Jonathan Quayle Higgins',
                  'jhiggins@example.com', 'Zeus and Apollo',
                  'Zeus and Apollo')
 

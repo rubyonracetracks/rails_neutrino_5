@@ -5,7 +5,7 @@
     # NOTE: The following line specifies the sort order.
     # This is reflected in the default sort criteria shown.
     # The user is free to remove these default criteria.
-    @search.sorts = 'last_name asc' if @search.sorts.empty?
+    @search.sorts = 'name asc' if @search.sorts.empty?
     @search.build_condition if @search.conditions.empty?
     @search.build_sort if @search.sorts.empty?
     @users = @search.result
