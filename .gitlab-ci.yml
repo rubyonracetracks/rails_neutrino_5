@@ -4,6 +4,9 @@ variables:
 
 image: "ruby:latest"
 
+services:
+  - docker:dind
+
 test_main:
   stage: build
   before_script:
