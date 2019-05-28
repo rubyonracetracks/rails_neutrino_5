@@ -1,24 +1,19 @@
-variables:
-  OWNER: rubyonracetracks
-  PROJECT: rails_neutrino_5
-
-image: "ruby:latest"
-
-services:
-  - docker:dind
-
-test_main:
-  stage: build
+.build: &build_definition
   before_script:
     - git config --global user.email "you@example.com"
     - git config --global user.name "Your Name"
-    - echo "$REPO_PASSWORD" | docker login registry.gitlab.com -u "$REPO_USERNAME" --password-stdin
     - apt-get update && apt-get install -y nodejs curl tree sudo postgresql graphviz
     - gem install rake
     - gem install rails
   script:
     - sh exec-main.sh 'tmp1' 'no_outline'
     - cd tmp1 && sh build_fast.sh
-  after_script:
-    - docker build -t "registry.gitlab.com/$OWNER/$PROJECT" .
-  
+  stage: build
+
+build_ruby_latest:
+  <<: *build_definition
+  image: ruby:latest
+
+build_ruby_2_6_0:
+  <<: *build_definition
+  image: ruby:2.6.0
