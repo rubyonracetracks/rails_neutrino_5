@@ -2,9 +2,9 @@ variables:
   OWNER: rubyonracetracks
   PROJECT: rails_neutrino_5
 
-image: "registry.gitlab.com/$OWNER/$PROJECT"
+image: "ruby:latest"
 
-build_ruby_latest:
+test_main:
   stage: build
   before_script:
     - git config --global user.email "you@example.com"
