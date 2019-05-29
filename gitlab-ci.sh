@@ -1,6 +1,6 @@
 #!/bin/bash
 set -e
 
-# NOTE: This script is inteded for the continuous integration environment.
+# NOTE: This script is intended for the continuous integration environment.
 
-docker build . -t container-debian-buster-rbenv-rails-general
+docker build . -t container-debian-buster-rvm-rails-general
