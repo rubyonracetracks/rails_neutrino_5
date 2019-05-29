@@ -1,6 +1,14 @@
-# NOTE: This Dockerfile is used ONLY in the continuous integration environment
-# and is NOT intended for the development environment on your local machine.
+# NOTE: This Dockerfile is intended for the continuous integration environment.
 
-FROM ruby:latest
+FROM registry.gitlab.com/rubyonracetracks/docker-debian-buster-rvm-rails-general
+MAINTAINER Ruby on Racetracks
 
-RUN sh docker-build.sh
+RUN mkdir -p /home/winner/application
+
+# Copy application code
+COPY . /home/winner/application
+
+# Change to the application's directory
+WORKDIR /home/winner/application
+
+RUN /home/winner/application/gitlab-ci-docker
