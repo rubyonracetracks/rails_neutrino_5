@@ -32,6 +32,3 @@ StringInFile.add_end("gemsurance_report.html\n", '.gitignore')
 # WICHTIG/LEGACY/bash: add test_code.sh to all.sh
 puts 'Adding test_code.sh to all.sh'
 StringInFile.add_end("sh test_code.sh\n", 'all.sh')
-
-puts 'Adding neutrino.sh'
-system('mv mod-01-04-neutrino.sh neutrino.sh')
