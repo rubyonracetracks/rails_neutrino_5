@@ -5,4 +5,5 @@ before_script:
   - sudo apt-get install -y bash
 
 script:
+  - ls -l
   - build-rails 'tmp1'
