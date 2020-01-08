@@ -17,8 +17,6 @@ echo '----------------'
 echo 'gem list bundler'
 gem list bundler
 
-sh credentials.sh
-
 gem uninstall capybara-slow_finder_errors
 gem uninstall capybara-email
 gem uninstall capybara
@@ -56,17 +54,14 @@ echo "cd $DIR_MAIN && rails new $APP_NAME"
 cd $DIR_MAIN && rails new $APP_NAME
 wait
 
+git config --global user.email "mhartl@railstutorial.org"
+git config --global user.name "Michael Hartl"
+
 # Migration
 echo '-------------------------------'
 echo "cd $DIR_APP && rails db:migrate"
 cd $DIR_APP && rails db:migrate
 wait
-
-# Copy credentials.sh to the new app's root directory
-# WICHTIG/LEGACY/bash: add credentials.sh
-echo '------------------------------------------------------------------------'
-echo 'Copying credentials.sh, mod_app.sh, and the mod directory to the new app'
-cp $DIR_MAIN/credentials.sh $DIR_APP
 
 # Adding config/rails_neutrino_timestamp.txt
 echo $APP_NAME > $DIR_APP/config/rails_neutrino_timestamp.txt
