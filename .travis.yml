@@ -6,3 +6,6 @@ before_script:
 
 script:
   - $PWD/build-rails 'tmp1'
+
+after_script:
+  - cd $PWD/tmp1 && bundle install && rails db:migrate && rails test
