@@ -1,0 +1,24 @@
+#!/bin/bash
+set +e
+
+docker-compose down -v --remove-orphans
+wait
+echo '###########################'
+echo 'BEGIN: docker-compose build'
+echo '###########################'
+docker-compose build
+echo '##############################'
+echo 'FINISHED: docker-compose build'
+echo '##############################'
+
+echo '------------------------------------------------------------'
+echo 'mkdir -p /bundle/vendor && chown -R railsuser /bundle/vendor'
+docker-compose run --rm -u root web bash -c "mkdir -p /bundle/vendor && chown -R railsuser /bundle/vendor"
+
+echo '------------------------------------'
+echo 'bundle install --path /bundle/vendor'
+docker-compose run --rm web bundle install --path /bundle/vendor
+
+echo '---------------------------'
+echo 'bundle exec rake db:migrate'
+docker-compose run --rm web bundle exec rake db:migrate

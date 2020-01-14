@@ -3,20 +3,24 @@ set -e
 
 # AGENDA
 # * Add an initial index page to show that the app works
+# * Add the Dockerfile and docker-compose.yml files
 # * Add the following scripts:
+#   bin/dbuild
+#   bin/dserver
+#   bin/dtest
 #   all.sh
 #   build_fast.sh
 #   git_check.sh
 #   kill_spring.sh
 #   log_test_app.sh
+#   nuke.sh
 #   pg-start.sh
 #   sandbox.sh
 #   server.sh
 #   test_app.sh
 
-# * NOTE 1: credentials.sh was added prior to the execution of this script.
-# * NOTE 2: The public/index.html page replaces the default Rails splash screen.
-# * NOTE 3: The default Rails splash screen does not work in the Heroku
+# * NOTE 1: The public/index.html page replaces the default Rails splash screen.
+# * NOTE 2: The default Rails splash screen does not work in the Heroku
 #           production environment.  If no index page is specified, the
 #           Heroku splash screen appears instead.
 
@@ -26,7 +30,16 @@ echo '###############################'
 
 git checkout -b 01-02-basic_scripts
 
-# WICHTIG/LEGACY/bash: add *.sh scripts from this chapter
+# WICHTIG/LEGACY/bash: add Dockerfile, docker-compose.yml file, and scripts from this chapter
+
+echo 'Adding Dockerfile and docker-compose.yml'
+mv mod-01-02-Dockerfile Dockerfile
+mv mod-01-02-docker-compose.yml docker-compose.yml
+
+echo 'Adding bin/dbuild, bin/dserver, and bin/dtest'
+mv mod-01-02-bin-dbuild bin/dbuild
+mv mod-01-02-bin-dserver bin/dserver
+mv mod-01-02-bin-dtest bin/dtest
 
 echo 'Adding build_fast.sh'
 mv mod-01-02-build_fast.sh build_fast.sh

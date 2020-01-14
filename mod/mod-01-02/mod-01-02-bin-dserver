@@ -1,0 +1,10 @@
+#!/bin/sh
+
+set -e
+
+docker-compose run --rm -u root web bash -c "mkdir -p /bundle/vendor && chown -R railsuser /bundle/vendor"
+
+docker-compose run --rm web bundle install --path /bundle/vendor
+docker-compose run --rm web bundle exec rake db:migrate
+docker-compose run --rm web rm -f /app/tmp/pids/server.pid
+docker-compose up web
