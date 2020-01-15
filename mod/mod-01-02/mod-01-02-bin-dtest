@@ -2,8 +2,6 @@
 
 set -e
 
-docker-compose run --rm -u root web bash -c "mkdir -p /bundle/vendor && chown -R railsuser /bundle/vendor"
-
-docker-compose run --rm web bundle install --path /bundle/vendor
-docker-compose run --rm web bundle exec rake db:migrate
+echo '---------------------'
+echo 'bundle exec rake test'
 docker-compose run --rm web bundle exec rake test

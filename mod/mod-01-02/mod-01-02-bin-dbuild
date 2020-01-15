@@ -11,9 +11,9 @@ echo '##############################'
 echo 'FINISHED: docker-compose build'
 echo '##############################'
 
-echo '------------------------------------------------------------'
-echo 'mkdir -p /bundle/vendor && chown -R railsuser /bundle/vendor'
-docker-compose run --rm -u root web bash -c "mkdir -p /bundle/vendor && chown -R railsuser /bundle/vendor"
+echo '---------------------------------------------------------'
+echo 'mkdir -p /bundle/vendor && chown -R winner /bundle/vendor'
+docker-compose run --rm -u root web bash -c "mkdir -p /bundle/vendor && chown -R winner /bundle/vendor"
 
 echo '------------------------------------'
 echo 'bundle install --path /bundle/vendor'

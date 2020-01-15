@@ -9,7 +9,7 @@ services:
     environment:
       - BUNDLE_PATH=/bundle/vendor
       - BUNDLE_APP_CONFIG=/app/.bundle
-    user: railsuser
+    user: winner
     command:
       - bundle
       - exec

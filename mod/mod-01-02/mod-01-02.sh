@@ -6,15 +6,15 @@ set -e
 # * Add the Dockerfile and docker-compose.yml files
 # * Add the following scripts:
 #   bin/dbuild
+#   bin/bundle
+#   bin/dmigrate
 #   bin/dserver
 #   bin/dtest
 #   all.sh
 #   build_fast.sh
 #   git_check.sh
-#   kill_spring.sh
 #   log_test_app.sh
 #   nuke.sh
-#   pg-start.sh
 #   sandbox.sh
 #   server.sh
 #   test_app.sh
@@ -36,36 +36,22 @@ echo 'Adding Dockerfile and docker-compose.yml'
 mv mod-01-02-Dockerfile Dockerfile
 mv mod-01-02-docker-compose.yml docker-compose.yml
 
-echo 'Adding bin/dbuild, bin/dserver, and bin/dtest'
+echo 'Adding bin/dbuild, bin/dbundle, bin/dmigrate, bin/dsandbox, bin/dserver, and bin/dtest'
 mv mod-01-02-bin-dbuild bin/dbuild
+mv mod-01-02-bin-dbundle bin/dbundle
+mv mod-01-02-bin-dmigrate bin/dmigrate
+mv mod-01-02-bin-dsandbox bin/dsandbox
 mv mod-01-02-bin-dserver bin/dserver
 mv mod-01-02-bin-dtest bin/dtest
 
-echo 'Adding build_fast.sh'
-mv mod-01-02-build_fast.sh build_fast.sh
-
-echo 'Adding all.sh'
+echo 'Adding Bash scripts'
 mv mod-01-02-all.sh all.sh
-
-echo 'Adding git_check.sh'
+mv mod-01-02-build_fast.sh build_fast.sh
 mv mod-01-02-git_check.sh git_check.sh
-
-echo 'Adding kill_spring.sh'
-mv mod-01-02-kill_spring.sh kill_spring.sh
-
-echo 'Adding log_test_app.sh'
 mv mod-01-02-log_test_app.sh log_test_app.sh
-
-echo 'Adding pg-start.sh'
-mv mod-01-02-pg-start.sh pg-start.sh
-
-echo 'Adding sandbox.sh'
+mv mod-01-02-nuke.sh nuke.sh
 mv mod-01-02-sandbox.sh sandbox.sh
-
-echo 'Adding server.sh'
 mv mod-01-02-server.sh server.sh
-
-echo 'Adding test_app.sh'
 mv mod-01-02-test_app.sh test_app.sh
 
 echo 'Adding public/index.html'
