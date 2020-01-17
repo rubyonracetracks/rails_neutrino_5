@@ -1,7 +1,8 @@
 # BASED ON
 # https://blog.codeminer42.com/zero-to-up-and-running-a-rails-project-only-using-docker-20467e15f1be/
 
-FROM ruby:2.6.5
+# Specify the Docker image to use as a base:
+FROM DOCKER_IMAGE_HERE
 
 ENV DEBIAN_FRONTEND=noninteractive \
     NODE_VERSION=12.14.1

@@ -36,6 +36,18 @@ echo 'Adding Dockerfile and docker-compose.yml'
 mv mod-01-02-Dockerfile Dockerfile
 mv mod-01-02-docker-compose.yml docker-compose.yml
 
+echo 'Getting the Ruby version'
+cp .ruby-version .ruby-version-process
+sed -i.bak "s|ruby-||g" .ruby-version-process
+rm .ruby-version-process.bak
+RUBY_VERSION_HERE=`cat .ruby-version-process`
+rm .ruby-version-process
+
+echo 'Updating the Docker image specified in the Dockerfile'
+DOCKER_IMAGE_HERE="ruby:$RUBY_VERSION_HERE"
+sed -i.bak "s|DOCKER_IMAGE_HERE|$DOCKER_IMAGE_HERE|g" Dockerfile
+rm Dockerfile.bak
+
 echo 'Adding bin/dbuild, bin/dbundle, bin/dmigrate, bin/dsandbox, bin/dserver, and bin/dtest'
 mv mod-01-02-bin-dbuild bin/dbuild
 mv mod-01-02-bin-dbundle bin/dbundle
