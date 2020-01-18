@@ -6,7 +6,8 @@ set -e
 # * Add the Dockerfile and docker-compose.yml files
 # * Add the following scripts:
 #   bin/dbuild
-#   bin/bundle
+#   bin/dbundle
+#   bin/dexec
 #   bin/dmigrate
 #   bin/dserver
 #   bin/dtest
@@ -48,9 +49,10 @@ DOCKER_IMAGE_HERE="ruby:$RUBY_VERSION_HERE"
 sed -i.bak "s|DOCKER_IMAGE_HERE|$DOCKER_IMAGE_HERE|g" Dockerfile
 rm Dockerfile.bak
 
-echo 'Adding bin/dbuild, bin/dbundle, bin/dmigrate, bin/dsandbox, bin/dserver, and bin/dtest'
+echo 'Adding bin/* scripts'
 mv mod-01-02-bin-dbuild bin/dbuild
 mv mod-01-02-bin-dbundle bin/dbundle
+mv mod-01-02-bin-dexec bin/dexec
 mv mod-01-02-bin-dmigrate bin/dmigrate
 mv mod-01-02-bin-dsandbox bin/dsandbox
 mv mod-01-02-bin-dserver bin/dserver
@@ -59,6 +61,7 @@ mv mod-01-02-bin-dtest bin/dtest
 echo 'Adding Bash scripts'
 mv mod-01-02-all.sh all.sh
 mv mod-01-02-build_fast.sh build_fast.sh
+mv mod-01-02-exec.sh exec.sh
 mv mod-01-02-git_check.sh git_check.sh
 mv mod-01-02-log_test_app.sh log_test_app.sh
 mv mod-01-02-nuke.sh nuke.sh
