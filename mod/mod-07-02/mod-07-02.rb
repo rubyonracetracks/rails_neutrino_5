@@ -47,5 +47,5 @@ InsertFromFile.replace('mod-07-02-rails_best_practices.txt', 'config/rails_best_
 puts 'Making the user model exempt from the Lint/AssignmentInCondition cop'
 InsertFromFile.add_end('mod-07-02-rubocop_yml.txt', '.rubocop.yml')
 
-puts 'Making the user model exempt from the Metrics/LineLength cop'
-LineContaining.add_before('# END: Metrics/LineLength', '    - app/models/user.rb', '.rubocop.yml')
+puts 'Making the user model exempt from the Layout/LineLength cop'
+LineContaining.add_before('# END: Layout/LineLength', '    - app/models/user.rb', '.rubocop.yml')

@@ -45,4 +45,4 @@ puts 'Making the admin model exempt from the Lint/AssignmentInCondition cop'
 LineContaining.add_before('# END: Lint/AssignmentInCondition', '    - app/models/admin.rb', '.rubocop.yml')
 
 puts 'Making the admin model exempt from the Lint/AssignmentInCondition cop'
-LineContaining.add_before('# END: Metrics/LineLength', '    - app/models/admin.rb', '.rubocop.yml')
+LineContaining.add_before('# END: Layout/LineLength', '    - app/models/admin.rb', '.rubocop.yml')

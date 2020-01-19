@@ -5,7 +5,7 @@
 # http://chriskottom.com/blog/2014/06/dress-up-your-minitest-output/
 
 # rubocop:disable Metrics/AbcSize
-# rubocop:disable Metrics/LineLength
+# rubocop:disable Layout/LineLength
 # rubocop:disable Metrics/MethodLength
 
 require 'minitest/reporters'
@@ -96,5 +96,5 @@ module Minitest
 end
 
 # rubocop:enable Metrics/AbcSize
-# rubocop:enable Metrics/LineLength
+# rubocop:enable Layout/LineLength
 # rubocop:enable Metrics/MethodLength

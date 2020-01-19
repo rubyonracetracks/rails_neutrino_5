@@ -37,4 +37,4 @@ puts '(allows the use of custom mailer views)'
 LineContaining.replace('config.scoped_views', '  config.scoped_views = true', 'config/initializers/devise.rb')
 
 puts 'Updating .rubocop.yml'
-LineContaining.add_before('# END: Metrics/LineLength', '    - config/initializers/devise.rb', ".rubocop.yml")
+LineContaining.add_before('# END: Layout/LineLength', '    - config/initializers/devise.rb', ".rubocop.yml")

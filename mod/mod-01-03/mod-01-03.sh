@@ -15,6 +15,9 @@ git checkout -b 01-03-rubocop
 echo 'Adding .rubocop.yml'
 mv mod-01-03-rubocop_yml.txt .rubocop.yml
 
+echo 'Adding bin/dcop'
+mv mod-01-03-bin-dcop bin/dcop
+
 ruby mod-01-03.rb
 
 git add .

@@ -1,4 +1,4 @@
-# rubocop:disable Metrics/LineLength
+# rubocop:disable Layout/LineLength
 # rubocop:disable Style/PercentLiteralDelimiters
 # rubocop:disable Style/UnneededPercentQ
 
@@ -103,6 +103,6 @@ puts 'Finished setting up PostgreSQL'
 puts '++++++++++++++++++++++++++++++'
 puts
 
-# rubocop:enable Metrics/LineLength
+# rubocop:enable Layout/LineLength
 # rubocop:enable Style/PercentLiteralDelimiters
 # rubocop:enable Style/UnneededPercentQ

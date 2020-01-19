@@ -4,7 +4,7 @@ Layout/EmptyComment:
 Style/FrozenStringLiteralComment:
   Enabled: false
 
-Naming/UncommunicativeMethodParamName:
+Naming/MethodParameterName:
   Exclude:
     - test/test_helper.rb
 
@@ -25,8 +25,8 @@ Bundler/OrderedGems:
   Exclude:
     - Gemfile
 
-# BEGIN: Metrics/LineLength
-Metrics/LineLength:
+# BEGIN: Layout/LineLength
+Layout/LineLength:
   Exclude:
     - config/application.rb
     - config/environments/development.rb
@@ -45,7 +45,7 @@ Metrics/LineLength:
     - Rakefile
     - test/integration/*
     - test/test_helper.rb
-# END: Metrics/LineLength
+# END: Layout/LineLength
 
 # BEGIN: Style/ClassAndModuleChildren
 Style/ClassAndModuleChildren:
