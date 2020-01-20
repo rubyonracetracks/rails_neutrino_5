@@ -45,6 +45,7 @@ echo '-----------------------------------------------'
 RAILS_VERSION=`cat PARAMS-rails_version.txt`
 
 gem install rails -v $RAILS_VERSION
+gem install bundler -v 1.17.3
 
 gem install insert_from_file
 gem install line_containing
