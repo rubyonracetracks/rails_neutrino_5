@@ -3,6 +3,7 @@ services:
 
 before_script:
   - sudo apt-get install -y bash
+  - gem uninstall bundler -x
 
 script:
   - $PWD/build-rails 'tmp1'

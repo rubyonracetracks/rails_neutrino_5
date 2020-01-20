@@ -52,9 +52,6 @@ echo '---------------------------------------------'
 echo "FINISHED: gem install rails -v $RAILS_VERSION"
 echo '---------------------------------------------'
 
-gem uninstall bundler -x
-gem install bundler -v 1.17.3
-
 echo '---------------------'
 echo 'Installing other gems'
 gem install insert_from_file
