@@ -36,27 +36,36 @@ if [ -d "$DIR_APP" ]; then
   rm -rf $DIR_APP
 fi
 
-echo '-----------------------------------------------'
+echo '+++++++++++++++++++++++++++++++++++++++++++++++'
 echo 'BEGIN: installing gems needed by Rails Neutrino'
-echo '-----------------------------------------------'
+echo '+++++++++++++++++++++++++++++++++++++++++++++++'
 # 1-14-2019: bundler 2.0.1 is incompatible with many gems
 # gem install bundler
 
 RAILS_VERSION=`cat PARAMS-rails_version.txt`
 
+echo '------------------------------------------'
+echo "BEGIN: gem install rails -v $RAILS_VERSION"
+echo '------------------------------------------'
 gem install rails -v $RAILS_VERSION
-gem uninstall bundler
+echo '---------------------------------------------'
+echo "FINISHED: gem install rails -v $RAILS_VERSION"
+echo '---------------------------------------------'
+
+gem uninstall bundler -x
 gem install bundler -v 1.17.3
 
+echo '---------------------'
+echo 'Installing other gems'
 gem install insert_from_file
 gem install line_containing
 gem install gemfile_entry
 gem install string_in_file
 gem install replace_quotes
 gem install remove_double_blank
-echo '-----------------------------------------------'
+echo '++++++++++++++++++++++++++++++++++++++++++++++++++'
 echo 'FINISHED: installing gems needed by Rails Neutrino'
-echo '-----------------------------------------------'
+echo '++++++++++++++++++++++++++++++++++++++++++++++++++'
 
 # Creating the new Rails app
 echo '-----------------------------------'
