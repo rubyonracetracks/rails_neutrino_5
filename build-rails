@@ -84,7 +84,7 @@ cp -R $DIR_MAIN/mod $DIR_APP
 cd $DIR_APP && bash mod_app.sh '01-01' $TOGGLE_OUTLINE
 cd $DIR_APP && bash mod_app.sh '01-02' $TOGGLE_OUTLINE
 cd $DIR_APP && bash mod_app.sh '01-03' $TOGGLE_OUTLINE
-# cd $DIR_APP && bash mod_app.sh '01-04' $TOGGLE_OUTLINE
+cd $DIR_APP && bash mod_app.sh '01-04' $TOGGLE_OUTLINE
 
 # cd $DIR_APP && bash mod_app.sh '02-01' $TOGGLE_OUTLINE
 # cd $DIR_APP && bash mod_app.sh '02-02' $TOGGLE_OUTLINE
