@@ -3,7 +3,7 @@ services:
 
 before_script:
   - sudo apt-get install -y bash
-  - gem uninstall bundler -x
+  - gem uninstall -i /home/travis/.rvm/gems/ruby-*@global bundler
 
 script:
   - $PWD/build-rails 'tmp1'
