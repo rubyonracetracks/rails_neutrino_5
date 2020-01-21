@@ -1,9 +1,13 @@
 services:
   - docker
 
+# Procedure for uninstalling Bundler 2 is from
+# https://github.com/mileszs/wicked_pdf/blob/master/.travis.yml
 before_script:
   - sudo apt-get install -y bash
-  - gem uninstall -ix /home/travis/.rvm/gems/ruby-2.5.3@global bundler
+  - "find /home/travis/.rvm/rubies -wholename '*default/bundler-*.gemspec' -delete"
+  - rvm @global do gem uninstall bundler -a -x -I || true
+  - gem install bundler -v '< 2'
 
 script:
   - $PWD/build-rails 'tmp1'
