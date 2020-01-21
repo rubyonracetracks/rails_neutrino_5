@@ -11,4 +11,10 @@ script:
   - $PWD/build-rails 'tmp1'
 
 after_script:
-  - cd $PWD/tmp1 && bundle install && rails db:migrate && bash build_fast.sh
+  - cd $PWD/tmp1 && bundle install && rails db:migrate && rails test
+  - cd $PWD/tmp1 && bundle exec brakeman -Aq -w2 --no-pager
+  - cd $PWD/tmp1 && bundle exec bundle exec sandi_meter
+  - cd $PWD/tmp1 && bundle exec bundle-audit update && bundle exec bundle-audit
+  - cd $PWD/tmp1 && bundle exec rubocop -D
+  - cd $PWD/tmp1 && bundle exec rails_best_practices .
+  - cd $PWD/tmp1 && bundle exec gemsurance
