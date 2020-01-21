@@ -1,7 +1,5 @@
-services:
-  - docker
-
-# Procedure for uninstalling Bundler 2 is from
+# Procedure for uninstalling bundler 2.*
+# and installing the latest version of bundler 1.* is from
 # https://github.com/mileszs/wicked_pdf/blob/master/.travis.yml
 before_script:
   - sudo apt-get install -y bash
