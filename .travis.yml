@@ -11,9 +11,9 @@ script:
   - $PWD/build-rails 'tmp1'
 
 after_script:
-  - cd $PWD/tmp1 && bundle install && rails db:migrate && rails test && \
+  - cd $PWD/tmp1 && bundle install --quiet && rails db:migrate && rails test && \
     bundle exec brakeman -Aq -w2 --no-pager && \
-    bundle exec bundle exec sandi_meter && \
+    bundle exec sandi_meter && \
     bundle exec bundle-audit update && bundle exec bundle-audit && \
     bundle exec rubocop -D && \
     bundle exec rails_best_practices . && \
