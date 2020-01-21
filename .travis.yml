@@ -1,11 +1,14 @@
-services:
-  - docker
-
+# Procedure for uninstalling bundler 2.*
+# and installing the latest version of bundler 1.* is from
+# https://github.com/mileszs/wicked_pdf/blob/master/.travis.yml
 before_script:
   - sudo apt-get install -y bash
+  - "find /home/travis/.rvm/rubies -wholename '*default/bundler-*.gemspec' -delete"
+  - rvm @global do gem uninstall bundler -a -x -I || true
+  - gem install bundler -v '< 2'
 
 script:
   - $PWD/build-rails 'tmp1'
 
 after_script:
-  - cd $PWD/tmp1 && bundle install && rails db:migrate && rails test
+  - bash travis-after.sh

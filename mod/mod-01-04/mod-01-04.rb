@@ -5,6 +5,10 @@ require 'line_containing'
 require 'gemfile_entry'
 require 'string_in_file'
 
+# WICHTIG/LEGACY/production: enable ssl (if necessary)
+puts 'Automatically enabling the use of SSL'
+LineContaining.replace('config.force_ssl = true', '  config.force_ssl = true', 'config/environments/production.rb')
+
 # WICHTIG/LEGACY/recommended: add brakeman, bundler-audit, and gemsurance to the Gemfile
 # WICHTIG/LEGACY/recommended: add brakeman, bundler-audit, and gemsurance to test_code.sh (if necessary)
 # WICHTIG/LEGACY/recommended: add brakeman to git_check.sh
