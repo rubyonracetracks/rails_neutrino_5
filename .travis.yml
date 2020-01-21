@@ -11,10 +11,4 @@ script:
   - $PWD/build-rails 'tmp1'
 
 after_script:
-  - cd $PWD/tmp1 && bundle install --quiet && rails db:migrate && rails test && \
-    bundle exec brakeman -Aq -w2 --no-pager && \
-    bundle exec sandi_meter && \
-    bundle exec bundle-audit update && bundle exec bundle-audit && \
-    bundle exec rubocop -D && \
-    bundle exec rails_best_practices . && \
-    bundle exec gemsurance
+  - bash travis-after.sh
