@@ -3,8 +3,7 @@ set -e
 
 # AGENDA
 # * sqlite3 should be limited to the development and test environments.
-# * Adding pg to the Gemfile
-# * Grouping rails, pg, and nokogiri together in the Gemfile
+# * pg should be specified for the production environment
 # * Pinning gems
 
 # NOTES
@@ -16,15 +15,15 @@ echo '##############################'
 echo 'UNIT 2: PRODUCTION ENVIRONMENT'
 echo '##############################'
 
-echo '############################################################'
-echo 'Unit 2 Chapter 1: Updating the Gemfile for Heroku Deployment'
-echo '############################################################'
+echo '######################################'
+echo 'Unit 2 Chapter 1: Updating the Gemfile'
+echo '######################################'
 
-git checkout -b 02-01-heroku_gems
+git checkout -b 02-01-update_gemfile
 
 ruby mod-02-01.rb
 
 git add .
 git commit -m "Updated the Gemfile"
 git checkout master
-git merge 02-01-heroku_gems
+git merge 02-01-update_gemfile
