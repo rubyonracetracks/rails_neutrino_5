@@ -1,3 +1,5 @@
+# rubocop:disable Layout/LineLength
+
 # PURPOSE:
 # Prevent data from being altered by rake commands in the production environment
 
@@ -5,10 +7,10 @@
 # http://www.developingandrails.com/2015/01/disable-dangerous-rake-tasks-in.html
 
 # Commands for overriding the restrictions:
-# I_KNOW_THIS_MAY_SCREW_THE_DB=1 RAILS_ENV=production rails db:drop
-# I_KNOW_THIS_MAY_SCREW_THE_DB=1 RAILS_ENV=production rails db:migrate:reset
-# I_KNOW_THIS_MAY_SCREW_THE_DB=1 RAILS_ENV=production rails db:schema:load
-# I_KNOW_THIS_MAY_SCREW_THE_DB=1 RAILS_ENV=production rails db:seed
+# I_KNOW_THIS_MAY_SCREW_THE_DB=1 RAILS_ENV=production bundle exec rake db:drop
+# I_KNOW_THIS_MAY_SCREW_THE_DB=1 RAILS_ENV=production bundle exec rake db:migrate:reset
+# I_KNOW_THIS_MAY_SCREW_THE_DB=1 RAILS_ENV=production bundle exec rake db:schema:load
+# I_KNOW_THIS_MAY_SCREW_THE_DB=1 RAILS_ENV=production bundle exec rake db:seed
 
 DISABLED_TASKS = ['db:drop', 'db:migrate:reset', 'db:schema:load',
                   'db:seed'].freeze
@@ -30,3 +32,5 @@ end
 DISABLED_TASKS.each do |task|
   Rake::Task[task].enhance ['db:guard_for_production']
 end
+
+# rubocop:enable Layout/LineLength

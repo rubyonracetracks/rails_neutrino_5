@@ -2,20 +2,22 @@
 set -e
 
 # AGENDA
-# * Add the heroku.sh script.
-# * Add the process of entering Heroku credentials to credentials.sh.
+# * Create a barrier to destroying data with rake commands in the
+#   product environment by creating the script
+#   lib/tasks/disable_db_tasks_on_production.rake
 
-echo '##################################################'
-echo 'Unit 2 Chapter 2: Adding Heroku Deployment Scripts'
-echo '##################################################'
+# This is a safeguard to prevent disasters.
 
-git checkout -b 02-02-heroku_scripts
+echo '###########################################################'
+echo 'Unit 2 Chapter 2: Restricting Dangerous Tasks in Production'
+echo '###########################################################'
 
-# WICHTIG/LEGACY/bash: add heroku.sh (if necessary)
-mv mod-02-02-heroku.sh heroku.sh
-ruby mod-02-02.rb
+git checkout -b 02-02-restrict_dangerous_tasks
+
+# WICHTIG/LEGACY/production: restrict dangerous tasks in production (if necessary)
+mv mod-02-02-disable.rake lib/tasks/disable_db_tasks_on_production.rake
 
 git add .
-git commit -m "Added Heroku deployment scripts"
+git commit -m "Restrict dangerous tasks in production"
 git checkout master
-git merge 02-02-heroku_scripts
+git merge 02-02-restrict_dangerous_tasks
