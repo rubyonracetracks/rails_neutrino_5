@@ -2,16 +2,10 @@
 
 # This is a slightly longer version of testc.sh.
 
-echo '---------------------------------------'
-echo 'bundle exec brakeman -Aq -w2 --no-pager'
-bundle exec brakeman -Aq -w2 --no-pager
+bin/dbrakeman
 
-echo '----------------------'
-echo 'bundle exec rubocop -D'
-bundle exec rubocop -D
+bin/dcop
 
-echo '----------------------------------'
-echo 'bundle exec rails_best_practices .'
-bundle exec rails_best_practices .
+bin/drbp
 
 sh testc.sh

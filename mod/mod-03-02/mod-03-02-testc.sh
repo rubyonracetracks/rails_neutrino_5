@@ -6,6 +6,6 @@
 
 # This script tests the controllers only.
 
-echo '---------------------------'
-echo 'rails test test/controllers'
-rails test test/controllers
+echo '---------------------------------'
+echo 'bundle exec test test/controllers'
+sh exec.sh bundle exec test test/controllers

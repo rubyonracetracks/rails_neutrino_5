@@ -6,6 +6,6 @@
 
 # This script tests the models only.
 
-echo '----------------------'
-echo 'rails test test/models'
-rails test test/models
+echo '---------------------------------'
+echo 'bundle exec rake test test/models'
+sh exec.sh bundle exec rake test test/models

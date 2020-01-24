@@ -6,6 +6,6 @@
 
 # This script tests the helpers and mailers only.
 
-echo '------------------------------------'
-echo 'rails test test/helpers test/mailers'
-rails test test/helpers test/mailers
+echo '-----------------------------------------------'
+echo 'bundle exec rake test test/helpers test/mailers'
+sh exec.sh bundle exec rake test test/helpers test/mailers
