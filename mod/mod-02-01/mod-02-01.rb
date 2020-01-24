@@ -26,6 +26,13 @@ puts 'bundle install --quiet'
 system('bundle install --quiet')
 LineContaining.replace("gem 'pg'", "  #{GemfileEntry.active('pg')}", "Gemfile")
 
+# Sticking with chromedriver-helper results in a deprecation warning
+puts 'Replacing chromedriver-helper with webdrivers'
+LineContaining.replace("gem 'chromedriver-helper'", "  gem 'webdrivers'", "Gemfile")
+puts 'bundle install --quiet'
+system('bundle install --quiet')
+LineContaining.replace("gem 'webdrivers'", "  #{GemfileEntry.active('webdrivers')}", "Gemfile")
+
 # Pin all other gems listed in the Gemfile
 puts 'Pinning other gems'
 LineContaining.replace("gem 'puma'", "#{GemfileEntry.active('puma')}", "Gemfile")
@@ -46,7 +53,6 @@ LineContaining.replace("gem 'spring-watcher-listen'", "  #{GemfileEntry.active('
 
 LineContaining.replace("gem 'capybara'", "  #{GemfileEntry.active('capybara')}", "Gemfile")
 LineContaining.replace("gem 'selenium-webdriver'", "  #{GemfileEntry.active('selenium-webdriver')}", "Gemfile")
-LineContaining.replace("gem 'chromedriver-helper'", "  #{GemfileEntry.active('chromedriver-helper')}", "Gemfile")
 
 LineContaining.add_before("gem 'tzinfo-data'", '# NOTE: tzinfo-data is not installed under the Ruby on Racetracks system', 'Gemfile')
 
