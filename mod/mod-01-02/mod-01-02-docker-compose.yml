@@ -4,11 +4,11 @@ services:
   web:
     build: .
     volumes:
-      - .:/app
+      - .:/myapp
       - bundle_path:/bundle
     environment:
       - BUNDLE_PATH=/bundle/vendor
-      - BUNDLE_APP_CONFIG=/app/.bundle
+      - BUNDLE_APP_CONFIG=/myapp/.bundle
     user: winner
     command:
       - bundle
