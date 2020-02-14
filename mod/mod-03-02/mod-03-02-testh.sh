@@ -8,4 +8,4 @@
 
 echo '-----------------------------------------------'
 echo 'bundle exec rake test test/helpers test/mailers'
-sh exec.sh bundle exec rake test test/helpers test/mailers
+docker-compose run --rm web bundle exec rake test test/helpers test/mailers

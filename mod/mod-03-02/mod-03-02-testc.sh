@@ -8,4 +8,4 @@
 
 echo '---------------------------------'
 echo 'bundle exec test test/controllers'
-sh exec.sh bundle exec test test/controllers
+docker-compose run --rm web bundle exec test test/controllers
