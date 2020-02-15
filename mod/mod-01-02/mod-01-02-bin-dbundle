@@ -1,9 +1,9 @@
 #!/bin/bash
 set +e
 
-# echo '---------------------------------------------------------'
-# echo 'mkdir -p /bundle/vendor && chown -R winner /bundle/vendor'
-# docker-compose run --rm -u root web bash -c "mkdir -p /bundle/vendor && chown -R winner:winner /bundle/vendor"
+echo '----------------------------------------------------------------------------------------'
+echo 'mkdir -p /home/winner/bundle/vendor && chown -R winner:winner /home/winner/bundle/vendor'
+docker-compose run --rm -u root web bash -c 'mkdir -p /home/winner/bundle/vendor && chown -R winner:winner /home/winner/bundle/vendor'
 
 echo '------------------------------------------------'
 echo 'bundle install --path /home/winner/bundle/vendor'
