@@ -1,0 +1,11 @@
+#!/bin/sh
+
+set -e
+
+echo '-------------------'
+echo 'cat /etc/os-release'
+docker-compose run --rm web cat /etc/os-release
+
+echo '-------'
+echo 'ruby -v'
+docker-compose run --rm web ruby -v

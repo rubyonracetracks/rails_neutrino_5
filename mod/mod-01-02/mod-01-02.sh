@@ -8,12 +8,14 @@ set -e
 #   bin/dbuild
 #   bin/dbundle
 #   bin/dexec
+#   bin/dinfo
 #   bin/dmigrate
 #   bin/dserver
 #   bin/dtest
 #   all.sh
 #   build_fast.sh
 #   git_check.sh
+#   info.sh
 #   log_test_app.sh
 #   nuke.sh
 #   sandbox.sh
@@ -53,6 +55,7 @@ echo 'Adding bin/* scripts'
 mv mod-01-02-bin-dbuild bin/dbuild
 mv mod-01-02-bin-dbundle bin/dbundle
 mv mod-01-02-bin-dexec bin/dexec
+mv mod-01-02-bin-dinfo bin/dinfo
 mv mod-01-02-bin-dmigrate bin/dmigrate
 mv mod-01-02-bin-dsandbox bin/dsandbox
 mv mod-01-02-bin-dserver bin/dserver
@@ -62,6 +65,7 @@ echo 'Adding Bash scripts'
 mv mod-01-02-all.sh all.sh
 mv mod-01-02-build_fast.sh build_fast.sh
 mv mod-01-02-exec.sh exec.sh
+mv mod-01-02-info.sh info.sh
 mv mod-01-02-git_check.sh git_check.sh
 mv mod-01-02-log_test_app.sh log_test_app.sh
 mv mod-01-02-nuke.sh nuke.sh
