@@ -9,3 +9,7 @@ docker-compose run --rm web cat /etc/os-release
 echo '-------'
 echo 'ruby -v'
 docker-compose run --rm web ruby -v
+
+echo '--------------'
+echo 'node --version'
+docker-compose run --rm web node --version
