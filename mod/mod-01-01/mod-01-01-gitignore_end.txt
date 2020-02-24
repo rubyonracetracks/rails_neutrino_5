@@ -90,3 +90,6 @@ mod_app.sh
 
 # NOTE: Comments MUST get their own dedicated lines and cannot be shared with that of the file name.
 
+#POSTGRES#config/database.yml
+#POSTGRES#init.sql
+#POSTGRES#.env/development/database
