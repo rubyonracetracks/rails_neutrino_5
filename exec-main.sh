@@ -7,8 +7,6 @@ DIR_APP=$PWD/$APP_NAME
 
 docker run -i -t --rm -v ${PWD}:/home/winner/neutrino rubyonracetracks/rails_neutrino_5 /home/winner/neutrino/build-rails $APP_NAME $TOGGLE_OUTLINE
 
-cd $DIR_APP && sh build_fast.sh
-
 echo '##########################################'
 echo 'The new app has been created from scratch!'
 echo ''
