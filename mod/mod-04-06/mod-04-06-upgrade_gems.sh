@@ -5,7 +5,7 @@
 # If the version of a gem is pinned in the Gemfile, you must update
 # the version number specified in that file.
 
-# Do NOT use this script until you have set up this project with the build_fast.sh script.
+# Do NOT use this script until you have set up this project with the build.sh script.
 
 echo '-------------'
 echo 'bundle update'
