@@ -2,6 +2,14 @@
 
 set -e
 
+#POSTGRES#echo '------------------------------------'
+#POSTGRES#echo 'docker-compose run --rm database env'
+#POSTGRES#docker-compose run --rm database env
+
+#POSTGRES#echo '-----------------------------------------------'
+#POSTGRES#echo 'docker-compose run --rm database psql --version'
+#POSTGRES#docker-compose run --rm database psql --version
+
 echo '---'
 echo 'env'
 docker-compose run --rm web env

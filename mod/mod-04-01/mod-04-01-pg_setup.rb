@@ -24,6 +24,11 @@ StringInFile.replace('#POSTGRES#', '', 'bin/dtest')
 system('wait')
 system('chmod +x bin/dtest')
 
+# Remove "#POSTGRES#" in bin/dinfo and keep it executable
+StringInFile.replace('#POSTGRES#', '', 'bin/dinfo')
+system('wait')
+system('chmod +x bin/dinfo')
+
 # Remove the SQLite section in the Gemfile
 LineContaining.delete_between_plus('# BEGIN: SQLite', '# END: SQLite', 'Gemfile')
 RemoveDoubleBlank.update('Gemfile')
