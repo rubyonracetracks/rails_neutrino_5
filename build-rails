@@ -17,8 +17,8 @@ echo 'cat /etc/os-release'
 cat /etc/os-release
 
 # Provide Git credentials
-git config --global user.email "mhartl@railstutorial.org"
-git config --global user.name "Michael Hartl"
+git config --global user.email 'jhsu@rubyonracetracks.com'
+git config --global user.name 'Jason Hsu'
 
 # 1-14-2019: bundler 2.0.1 is incompatible with many gems
 echo '----------------'
@@ -39,8 +39,6 @@ fi
 echo '+++++++++++++++++++++++++++++++++++++++++++++++'
 echo 'BEGIN: installing gems needed by Rails Neutrino'
 echo '+++++++++++++++++++++++++++++++++++++++++++++++'
-# 1-14-2019: bundler 2.0.1 is incompatible with many gems
-# gem install bundler
 
 RAILS_VERSION=`cat PARAMS-rails_version.txt`
 
@@ -162,6 +160,8 @@ T_SEC=$((DATE_END-DATE_START))
 
 echo '##########################################'
 echo 'The new app has been created from scratch!'
+echo 'It is in'
+echo "$DIR_APP"
 echo ''
 echo "Time used:"
 echo "$((T_SEC/60)) minutes and $((T_SEC%60)) seconds"

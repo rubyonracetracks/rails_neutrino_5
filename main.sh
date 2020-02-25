@@ -10,7 +10,7 @@
 
 DATE=`date +%Y%m%d-%H%M%S-%3N`
 
-APP_NAME="rails-$DATE"
+APP_NAME="railn-$DATE"
 
 mkdir -p log
 sh exec-main.sh $APP_NAME 'outline' 2>&1 | tee log/log-$DATE.txt
