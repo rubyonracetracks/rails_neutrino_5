@@ -19,10 +19,10 @@ StringInFile.replace('#POSTGRES#', '', '.gitignore')
 # Remove "#POSTGRES#" in docker-compose.yml
 StringInFile.replace('#POSTGRES#', '', 'docker-compose.yml')
 
-# Remove "#POSTGRES#" in bin/dtest and keep it executable
-StringInFile.replace('#POSTGRES#', '', 'bin/dtest')
+# Remove "#POSTGRES#" in bin/dmigrate and keep it executable
+StringInFile.replace('#POSTGRES#', '', 'bin/dmigrate')
 system('wait')
-system('chmod +x bin/dtest')
+system('chmod +x bin/dmigrate')
 
 # Remove "#POSTGRES#" in bin/dinfo and keep it executable
 StringInFile.replace('#POSTGRES#', '', 'bin/dinfo')
