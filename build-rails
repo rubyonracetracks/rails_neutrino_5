@@ -102,7 +102,7 @@ cd $DIR_APP && bash mod_app.sh '03-03' $TOGGLE_OUTLINE
 cd $DIR_APP && bash mod_app.sh '03-04' $TOGGLE_OUTLINE
 
 cd $DIR_APP && bash mod_app.sh '04-01' $TOGGLE_OUTLINE
-# cd $DIR_APP && bash mod_app.sh '04-02' $TOGGLE_OUTLINE
+cd $DIR_APP && bash mod_app.sh '04-02' $TOGGLE_OUTLINE
 # cd $DIR_APP && bash mod_app.sh '04-03' $TOGGLE_OUTLINE
 # cd $DIR_APP && bash mod_app.sh '04-04' $TOGGLE_OUTLINE
 # cd $DIR_APP && bash mod_app.sh '04-05' $TOGGLE_OUTLINE

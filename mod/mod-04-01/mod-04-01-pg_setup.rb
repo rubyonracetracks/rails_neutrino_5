@@ -12,6 +12,7 @@ password_x = ARGV[2]
 
 # Update the Dockerfile to remove SQLite (no longer needed)
 StringInFile.replace(' sqlite3', '', 'Dockerfile')
+StringInFile.replace(' libsqlite3-dev', '', 'Dockerfile')
 
 # Remove "#POSTGRES#" in .gitignore
 StringInFile.replace('#POSTGRES#', '', '.gitignore')
