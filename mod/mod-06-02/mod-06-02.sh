@@ -34,7 +34,8 @@ ruby mod-06-02.rb
 
 if [ "$TOGGLE_OUTLINE" = 'outline' ]
 then
-  sh outline-short.sh
+  bundle exec annotate --routes
+  bundle exec annotate
 else
   echo 'Skipping the outlining process to save time'
 fi
