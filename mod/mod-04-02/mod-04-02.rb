@@ -6,7 +6,7 @@ require 'string_in_file'
 require 'line_containing'
 
 # WICHTIG/LEGACY/all_or_nothing: add annotate to the Gemfile (not recommended for legacy apps if you need to keep it out of pull requests)
-# WICHTIG/LEGACY/recommended: railroady, and rails-erd to the Gemfile
+# WICHTIG/LEGACY/recommended: add railroady, and rails-erd to the Gemfile
 puts 'Adding annotate, railroady, and rails-erd to the Gemfile'
 InsertFromFile.add_end('mod-04-02-Gemfile.txt', 'Gemfile')
 puts 'bundle install --quiet'
@@ -16,6 +16,11 @@ StringInFile.replace("gem 'railroady'", "#{GemfileEntry.active('railroady')}", '
 StringInFile.replace("gem 'rails-erd'", "#{GemfileEntry.active('rails-erd')}", 'Gemfile')
 puts 'bundle install --quiet'
 system('bundle install --quiet')
+
+# WICHTIG/LEGACYrecommended: add bin/doutline and bin/doutline-short
+puts 'Adding bin/doutline and bin/doutline-short'
+system('mv mod-04-02-bin-doutline bin/doutline')
+system('mv mod-04-02-bin-doutline-short bin/doutline-short')
 
 # WICHTIG/LEGACY/bash: add outline-short.sh
 # WICHTIG/LEGACY/all_or_nothing: add annotate to outline-short.sh (if necessary)

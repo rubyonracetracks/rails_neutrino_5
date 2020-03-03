@@ -1,0 +1,45 @@
+#!/bin/sh
+
+set -e
+
+OUTPUT_DIR=$1
+
+d_mo_1="$OUTPUT_DIR/diagram-models-1"
+d_mo_2="$OUTPUT_DIR/diagram-models-2.dot"
+d_co="$OUTPUT_DIR/diagram-controllers.dot"
+d_gems="$OUTPUT_DIR/diagram-gems"
+
+echo '---------------'
+echo 'Using rails-erd'
+docker-compose run --rm web \
+  bundle exec erd --attributes=foreign_keys,primary_keys,timestamps,inheritance,content \
+  --filetype=dot --filename=$d_mo_1 --inheritance=true \
+  --notation=bachman --orientation=vertical --polymorphism=true
+echo
+echo "The rails-erd models diagram is at $d_mo_1.dot."
+echo
+
+echo '---------------'
+echo 'Using railroady'
+docker-compose run --rm web bundle exec railroady -i -l -v \
+  -a --show-belongs_to --all-columns -m -p -z --include-concerns -t -M \
+  | dot -Tdot > $d_mo_2
+docker-compose run --rm web bundle exec railroady -i -l -v --engine-controllers -C | dot -Tdot > $d_co
+echo
+echo "The railroady models diagram is at $d_mo_2."
+echo "The railroady controllers diagram is at $d_co."
+echo
+
+echo '--------------------------------------------'
+echo "Drawing gem dependency diagram ($d_gems.dot)"
+# NOTE: Using the --version flag causes the bundle viz command to fail
+docker-compose run --rm web bundle viz --file=$d_gems --format=dot --requirements # --version
+
+echo '************************'
+echo 'outline.sh OUTPUT FILES:'
+echo "$d_mo_1.dot"
+echo "$d_mo_2"
+echo "$d_co"
+echo "$d_gems.dot"
+echo 'Directory trees are in the log directory.'
+echo

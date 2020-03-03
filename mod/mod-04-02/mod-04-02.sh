@@ -5,6 +5,7 @@ set -e
 
 # AGENDA
 # * Add annotate, railroady, and rails-erd to the Gemfile.
+# * Add bin/doutline, bin/doutline-short
 # * Add outline-short.sh.
 # * Add outline.sh.
 # * Add outline.sh to all.sh.
@@ -18,7 +19,9 @@ git checkout -b 04-02-outlining
 
 ruby mod-04-02.rb
 
-sh outline-short.sh
+bundle exec annotate --routes
+bundle exec annotate
+
 git add .
 git commit -m "Added outlining gems and scripts"
 git checkout master
