@@ -4,4 +4,4 @@ APP_NAME='tmp1'
 DIR_APP=$PWD/$APP_NAME
 
 mkdir -p log
-bash exec-test.sh $APP_NAME 2>&1 | tee log/log-$DATE.txt
+bash exec-test.sh $APP_NAME 2>&1 | tee log/test-$DATE.txt
