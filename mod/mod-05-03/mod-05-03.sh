@@ -17,6 +17,8 @@ git checkout -b 05-03-static_page_views
 
 ruby mod-05-03.rb
 
+# BEGIN: outlining
+TOGGLE_OUTLINE=$1
 if [ "$TOGGLE_OUTLINE" = 'outline' ]
 then
   bundle exec annotate --routes
@@ -24,6 +26,7 @@ then
 else
   echo 'Skipping the outlining process to save time'
 fi
+# END: outlining
 
 git add .
 git commit -m "Created static page views"
