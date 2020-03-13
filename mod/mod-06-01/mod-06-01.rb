@@ -14,10 +14,8 @@ StringInFile.replace("gem 'devise'", GemfileEntry.active('devise'), 'Gemfile')
 puts 'bundle install --quiet'
 system('bundle install --quiet')
 
-system('sh kill_spring.sh')
-
-puts 'rails generate devise:install'
-system('rails generate devise:install')
+puts 'bundle exec rails generate devise:install'
+system('bundle exec rails generate devise:install')
 
 puts 'Updating the subject lines of email messages in config/locales/devise.en.yml'
 StringInFile.replace('Confirmation instructions', 'Generic App Template: Confirmation instructions', 'config/locales/devise.en.yml')
