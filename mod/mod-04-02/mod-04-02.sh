@@ -5,9 +5,7 @@ set -e
 
 # AGENDA
 # * Add annotate, railroady, and rails-erd to the Gemfile.
-# * Add bin/doutline, bin/doutline-short
-# * Add outline-short.sh.
-# * Add outline.sh.
+# * Add outline.sh, outline-short.sh, and docker-outline-long.sh
 # * Add outline.sh to all.sh.
 # * Add outline-short.sh to git_check.sh.
 
