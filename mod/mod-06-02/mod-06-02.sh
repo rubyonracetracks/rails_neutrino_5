@@ -14,17 +14,17 @@ echo '####################################################'
 
 git checkout -b 06-02-create_models
 
-echo '--------------------------'
-echo 'rails generate devise USER'
-rails generate devise USER
+echo '--------------------------------------'
+echo 'bundle exec rails generate devise USER'
+bundle exec rails generate devise USER
+wait
+echo '---------------------------------------'
+echo 'bundle exec rails generate devise ADMIN'
+bundle exec rails generate devise ADMIN
 wait
 echo '---------------------------'
-echo 'rails generate devise ADMIN'
-rails generate devise ADMIN
-wait
-echo '----------------'
-echo 'rails db:migrate'
-rails db:migrate
+echo 'bundle exec rake db:migrate'
+bundle exec rake db:migrate
 
 echo 'Making the user and admin test fixtures blank so that tests pass'
 cp mod-06-02-test_fixtures_initial.yml test/fixtures/users.yml
@@ -32,6 +32,8 @@ cp mod-06-02-test_fixtures_initial.yml test/fixtures/admins.yml
 
 ruby mod-06-02.rb
 
+# BEGIN: outlining
+TOGGLE_OUTLINE=$1
 if [ "$TOGGLE_OUTLINE" = 'outline' ]
 then
   bundle exec annotate --routes
@@ -39,7 +41,7 @@ then
 else
   echo 'Skipping the outlining process to save time'
 fi
-
+# END: outlining
 
 git add .
 git commit -m "Created the user and admin models"

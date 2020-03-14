@@ -3,6 +3,17 @@
 require 'string_in_file'
 require 'line_containing'
 require 'insert_from_file'
+require 'gemfile_entry'
+
+puts 'Adding the faker and ruby-progressbar gems to the Gemfile'
+InsertFromFile.add_end('mod-06-03-Gemfile.txt', 'Gemfile')
+puts 'bundle install --quiet'
+system('bundle install --quiet')
+StringInFile.replace("gem 'faker'", "#{GemfileEntry.active('faker')}", 'Gemfile')
+StringInFile.replace("gem 'ruby-progressbar'", "#{GemfileEntry.active('ruby-progressbar')}", 'Gemfile')
+puts 'bundle install --quiet'
+system('bundle install --quiet')
+
 
 puts 'Adding user model tests'
 StringInFile.replace('  # end', '', 'test/models/user_test.rb')
@@ -10,9 +21,9 @@ LineContaining.delete_between('class UserTest < ActiveSupport::TestCase', 'end',
 InsertFromFile.add_after('mod-06-03-user_test.txt', 'test/models/user_test.rb', 'class UserTest < ActiveSupport::TestCase')
 
 puts 'Adding user parameters'
-system('rails generate migration add_params_to_users name:string username:string:uniq')
+system('bundle exec rails generate migration add_params_to_users name:string username:string:uniq')
 system('wait')
-system('rails db:migrate:reset')
+system('bundle exec rake db:migrate:reset')
 system('wait')
 
 FILE_MIGRATE = `ls db/migrate/*_devise_create_users.rb`
@@ -23,7 +34,7 @@ StringInFile.replace('# t.datetime', 't.datetime', FILE_MIGRATE)
 StringInFile.replace('# t.integer', 't.integer', FILE_MIGRATE)
 StringInFile.replace('# add_index', 'add_index', FILE_MIGRATE)
 
-system('rails db:migrate:reset')
+system('bundle exec rake db:migrate:reset')
 system('wait')
 
 puts 'Adding conditions section to app/models/user.rb'

@@ -2,7 +2,6 @@
 set -e
 
 # AGENDA
-# * Add the faker and ruby-progressbar gems to the Gemfile.
 # * Update db/seeds.rb.
 # * Add seed.sh.
 # * Update all.sh.
