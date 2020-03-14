@@ -31,7 +31,6 @@ system('mv mod-04-02-outline.sh outline.sh')
 puts 'Adding docker-outline-long.sh'
 system('mv mod-04-02-docker-outline-long.sh docker-outline-long.sh')
 
-
 # WICHTIG/LEGACY/bash: add outline-short.sh to git_check.sh
 puts 'Adding outline-short.sh to git_check.sh'
 InsertFromFile.add_end('mod-04-02-git_check.txt', 'git_check.sh')

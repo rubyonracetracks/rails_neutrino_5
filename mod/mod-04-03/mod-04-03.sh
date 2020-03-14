@@ -19,6 +19,6 @@ git checkout -b 04-03-mailcatcher
 ruby mod-04-03.rb
 
 git add .
-git commit -m "Added outlining gems and scripts"
+git commit -m "Added MailCatcher"
 git checkout master
 git merge 04-03-mailcatcher
