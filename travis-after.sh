@@ -32,10 +32,6 @@ echo '---------------------------'
 echo 'brakeman -Aq -w2 --no-pager'
 brakeman -Aq -w2 --no-pager
 
-echo '-----------'
-echo 'sandi_meter'
-sandi_meter
-
 echo '-------------------'
 echo 'bundle-audit update'
 bundle-audit update
