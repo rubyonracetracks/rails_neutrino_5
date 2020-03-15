@@ -2,4 +2,4 @@
 
 echo '**********************'
 echo 'Entering rails console'
-bundle exec rails runner "eval(File.read 'admin_create.rb')"
+docker-compose run --rm web bundle exec rails runner "eval(File.read 'admin_create.rb')"
