@@ -24,7 +24,7 @@ puts 'Adding test/rake_rerun_reporter.rb'
 system('mv mod-03-01-rake_run_reporter.rb test/rake_rerun_reporter.rb')
 
 puts 'Adding first integration test'
-system('rails generate integration_test test1')
+system('bundle exec rails generate integration_test test1')
 system('wait')
 InsertFromFile.add_after('mod-03-01-test1.txt', 'test/integration/test1_test.rb', 'class Test1Test < ActionDispatch::IntegrationTest')
 

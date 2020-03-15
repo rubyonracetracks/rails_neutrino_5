@@ -5,7 +5,7 @@ require 'string_in_file'
 require 'gemfile_entry'
 
 puts 'Generating integration test'
-system('rails generate integration_test admin_lock')
+system('bundle exec rails generate integration_test admin_lock')
 system('wait')
 
 puts 'Filling in integration tests'

@@ -5,7 +5,7 @@ require 'line_containing'
 require 'string_in_file'
 
 puts 'Generating integration test'
-system('rails generate integration_test user_login')
+system('bundle exec rails generate integration_test user_login')
 system('wait')
 
 puts 'Filling in integration tests'

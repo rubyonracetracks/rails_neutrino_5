@@ -5,7 +5,7 @@ require 'insert_from_file'
 require 'string_in_file'
 
 puts 'Generating integration test'
-system('rails generate integration_test admin_resend_conf')
+system('bundle exec rails generate integration_test admin_resend_conf')
 system('wait')
 
 puts 'Filling in integration tests'

@@ -6,7 +6,7 @@ require 'insert_from_file'
 require 'line_containing'
 
 puts 'Generating static pages'
-system('rails generate controller StaticPages home about contact')
+system('bundle exec rails generate controller StaticPages home about contact')
 system('wait')
 
 puts 'Creating static pages controller test'

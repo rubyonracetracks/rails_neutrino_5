@@ -5,7 +5,7 @@ require 'line_containing'
 require 'string_in_file'
 
 puts 'Generating integration test'
-system('rails generate integration_test user_signup')
+system('bundle exec rails generate integration_test user_signup')
 system('wait')
 
 puts 'Filling in integration tests'
@@ -22,15 +22,15 @@ system('mv mod-07-01-home.html.erb app/views/static_pages/home.html.erb')
 puts 'Updating config/routes.rb'
 InsertFromFile.replace('mod-07-01-routes.txt', 'config/routes.rb', 'devise_for :users')
 
-puts 'rails generate devise:controllers users'
-system('rails generate devise:controllers users')
+puts 'bundle exec rails generate devise:controllers users'
+system('bundle exec rails generate devise:controllers users')
 system('wait')
 
 puts 'Filtering /app/controllers/users/omniauth_callbacks_controller.rb from SimpleCov'
 LineContaining.add_after('SimpleCov.start :rails', "  add_filter '/app/controllers/users/omniauth_callbacks_controller.rb'", 'test/test_helper.rb')
 
-puts 'rails generate devise:views users'
-system('rails generate devise:views users')
+puts 'bundle exec rails generate devise:views users'
+system('bundle exec rails generate devise:views users')
 system('wait')
 
 puts 'Updating the messages to users in app/views/users/mailer/*'

@@ -5,7 +5,7 @@ require 'line_containing'
 require 'string_in_file'
 
 puts 'Generating user controller'
-system('rails generate controller Users new')
+system('bundle exec rails generate controller Users new')
 system('wait')
 system('rm app/helpers/users_helper.rb')
 system('rm app/views/users/new.html.erb')
