@@ -4,7 +4,7 @@ require 'insert_from_file'
 require 'line_containing'
 require 'string_in_file'
 
-system('rails generate integration_test admin_show')
+system('bundle exec rails generate integration_test admin_show')
 system('wait')
 
 puts 'Filling in integration tests'

@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 # This script is used in the Travis environment for testing the new app
 # after it is created.
@@ -11,13 +12,25 @@ echo '----------'
 echo 'rails test'
 rails test
 
+echo '----------------------'
+echo 'rails db:migrate:reset'
+rails db:migrate:reset
+
+echo '-------------'
+echo 'rails db:seed'
+rails db:seed
+
+echo '--------------------'
+echo 'bundle exec annotate'
+bundle exec annotate
+
+echo '-----------------------------'
+echo 'bundle exec annotate --routes'
+bundle exec annotate --routes
+
 echo '---------------------------'
 echo 'brakeman -Aq -w2 --no-pager'
 brakeman -Aq -w2 --no-pager
-
-echo '-----------'
-echo 'sandi_meter'
-sandi_meter
 
 echo '-------------------'
 echo 'bundle-audit update'

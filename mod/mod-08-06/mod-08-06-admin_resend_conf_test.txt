@@ -1,4 +1,4 @@
-  # rubocop:disable Naming/UncommunicativeMethodParamName
+  # rubocop:disable Naming/MethodParameterName
   def edit(a, uname, e, name, password_n, password_c)
     edit_admin_start(a)
     fill_in('Username', with: uname)
@@ -10,7 +10,7 @@
     click_button('Update')
     assert page.has_text?('You updated your account successfully,')
     assert page.has_text?('but we need to verify your new email address.')
-    assert page.has_text?('Please check your email and follow the confirm link')
+    assert page.has_text?('Please check your email and follow the confirmation link')
     assert page.has_text?('to confirm your new email address.')
 
     click_on 'Logout'
@@ -39,7 +39,7 @@
     assert page.has_text?('Signed in successfully.')
     click_on 'Logout'
   end
-  # rubocop:enable Naming/UncommunicativeMethodParamName
+  # rubocop:enable Naming/MethodParameterName
 
   test 'resend confirmation from super admin changing all params' do
     edit(@a1, 'rwitherspoon', 'reese_witherspoon@example.com',

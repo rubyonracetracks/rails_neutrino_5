@@ -9,6 +9,4 @@ before_script:
 
 script:
   - $PWD/build-rails 'tmp1'
-
-after_script:
   - bash travis-after.sh

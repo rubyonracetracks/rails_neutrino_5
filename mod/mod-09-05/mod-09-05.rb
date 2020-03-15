@@ -5,7 +5,7 @@ require 'line_containing'
 require 'string_in_file'
 require 'gemfile_entry'
 
-system('rails generate integration_test user_search')
+system('bundle exec rails generate integration_test user_search')
 system('wait')
 
 LineContaining.delete('  # end', 'test/integration/user_search_test.rb')
