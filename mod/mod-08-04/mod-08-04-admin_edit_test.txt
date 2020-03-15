@@ -1,4 +1,4 @@
-  # rubocop:disable Naming/UncommunicativeMethodParamName
+  # rubocop:disable Naming/MethodParameterName
   # Edit all parameters except email
   def edit_all_but_email(a, uname, name, password_n, password_c)
     edit_admin_start(a)
@@ -53,7 +53,7 @@
     assert page.has_text?('Signed in successfully.')
     click_on 'Logout'
   end
-  # rubocop:enable Naming/UncommunicativeMethodParamName
+  # rubocop:enable Naming/MethodParameterName
 
   test 'super admin can access the page for editing settings' do
     login_as(@a1, scope: :admin)
