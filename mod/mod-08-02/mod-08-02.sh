@@ -17,12 +17,16 @@ git checkout -b 08-02-admin_sign_up
 
 ruby mod-08-02.rb
 
+# BEGIN: outlining
+TOGGLE_OUTLINE=$1
 if [ "$TOGGLE_OUTLINE" = 'outline' ]
 then
-  sh outline-short.sh
+  bundle exec annotate --routes
+  bundle exec annotate
 else
   echo 'Skipping the outlining process to save time'
 fi
+# END: outlining
 
 git add .
 git commit -m "Prevented the general public from signing up as admins"

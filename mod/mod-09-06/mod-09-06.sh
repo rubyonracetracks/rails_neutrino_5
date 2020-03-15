@@ -14,12 +14,16 @@ git checkout -b 09-06-user_delete_controller
 
 ruby mod-09-06.rb
 
+# BEGIN: outlining
+TOGGLE_OUTLINE=$1
 if [ "$TOGGLE_OUTLINE" = 'outline' ]
 then
-  sh outline-short.sh
+  bundle exec annotate --routes
+  bundle exec annotate
 else
   echo 'Skipping the outlining process to save time'
 fi
+# END: outlining
 
 git add .
 git commit -m "Add the user delete controller"

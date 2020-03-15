@@ -15,12 +15,16 @@ git checkout -b 08-06-admin_resend_conf
 
 ruby mod-08-06.rb
 
+# BEGIN: outlining
+TOGGLE_OUTLINE=$1
 if [ "$TOGGLE_OUTLINE" = 'outline' ]
 then
-  sh outline-short.sh
+  bundle exec annotate --routes
+  bundle exec annotate
 else
   echo 'Skipping the outlining process to save time'
 fi
+# END: outlining
 
 git add .
 git commit -m "Allow admins to request the resending of a confirmation email"
