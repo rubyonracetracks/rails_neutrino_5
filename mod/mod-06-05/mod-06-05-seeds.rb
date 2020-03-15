@@ -27,10 +27,10 @@ puts '--------------------------------------------'
 puts "Creating the first #{n_admins} random admins"
 pbar = ProgressBar.create(total: n_admins)
 n_admins.times do |n|
-  name = "#{Faker::Name.first_name} #{Faker::Name.last_name}"
+  name1 = "#{Faker::Name.first_name} #{Faker::Name.last_name}"
   email_address = "admin-#{n + 1}@rubyonracetracks.com"
 
-  Admin.create!(name: name,
+  Admin.create!(name: name1,
                 username: "admin#{n + 1}",
                 email: email_address, password: 'Daytona 500',
                 password_confirmation: 'Daytona 500',
@@ -43,10 +43,10 @@ puts '---------------------------------------------'
 puts "Creating the second #{n_admins} random admins"
 pbar = ProgressBar.create(total: n_admins)
 n_admins.times do |n|
-  name = "#{Faker::Name.first_name} #{Faker::Name.last_name}"
-  email_address = Faker::Internet.email(name)
+  name1 = "#{Faker::Name.first_name} #{Faker::Name.last_name}"
+  email_address = Faker::Internet.email(name: name1)
 
-  Admin.create!(name: name,
+  Admin.create!(name: name1,
                 username: "admin-faker#{n + 1}",
                 email: email_address, password: 'Daytona 500',
                 password_confirmation: 'Daytona 500',
@@ -101,10 +101,10 @@ puts '-------------------------------------------'
 pbar = ProgressBar.create(total: n_users)
 puts "Creating the second #{n_users} random users"
 n_users.times do |n|
-  name = "#{Faker::Name.first_name} #{Faker::Name.last_name}"
-  email_address = Faker::Internet.email(name)
+  name1 = "#{Faker::Name.first_name} #{Faker::Name.last_name}"
+  email_address = Faker::Internet.email(name: name1)
 
-  User.create!(name: name,
+  User.create!(name: name1,
                username: "user-faker#{n + 1}", email: email_address,
                password: 'Daytona 500',
                password_confirmation: 'Daytona 500',

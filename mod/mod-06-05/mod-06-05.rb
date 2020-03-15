@@ -8,6 +8,10 @@ require 'gemfile_entry'
 puts 'Updating db/seeds.rb'
 system('mv mod-06-05-seeds.rb db/seeds.rb')
 
+# WICHTIG/LEGACY/bash: bin/dseed
+puts 'Adding bin/dseed'
+system('mv mod-06-05-bin-dseed bin/dseed')
+
 # WICHTIG/LEGACY/bash: seed.sh
 puts 'Adding seed.sh'
 system('mv mod-06-05-seed.sh seed.sh')
