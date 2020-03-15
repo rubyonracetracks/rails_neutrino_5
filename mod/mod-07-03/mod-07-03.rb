@@ -14,7 +14,7 @@ puts 'bundle install --quiet'
 system('bundle install --quiet')
 
 puts 'Generating integration test'
-system('rails generate integration_test user_edit')
+system('bundle exec rails generate integration_test user_edit')
 system('wait')
 
 puts 'Filling in integration tests'

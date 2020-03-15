@@ -13,7 +13,7 @@ system('git rm test/integration/test2_test.rb')
 system('git rm test/integration/test3_test.rb')
 
 puts 'Adding integration tests'
-system('rails generate integration_test static_pages')
+system('bundle exec rails generate integration_test static_pages')
 system('wait')
 StringInFile.replace('  # end', '', 'test/integration/static_pages_test.rb')
 LineContaining.delete_between('class StaticPagesTest < ActionDispatch::IntegrationTest', 'end', 'test/integration/static_pages_test.rb')

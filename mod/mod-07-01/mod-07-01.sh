@@ -21,12 +21,16 @@ git checkout -b 07-01-user_sign_up
 
 ruby mod-07-01.rb
 
+# BEGIN: outlining
+TOGGLE_OUTLINE=$1
 if [ "$TOGGLE_OUTLINE" = 'outline' ]
 then
-  sh outline-short.sh
+  bundle exec annotate --routes
+  bundle exec annotate
 else
   echo 'Skipping the outlining process to save time'
 fi
+# END: outlining
 
 git add .
 git commit -m "Add user sign-up capability"
