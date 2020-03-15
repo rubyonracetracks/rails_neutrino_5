@@ -120,12 +120,12 @@ cd $DIR_APP && bash mod_app.sh '06-03' $TOGGLE_OUTLINE
 cd $DIR_APP && bash mod_app.sh '06-04' $TOGGLE_OUTLINE
 cd $DIR_APP && bash mod_app.sh '06-05' $TOGGLE_OUTLINE
 
-# cd $DIR_APP && bash mod_app.sh '07-01' $TOGGLE_OUTLINE
-# cd $DIR_APP && bash mod_app.sh '07-02' $TOGGLE_OUTLINE
-# cd $DIR_APP && bash mod_app.sh '07-03' $TOGGLE_OUTLINE
-# cd $DIR_APP && bash mod_app.sh '07-04' $TOGGLE_OUTLINE
-# cd $DIR_APP && bash mod_app.sh '07-05' $TOGGLE_OUTLINE
-# cd $DIR_APP && bash mod_app.sh '07-06' $TOGGLE_OUTLINE
+cd $DIR_APP && bash mod_app.sh '07-01' $TOGGLE_OUTLINE
+cd $DIR_APP && bash mod_app.sh '07-02' $TOGGLE_OUTLINE
+cd $DIR_APP && bash mod_app.sh '07-03' $TOGGLE_OUTLINE
+cd $DIR_APP && bash mod_app.sh '07-04' $TOGGLE_OUTLINE
+cd $DIR_APP && bash mod_app.sh '07-05' $TOGGLE_OUTLINE
+cd $DIR_APP && bash mod_app.sh '07-06' $TOGGLE_OUTLINE
 
 # cd $DIR_APP && bash mod_app.sh '08-01' $TOGGLE_OUTLINE
 # cd $DIR_APP && bash mod_app.sh '08-02' $TOGGLE_OUTLINE
