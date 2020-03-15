@@ -10,7 +10,7 @@
     click_button('Update')
     assert page.has_text?('You updated your account successfully,')
     assert page.has_text?('but we need to verify your new email address.')
-    assert page.has_text?('Please check your email and follow the confirm link')
+    assert page.has_text?('Please check your email and follow the confirmation link')
     assert page.has_text?('to confirm your new email address.')
 
     click_on 'Logout'
