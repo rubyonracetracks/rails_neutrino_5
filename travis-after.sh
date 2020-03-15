@@ -12,6 +12,22 @@ echo '----------'
 echo 'rails test'
 rails test
 
+echo '----------------------'
+echo 'rails db:migrate:reset'
+rails db:migrate:reset
+
+echo '-------------'
+echo 'rails db:seed'
+rails db:seed
+
+echo '--------------------'
+echo 'bundle exec annotate'
+bundle exec annotate
+
+echo '-----------------------------'
+echo 'bundle exec annotate --routes'
+bundle exec annotate --routes
+
 echo '---------------------------'
 echo 'brakeman -Aq -w2 --no-pager'
 brakeman -Aq -w2 --no-pager
