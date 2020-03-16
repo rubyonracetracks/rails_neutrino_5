@@ -135,13 +135,13 @@ cd $DIR_APP && bash mod_app.sh '08-05' $TOGGLE_OUTLINE
 cd $DIR_APP && bash mod_app.sh '08-06' $TOGGLE_OUTLINE
 cd $DIR_APP && bash mod_app.sh '08-07' $TOGGLE_OUTLINE
 
-# cd $DIR_APP && bash mod_app.sh '09-01' $TOGGLE_OUTLINE
-# cd $DIR_APP && bash mod_app.sh '09-02' $TOGGLE_OUTLINE
-# cd $DIR_APP && bash mod_app.sh '09-03' $TOGGLE_OUTLINE
-# cd $DIR_APP && bash mod_app.sh '09-04' $TOGGLE_OUTLINE
-# cd $DIR_APP && bash mod_app.sh '09-05' $TOGGLE_OUTLINE
-# cd $DIR_APP && bash mod_app.sh '09-06' $TOGGLE_OUTLINE
-# cd $DIR_APP && bash mod_app.sh '09-07' $TOGGLE_OUTLINE
+cd $DIR_APP && bash mod_app.sh '09-01' $TOGGLE_OUTLINE
+cd $DIR_APP && bash mod_app.sh '09-02' $TOGGLE_OUTLINE
+cd $DIR_APP && bash mod_app.sh '09-03' $TOGGLE_OUTLINE
+cd $DIR_APP && bash mod_app.sh '09-04' $TOGGLE_OUTLINE
+cd $DIR_APP && bash mod_app.sh '09-05' $TOGGLE_OUTLINE
+cd $DIR_APP && bash mod_app.sh '09-06' $TOGGLE_OUTLINE
+cd $DIR_APP && bash mod_app.sh '09-07' $TOGGLE_OUTLINE
 
 # cd $DIR_APP && bash mod_app.sh '10-01' $TOGGLE_OUTLINE
 # cd $DIR_APP && bash mod_app.sh '10-02' $TOGGLE_OUTLINE
