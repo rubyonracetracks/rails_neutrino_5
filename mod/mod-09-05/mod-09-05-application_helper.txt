@@ -1,5 +1,5 @@
 
-  # rubocop:disable Naming/UncommunicativeMethodParamName
+  # rubocop:disable Naming/MethodParameterName
   def link_to_add_fields(name, f, type)
     new_object = f.object.send "build_#{type}"
     id = "new_#{type}"
@@ -9,4 +9,4 @@
     link_to(name, '#', class: 'add_fields',
                        data: { id: id, fields: fields.delete("\n") })
   end
-  # rubocop:enable Naming/UncommunicativeMethodParamName
+  # rubocop:enable Naming/MethodParameterName
