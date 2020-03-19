@@ -5,7 +5,7 @@ set -e
 
 # AGENDA
 # * Update config/environments/development.rb.
-# * Add mailcatcher.sh.
+# * Update docker-compose.yml
 
 # NOTE: MailCatcher is NOT added to the Gemfile, because it will likely
 # conflict with other gems sooner or later.
