@@ -5,6 +5,8 @@ echo '++++++++++++++++'
 echo 'BEGIN: outlining'
 echo '++++++++++++++++'
 
+bash outline-short.sh
+
 STR1="gem 'railroady'"
 STR2="# $STR1"
 STR3="gem 'rails-erd'"
