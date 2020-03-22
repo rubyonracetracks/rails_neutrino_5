@@ -20,13 +20,13 @@ echo '-------------'
 echo 'rails db:seed'
 rails db:seed
 
-echo '--------------------'
-echo 'bundle exec annotate'
-bundle exec annotate
+echo '-----------------------------------------'
+echo 'bundle exec annotate -r --models -a -k -i'
+bundle exec annotate -r --models -a -k -i
 
-echo '-----------------------------'
-echo 'bundle exec annotate --routes'
-bundle exec annotate --routes
+echo '-----------------------'
+echo 'bundle exec sandi_meter'
+bundle exec sandi_meter
 
 echo '---------------------------'
 echo 'brakeman -Aq -w2 --no-pager'
