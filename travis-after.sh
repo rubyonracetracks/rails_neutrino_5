@@ -24,10 +24,6 @@ echo '-----------------------------------------'
 echo 'bundle exec annotate -r --models -a -k -i'
 bundle exec annotate -r --models -a -k -i
 
-echo '-----------------------'
-echo 'bundle exec sandi_meter'
-bundle exec sandi_meter
-
 echo '---------------------------'
 echo 'brakeman -Aq -w2 --no-pager'
 brakeman -Aq -w2 --no-pager
