@@ -17,8 +17,7 @@ git checkout -b 04-02-outlining
 
 ruby mod-04-02.rb
 
-bundle exec annotate --routes
-bundle exec annotate
+bash annotate.sh
 
 git add .
 git commit -m "Added outlining gems and scripts"
