@@ -5,4 +5,5 @@ DIR_APP=$PWD/$APP_NAME
 
 mkdir -p log
 bash exec-main.sh $APP_NAME 'outline'
+cd $DIR_APP && bash nuke.sh
 cd $DIR_APP && bash build.sh
