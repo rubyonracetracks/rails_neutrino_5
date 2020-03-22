@@ -19,8 +19,7 @@ ruby mod-08-07.rb
 TOGGLE_OUTLINE=$1
 if [ "$TOGGLE_OUTLINE" = 'outline' ]
 then
-  bundle exec annotate --routes
-  bundle exec annotate
+  bash docker-annotate.sh
 else
   echo 'Skipping the outlining process to save time'
 fi

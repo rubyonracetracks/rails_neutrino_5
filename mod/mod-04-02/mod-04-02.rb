@@ -18,6 +18,11 @@ StringInFile.replace("gem 'annotate'", "#{GemfileEntry.active('annotate')}", 'Ge
 puts 'bundle install --quiet'
 system('bundle install --quiet')
 
+# WICHTIG/LEGACY/bash: add annotate.sh and docker-annotate.sh
+puts 'Adding annotate.sh and docker-annotate.sh'
+system('mv mod-04-02-annotate.sh annotate.sh')
+system('mv mod-04-02-docker-annotate.sh docker-annotate.sh')
+
 # WICHTIG/LEGACY/bash: add outline-short.sh
 # WICHTIG/LEGACY/all_or_nothing: add annotate to outline-short.sh (if necessary)
 puts 'Adding outline-short.sh'
@@ -38,3 +43,6 @@ InsertFromFile.add_end('mod-04-02-git_check.txt', 'git_check.sh')
 # WICHTIG/LEGACY/bash: add outline.sh to all.sh
 puts 'Adding outline.sh to all.sh'
 LineContaining.add_before('sh test_code.sh', 'sh outline.sh', 'all.sh')
+
+puts 'bash docker-annotate.sh'
+bash docker-annotate.sh

@@ -9,13 +9,7 @@ file_mo="$OUTPUT_DIR/1-file_list-models.txt"
 file_co="$OUTPUT_DIR/1-file_list-controllers.txt"
 file_vi="$OUTPUT_DIR/1-file_list-views.txt"
 
-echo '-----------------------------'
-echo 'bundle exec annotate --routes'
-docker-compose run --rm web bundle exec annotate --routes
-
-echo '--------------------'
-echo 'bundle exec annotate'
-docker-compose run --rm web bundle exec annotate
+bash annotate.sh
 
 echo '------------------------------------'
 echo 'Listing the helper files in the file'
