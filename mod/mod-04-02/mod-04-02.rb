@@ -45,4 +45,4 @@ puts 'Adding outline.sh to all.sh'
 LineContaining.add_before('sh test_code.sh', 'sh outline.sh', 'all.sh')
 
 puts 'bash docker-annotate.sh'
-bash docker-annotate.sh
+system('bash docker-annotate.sh')
