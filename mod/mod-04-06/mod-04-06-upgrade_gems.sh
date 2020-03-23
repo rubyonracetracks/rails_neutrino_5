@@ -7,13 +7,8 @@
 
 # Do NOT use this script until you have set up this project with the build.sh script.
 
-echo '-------------'
-echo 'bundle update'
-bundle update
+bin/dupdate
 
 sh git_check.sh
 
-echo '----------------------------------------------------------'
-echo 'bundle exec gemsurance --output log/gemsurance_report.html'
-bundle exec gemsurance --output log/gemsurance_report.html
-echo 'The Gemsurance Report is at log/gemsurance_report.html .'
+bin/dgemsurance

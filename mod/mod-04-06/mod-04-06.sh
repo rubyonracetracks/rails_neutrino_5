@@ -12,6 +12,9 @@ echo '####################################'
 
 git checkout -b 04-06-upgrade_gems
 
+# WICHTIG/LEGACY/bash: add bin/dupdate
+mv mod-04-06-bin-dupdate bin/dupdate
+
 # WICHTIG/LEGACY/bash: add upgrade_gems.sh
 mv mod-04-06-upgrade_gems.sh upgrade_gems.sh
 
