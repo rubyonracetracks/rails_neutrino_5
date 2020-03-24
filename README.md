@@ -46,6 +46,6 @@ Similarly, Rails Neutrino allows you to create a new app very rapidly because th
 * Includes a script for deleting users who never sign in after creating their accounts
 
 ## Things to Upgrade
-* Ruby version: specified in the Dockerfile of the [Rails Neutrino Docker image](https://github.com/rubyonracetracks/docker-rails_neutrino_5/blob/master/Dockerfile)
-* Rails version: specified in the PARAMS-rails_version.txt file
-* PostgreSQL version: specified in the mod/mod-01-02/mod-01-02-docker-compose.yml file
+* [Ruby](https://hub.docker.com/_/ruby) version: specified in the Dockerfile of the [Rails Neutrino Docker image](https://github.com/rubyonracetracks/docker-rails_neutrino_5/blob/master/Dockerfile)
+* [Rails](https://rubygems.org/gems/rails/versions) version: specified in the PARAMS-rails_version.txt file
+* [PostgreSQL](https://hub.docker.com/_/postgres) version: specified in the mod/mod-01-02/mod-01-02-docker-compose.yml file
