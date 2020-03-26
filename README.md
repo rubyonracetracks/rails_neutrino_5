@@ -1,6 +1,6 @@
 # Rails Neutrino: Automatic Rails App Generator
 
-[![Build Status](https://travis-ci.org/rubyonracetracks/rails_neutrino_5.svg?branch=master)](https://travis-ci.org/rubyonracetracks/rails_neutrino_5)
+[![Build Status](https://travis-ci.com/rubyonracetracks/rails_neutrino_5.svg?branch=master)](https://travis-ci.com/rubyonracetracks/rails_neutrino_5)
 
 Welcome to Rails Neutrino!  This repository automatically creates a new high-quality Rails 5 app from scratch.  It takes just a few minutes to  complete a task that would require many hours of grueling work to do manually.
 
