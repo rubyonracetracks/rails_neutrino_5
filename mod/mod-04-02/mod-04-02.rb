@@ -23,6 +23,10 @@ puts 'Adding annotate.sh and docker-annotate.sh'
 system('mv mod-04-02-annotate.sh annotate.sh')
 system('mv mod-04-02-docker-annotate.sh docker-annotate.sh')
 
+# WICHTIG/LEGACY/bash: add docker-tree.sh
+puts 'Adding docker-tree.sh'
+system('mv mod-04-02-docker-tree.sh docker-tree.sh')
+
 # WICHTIG/LEGACY/bash: add outline-short.sh
 # WICHTIG/LEGACY/all_or_nothing: add annotate to outline-short.sh (if necessary)
 puts 'Adding outline-short.sh'
