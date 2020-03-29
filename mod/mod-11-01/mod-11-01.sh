@@ -17,7 +17,6 @@ echo '###############################'
 # WICHTIG/LEGACY/all_or_nothing: update README files
 # WICHTIG/LEGACY/all_or_nothing: add README-setup.md file explaining setup procedure (if necessary)
 git checkout -b 11-01-README_files
-mv mod-11-01-README-to_do.txt README-to_do.txt
 mv mod-11-01-README.md README.md
 
 git add .
