@@ -39,4 +39,5 @@ This Rails app was created with
 * [Ruby](https://hub.docker.com/_/ruby) version: specified in the Dockerfile, Gemfile, .ruby-version file, and .travis.yml file
 * [Node](https://nodejs.org/en/) version: specified in the Dockerfile
 * [PostgreSQL](https://hub.docker.com/_/postgres) version: specified in the docker-compose.yml file and .travis.yml file
+* [Bundler](https://rubygems.org/gems/bundler/versions) version: specified at the end of the Gemfile.lock file
 * Gems in the Gemfile
