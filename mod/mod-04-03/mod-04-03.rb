@@ -11,3 +11,4 @@ StringInFile.replace('#MAILCATCHER#', '', 'docker-compose.yml')
 
 # WICHTIG/LEGACY/recommended: update bin/dserver
 StringInFile.replace('#MAILCATCHER#', '', 'bin/dserver')
+system('chmod +x bin/dserver')
