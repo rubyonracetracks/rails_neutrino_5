@@ -8,3 +8,6 @@ InsertFromFile.add_after('mod-04-03-development.txt', 'config/environments/devel
 
 # WICHTIG/LEGACY/recommended: update docker-compose.yml if not already done
 StringInFile.replace('#MAILCATCHER#', '', 'docker-compose.yml')
+
+# WICHTIG/LEGACY/recommended: update bin/dserver
+StringInFile.replace('#MAILCATCHER#', '', 'bin/dserver')
