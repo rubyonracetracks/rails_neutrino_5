@@ -48,4 +48,5 @@ Similarly, Rails Neutrino allows you to create a new app very rapidly because th
 ## Things to Upgrade
 * [Ruby](https://hub.docker.com/_/ruby) version: specified in the Dockerfile of the [Rails Neutrino Docker image](https://github.com/rubyonracetracks/docker-rails_neutrino_5/blob/master/Dockerfile)
 * [Rails](https://rubygems.org/gems/rails/versions) version: specified in the PARAMS-rails_version.txt file
+* [Node](https://nodejs.org/en/) version: specified in mod/mod-01-02/mod-01-02-Dockerfile
 * [PostgreSQL](https://hub.docker.com/_/postgres) version: specified in the mod/mod-01-02/mod-01-02-docker-compose.yml file

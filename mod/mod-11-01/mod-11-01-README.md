@@ -34,3 +34,9 @@ This Rails app was created with
 * `bash outline-short.sh`: Use this command to annotate the code and print a file trees of selected parts of this app's source code in the log directory.
 * `bash outline.sh`: Use this command to run the outline-short.sh script and use the railroady and rails-erd gems to print block diagrams of this app to files in the log directory.
 * `bash test_code.sh`: Use this command to run RuboCop, Rails Best Practices, and other tools for analyzing this app's source code.
+
+## Things To Upgrade
+* [Ruby](https://hub.docker.com/_/ruby) version: specified in the Dockerfile, Gemfile, .ruby-version file, and .travis.yml file
+* [Node](https://nodejs.org/en/) version: specified in the Dockerfile
+* [PostgreSQL](https://hub.docker.com/_/postgres) version: specified in the docker-compose.yml file and .travis.yml file
+* Gems in the Gemfile
