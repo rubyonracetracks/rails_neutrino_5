@@ -8,6 +8,7 @@ set -e
 #   bin/dbuild
 #   bin/dbundle
 #   bin/dexec
+#   bin/dexec-root
 #   bin/dinfo
 #   bin/dmigrate
 #   bin/dserver
@@ -57,6 +58,7 @@ mv mod-01-02-bin-dbundle bin/dbundle
 mv mod-01-02-bin-dexec bin/dexec
 mv mod-01-02-bin-dinfo bin/dinfo
 mv mod-01-02-bin-dmigrate bin/dmigrate
+mv mod-01-02-bin-droot bin/droot
 mv mod-01-02-bin-dsandbox bin/dsandbox
 mv mod-01-02-bin-dserver bin/dserver
 mv mod-01-02-bin-dtest bin/dtest
@@ -69,6 +71,7 @@ mv mod-01-02-info.sh info.sh
 mv mod-01-02-git_check.sh git_check.sh
 mv mod-01-02-log_test_app.sh log_test_app.sh
 mv mod-01-02-nuke.sh nuke.sh
+mv mod-01-02-root.sh root.sh
 mv mod-01-02-sandbox.sh sandbox.sh
 mv mod-01-02-server.sh server.sh
 mv mod-01-02-test_app.sh test_app.sh
