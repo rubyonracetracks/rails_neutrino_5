@@ -25,6 +25,7 @@ This Rails app was created with
 * `bash git_check.sh`: Before you use the "git add" and "git commit" commands, run the git_check.sh script to make sure that all tests pass, annotate the code, and make sure that this app complies with RuboCop and Rails Best Practices.
 * `bash exec.sh *`: Add the command "bash exec.sh" to the beginning of any command in order to execute it within the Docker container (instead of the host OS).
 * `bash pg_setup.sh`: Use this command to convert this app from SQLite to PostgreSQL.
+* `bash root.sh`: Use this command to open a Bash shell in the Docker container as root.
 * `bash sandbox.sh`: Use this command to run the Rails sandbox.
 * `bash test_app.sh`: Use this command to run the full test suite.
 * `bash testc.sh`: Use this command to run just the controller tests.
