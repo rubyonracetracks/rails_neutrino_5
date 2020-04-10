@@ -1,7 +1,6 @@
-#!/bin/sh
+#!/bin/bash
 
 set -e
-
 
 # Checks for security vulnerabilities
 # -A: runs all checks
