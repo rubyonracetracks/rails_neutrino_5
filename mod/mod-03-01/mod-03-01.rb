@@ -16,8 +16,9 @@ system('bundle install --quiet')
 puts 'Adding the use of minitest-reporters to test/test_helper.rb'
 InsertFromFile.add_before('mod-03-01-add_to_test_helper.txt', 'test/test_helper.rb', 'class ActiveSupport::TestCase')
 
-puts 'Adding the HTML test reports to .gitignore'
+puts 'Adding the HTML test reports to .gitignore and .dockerignore'
 StringInFile.add_end("test/html_reports/\n", '.gitignore')
+StringInFile.add_end("test/html_reports/\n", '.dockerignore')
 
 # WICHTIG/LEGACY/recommended: print the command to run a failed test again (if necessary)
 puts 'Adding test/rake_rerun_reporter.rb'

@@ -3,7 +3,7 @@ set -e
 
 # AGENDA
 # * Add an initial index page to show that the app works
-# * Add the Dockerfile and docker-compose.yml files
+# * Add the Dockerfile, docker-compose.yml, and .dockerignore files
 # * Add the following scripts:
 #   bin/dbuild
 #   bin/dbundle
@@ -34,11 +34,12 @@ echo '###############################'
 
 git checkout -b 01-02-basic_scripts
 
-# WICHTIG/LEGACY/bash: add Dockerfile, docker-compose.yml file, and scripts from this chapter
+# WICHTIG/LEGACY/bash: add Dockerfile, docker-compose.yml, .dockerignore, and scripts from this chapter
 
-echo 'Adding Dockerfile and docker-compose.yml'
+echo 'Adding Dockerfile, docker-compose.yml, and .dockerignore'
 mv mod-01-02-Dockerfile Dockerfile
 mv mod-01-02-docker-compose.yml docker-compose.yml
+mv mod-01-02-dockerignore .dockerignore
 
 echo 'Getting the Ruby version'
 cp .ruby-version .ruby-version-process
