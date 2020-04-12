@@ -6,13 +6,13 @@ DIR_APP=$PWD/$APP_NAME
 mkdir -p log
 bash exec-main.sh $APP_NAME 'no_outline'
 
-echo '#############################'
-echo 'BEGIN: bash build.sh (SQLite)'
-echo '#############################'
-cd $DIR_APP && bash build.sh
-echo '###########################'
-echo 'END: bash build.sh (SQLite)'
-echo '###########################'
+echo '#################################'
+echo 'BEGIN: bash build-log.sh (SQLite)'
+echo '#################################'
+cd $DIR_APP && bash build-log.sh
+echo '###############################'
+echo 'END: bash build-log.sh (SQLite)'
+echo '###############################'
 
 cd $DIR_APP && bash nuke.sh
 
@@ -35,10 +35,10 @@ cd $DIR_APP && bash pg_setup_full.sh 'neutrino' 'winner' 'long_way_stinks'
 echo '##############################'
 echo 'END: pg_setup_full.sh (second)'
 echo '##############################'
-echo '#################################'
-echo 'BEGIN: bash build.sh (PostgreSQL)'
-echo '#################################'
-cd $DIR_APP && bash build.sh
-echo '###############################'
-echo 'END: bash build.sh (PostgreSQL)'
-echo '###############################'
+echo '#####################################'
+echo 'BEGIN: bash build-log.sh (PostgreSQL)'
+echo '#####################################'
+cd $DIR_APP && bash build-log.sh
+echo '###################################'
+echo 'END: bash build-log.sh (PostgreSQL)'
+echo '###################################'

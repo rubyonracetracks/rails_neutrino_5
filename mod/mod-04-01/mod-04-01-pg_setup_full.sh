@@ -31,9 +31,9 @@ insert_line_after_string_in_file () {
 echo 'Removing SQLite from the Dockerfile'
 replace_string_in_file ' sqlite3' '' 'Dockerfile'
 
-# Remove "#POSTGRES#" in build.sh
-echo 'Updating build.sh'
-replace_string_in_file '#POSTGRES#' '' 'build.sh'
+# Remove "#POSTGRES#" in build-log.sh
+echo 'Updating build-log.sh'
+replace_string_in_file '#POSTGRES#' '' 'build-log.sh'
 
 # Remove "#POSTGRES#" in .gitignore
 echo 'Updating .gitignore'

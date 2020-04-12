@@ -15,6 +15,7 @@ set -e
 #   bin/dtest
 #   all.sh
 #   build.sh
+#   build-log.sh
 #   git_check.sh
 #   info.sh
 #   log_test_app.sh
@@ -67,6 +68,7 @@ mv mod-01-02-bin-dtest bin/dtest
 echo 'Adding Bash scripts'
 mv mod-01-02-all.sh all.sh
 mv mod-01-02-build.sh build.sh
+mv mod-01-02-build-log.sh build-log.sh
 mv mod-01-02-exec.sh exec.sh
 mv mod-01-02-info.sh info.sh
 mv mod-01-02-git_check.sh git_check.sh

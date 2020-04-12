@@ -1,19 +1,5 @@
 #!/bin/bash
 set -e
 
-exec_pg_setup () {
-  FILENAME=$1
-  if [[ ! -f $FILENAME ]]
-  then
-    echo # Placeholder command to avoid error before the POSTGRES section is uncommented
-    #POSTGRES#bash pg_setup.sh
-  fi
-}
-
-exec_pg_setup 'config/database.yml'
-exec_pg_setup '.env/development/database'
-exec_pg_setup 'init.sql'
-
-bin/dbuild
-sh all.sh
-sh info.sh
+DATE=`date +%Y%m%d-%H%M%S-%3N`
+bash build-log.sh 2>&1 | tee log/build-$DATE.txt
