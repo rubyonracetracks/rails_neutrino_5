@@ -78,12 +78,4 @@ echo "Password: ${db_password}"
 # FINISHED: getting username and password
 #########################################
 
-echo '---------------------------'
-echo 'BEGIN: docker-compose build'
-echo '---------------------------'
-docker-compose build
-echo '------------------------------'
-echo 'FINISHED: docker-compose build'
-echo '------------------------------'
-
-docker-compose run --rm web bash pg_setup_bash.sh $db_root $db_username $db_password
+bash pg_setup_full.sh $db_root $db_username $db_password
