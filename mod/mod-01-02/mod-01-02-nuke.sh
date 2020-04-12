@@ -26,3 +26,5 @@ docker ps -a
 echo '----------------'
 echo 'docker images -a'
 docker images -a
+
+wait

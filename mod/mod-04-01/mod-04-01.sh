@@ -25,11 +25,8 @@ mv mod-04-01-database-pg.yml config/database-pg.yml
 echo 'Adding pg_setup.sh'
 mv mod-04-01-pg_setup.sh pg_setup.sh
 
-echo 'Adding pg_setup_bash.sh'
-mv mod-04-01-pg_setup_bash.sh pg_setup_bash.sh
-
-echo 'Adding pg_setup.rb'
-mv mod-04-01-pg_setup.rb pg_setup.rb
+echo 'Adding pg_setup_full.sh'
+mv mod-04-01-pg_setup_full.sh pg_setup_full.sh
 
 echo 'mkdir -p .env/development'
 mkdir -p .env/development
