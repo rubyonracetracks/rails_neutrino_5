@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sh test_app.sh
+bash test_app.sh

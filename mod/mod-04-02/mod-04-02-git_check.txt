@@ -1,5 +1,5 @@
 
-sh outline-short.sh
+bash outline-short.sh
 
 echo '----------'
 echo 'git status'

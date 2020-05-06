@@ -2,9 +2,8 @@
 
 # Run this script before entering "git add" and "git commit".
 
-sh test_app.sh
+bash test_app.sh
 
-bash brakeman.sh
 bin/dcop
 bin/drbp
 

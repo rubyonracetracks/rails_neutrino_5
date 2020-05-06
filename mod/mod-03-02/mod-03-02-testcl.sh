@@ -8,4 +8,4 @@ bin/dcop
 
 bin/drbp
 
-sh testc.sh
+bash testc.sh

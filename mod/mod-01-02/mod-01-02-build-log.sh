@@ -15,5 +15,5 @@ exec_pg_setup '.env/development/database'
 exec_pg_setup 'init.sql'
 
 bin/dbuild
-sh all.sh
-sh info.sh
+bash all.sh
+bash info.sh
