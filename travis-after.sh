@@ -24,17 +24,8 @@ echo '-----------------------------------------'
 echo 'bundle exec annotate -r --models -a -k -i'
 bundle exec annotate -r --models -a -k -i
 
-echo '---------------------------'
-echo 'brakeman -Aq -w2 --no-pager'
-brakeman -Aq -w2 --no-pager
-
-echo '-------------------'
-echo 'bundle-audit update'
-bundle-audit update
-
-echo '------------'
-echo 'bundle-audit'
-bundle-audit
+bash docker-brakeman.sh
+bash docker-audit.sh
 
 echo '----------'
 echo 'rubocop -D'
