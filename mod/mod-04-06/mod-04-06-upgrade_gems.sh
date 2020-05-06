@@ -9,6 +9,6 @@
 
 bin/dupdate
 
-sh git_check.sh
+bash git_check.sh
 
-bin/dgemsurance
+bash gemsurance.sh

@@ -4,7 +4,7 @@
 
 sh test_app.sh
 
-bin/dbrakeman
+bash brakeman.sh
 bin/dcop
 bin/drbp
 

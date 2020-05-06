@@ -5,4 +5,4 @@ set -e
 # Checks for compliance with Sandi Metz' four rules
 echo '-----------------------'
 echo 'bundle exec sandi_meter'
-docker-compose run --rm web bundle exec sandi_meter
+bundle exec sandi_meter

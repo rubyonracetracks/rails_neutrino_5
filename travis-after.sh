@@ -24,18 +24,6 @@ echo '-----------------------------------------'
 echo 'bundle exec annotate -r --models -a -k -i'
 bundle exec annotate -r --models -a -k -i
 
-echo '---------------------------'
-echo 'brakeman -Aq -w2 --no-pager'
-brakeman -Aq -w2 --no-pager
-
-echo '-------------------'
-echo 'bundle-audit update'
-bundle-audit update
-
-echo '------------'
-echo 'bundle-audit'
-bundle-audit
-
 echo '----------'
 echo 'rubocop -D'
 rubocop -D
@@ -43,7 +31,3 @@ rubocop -D
 echo '----------------------'
 echo 'rails_best_practices .'
 rails_best_practices .
-
-echo '----------'
-echo 'gemsurance'
-gemsurance
