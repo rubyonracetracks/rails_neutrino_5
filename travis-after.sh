@@ -24,9 +24,6 @@ echo '-----------------------------------------'
 echo 'bundle exec annotate -r --models -a -k -i'
 bundle exec annotate -r --models -a -k -i
 
-bash docker-brakeman.sh
-bash docker-audit.sh
-
 echo '----------'
 echo 'rubocop -D'
 rubocop -D
@@ -34,7 +31,3 @@ rubocop -D
 echo '----------------------'
 echo 'rails_best_practices .'
 rails_best_practices .
-
-echo '----------'
-echo 'gemsurance'
-gemsurance
