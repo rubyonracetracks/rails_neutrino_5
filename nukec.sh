@@ -2,6 +2,10 @@
 
 # This script destroys all Docker containers but leaves the Docker images alone.
 
+echo '--------------------'
+echo 'docker network prune'
+docker network prune
+
 echo '------------------------------------------'
 echo 'Killing and removing all Docker containers'
 for i in $(docker ps -a -q)
