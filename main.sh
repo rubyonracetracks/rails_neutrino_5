@@ -8,7 +8,7 @@
 # ensure uniqueness even if a large number of people (perhaps in a workshop)
 # using Rails Neutrino create apps simultaneously.
 
-DATE=`date +%Y%m%d-%H%M%S-%3N`
+DATE=`date -u +%Y%m%d-%H%M%S-%3N`
 
 APP_NAME="railn-$DATE"
 
