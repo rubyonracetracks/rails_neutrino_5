@@ -80,6 +80,10 @@ ls -l $DIR_APP
 touch $DIR_APP/config/rails_neutrino_timestamp.txt
 echo $APP_NAME > $DIR_APP/config/rails_neutrino_timestamp.txt
 
+# Adding nukec.sh and nuke.sh
+cp $DIR_MAIN/nukec.sh $DIR_APP
+cp $DIR_MAIN/nuke.sh $DIR_APP
+
 # Copy mod_app.sh to the new app's root directory
 cp $DIR_MAIN/mod_app.sh $DIR_APP
 

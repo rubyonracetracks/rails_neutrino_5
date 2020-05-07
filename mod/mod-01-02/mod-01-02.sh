@@ -19,7 +19,6 @@ set -e
 #   git_check.sh
 #   info.sh
 #   log_test_app.sh
-#   nuke.sh
 #   sandbox.sh
 #   server.sh
 #   test_app.sh
@@ -73,7 +72,6 @@ mv mod-01-02-exec.sh exec.sh
 mv mod-01-02-info.sh info.sh
 mv mod-01-02-git_check.sh git_check.sh
 mv mod-01-02-log_test_app.sh log_test_app.sh
-mv mod-01-02-nuke.sh nuke.sh
 mv mod-01-02-root.sh root.sh
 mv mod-01-02-sandbox.sh sandbox.sh
 mv mod-01-02-server.sh server.sh

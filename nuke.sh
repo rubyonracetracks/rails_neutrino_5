@@ -3,13 +3,7 @@
 # This script destroys all Docker containers and images.
 # SOURCE: https://gist.github.com/JeffBelback/5687bb02f3618965ca8f
 
-echo '------------------------------------------'
-echo 'Killing and removing all Docker containers'
-for i in $(docker ps -a -q)
-do
-  docker kill $i; wait;
-  docker rm -f $i; wait;
-done;
+bash nukec.sh
 
 echo '--------------------------------------'
 echo 'Killing and removing all Docker images'
