@@ -80,7 +80,7 @@ ls -l $DIR_APP
 touch $DIR_APP/config/rails_neutrino_timestamp.txt
 echo $APP_NAME > $DIR_APP/config/rails_neutrino_timestamp.txt
 
-# Adding nukec.sh and nuke.sh
+# WICHTIG/LEGACY/bash: Adding nukec.sh and nuke.sh
 cp $DIR_MAIN/nukec.sh $DIR_APP
 cp $DIR_MAIN/nuke.sh $DIR_APP
 
