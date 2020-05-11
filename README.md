@@ -19,7 +19,7 @@ Similarly, Rails Neutrino allows you to create a new app very rapidly because th
 * Please note that the RuboCop and Rails Best Practices gems are NOT recommended for legacy apps.  There will be hundreds or thousands of offenses, too many to correct in a reasonable amount of time.
 
 ## Safety Features
-* Advises users and admins to use KeePassX or similar password management software to create, encrypt, and save passwords
+* Advises users and admins to use KeePassXC or similar password management software to create, encrypt, and save passwords
 * Prevents accidental data destruction in the production environment by requiring the right environment variable setting
 * Locks accounts after the 6th unsuccessful login attempt and reinstates them after the user/admin follows the unlocking instructions or waits 30 minutes, whichever comes first
 
