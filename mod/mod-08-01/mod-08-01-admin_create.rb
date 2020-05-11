@@ -30,7 +30,7 @@ while arg_pwd == ''
   puts
   puts 'Using the same password for all of your accounts is risky.'
   puts 'Limiting yourself to passwords that you can easily remember is risky.'
-  puts 'You should use a password management program like KeePassX'
+  puts 'You should use a password management program like KeePassXC'
   puts '(http://www.keepassxc.org/) to create much better passwords AND '
   puts 'store them in encrypted form.'
   puts
