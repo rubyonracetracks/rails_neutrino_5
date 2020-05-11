@@ -73,7 +73,7 @@
     assert page.has_css?('h1', text: 'Admin Edit')
     assert page.has_text?('password management program')
     assert page.has_text?('create much better passwords')
-    assert page.has_link?('KeePassX', href: 'http://www.keepassx.org')
+    assert page.has_link?('KeePassX', href: 'http://www.keepassxc.org')
   end
 
   test 'admin edit page has the expected content for regular admin' do
@@ -82,7 +82,7 @@
     assert page.has_css?('h1', text: 'Admin Edit')
     assert page.has_text?('password management program')
     assert page.has_text?('create much better passwords')
-    assert page.has_link?('KeePassX', href: 'http://www.keepassx.org')
+    assert page.has_link?('KeePassX', href: 'http://www.keepassxc.org')
   end
 
   test 'super admin can edit all parameters besides email' do

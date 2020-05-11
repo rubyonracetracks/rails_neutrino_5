@@ -31,7 +31,7 @@ while arg_pwd == ''
   puts 'Using the same password for all of your accounts is risky.'
   puts 'Limiting yourself to passwords that you can easily remember is risky.'
   puts 'You should use a password management program like KeePassX'
-  puts '(http://www.keepassx.org/) to create much better passwords AND '
+  puts '(http://www.keepassxc.org/) to create much better passwords AND '
   puts 'store them in encrypted form.'
   puts
   puts 'Enter the password of the new admin:'
