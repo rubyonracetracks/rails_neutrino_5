@@ -1,5 +1,3 @@
-# rubocop:disable Layout/LineLength
-
 # PURPOSE:
 # Prevent data from being altered by rake commands in the production environment
 
@@ -32,5 +30,3 @@ end
 DISABLED_TASKS.each do |task|
   Rake::Task[task].enhance ['db:guard_for_production']
 end
-
-# rubocop:enable Layout/LineLength
